@@ -10,7 +10,8 @@ import java.util.List;
 import stamboom.controller.StamboomController;
 import stamboom.util.StringUtilities;
 
-public class Persoon {
+public class Persoon
+{
 
     // ********datavelden**************************************
     private final int nr;
@@ -24,6 +25,7 @@ public class Persoon {
     private final Geslacht geslacht;
 
     // ********constructoren***********************************
+
     /**
      * er wordt een persoon gecreeerd met persoonsnummer persNr en met als
      * voornamen vnamen, achternaam anaam, tussenvoegsel tvoegsel, geboortedatum
@@ -32,9 +34,9 @@ public class Persoon {
      * gebplaats wordt naar een hoofdletter omgezet, alle andere letters zijn
      * kleine letters; het tussenvoegsel is zo nodig in zijn geheel
      * geconverteerd naar kleine letters.
-     *
      */
-    public Persoon(int nr, String[] voornamen, String achternaam, String tussenvoegsel, Calendar gebDat, String gebPlaats, List<Gezin> alsOuderBetrokkenIn, Geslacht geslacht) {
+    public Persoon(int nr, String[] voornamen, String achternaam, String tussenvoegsel, Calendar gebDat, String gebPlaats, List<Gezin> alsOuderBetrokkenIn, Geslacht geslacht)
+    {
         this.nr = nr;
         this.voornamen = voornamen;
         this.achternaam = achternaam;
@@ -45,42 +47,45 @@ public class Persoon {
         this.geslacht = geslacht;
     }
     // ********methoden****************************************
+
     /**
      * @return de achternaam van deze persoon
      */
-    public String getAchternaam() {
+    public String getAchternaam()
+    {
         return achternaam;
     }
 
     /**
      * @return de geboortedatum van deze persoon
      */
-    public Calendar getGebDat() {
+    public Calendar getGebDat()
+    {
         return gebDat;
     }
 
     /**
-     *
      * @return de geboorteplaats van deze persoon
      */
-    public String getGebPlaats() {
+    public String getGebPlaats()
+    {
         return gebPlaats;
     }
 
     /**
-     *
      * @return het geslacht van deze persoon
      */
-    public Geslacht getGeslacht() {
+    public Geslacht getGeslacht()
+    {
         return geslacht;
     }
 
     /**
-     *
      * @return de voorletters van de voornamen; elke voorletter wordt gevolgd
      * door een punt
      */
-    public String getInitialen() {
+    public String getInitialen()
+    {
         String initialen;
         initialen = "";
         for (String i : voornamen)
@@ -91,26 +96,28 @@ public class Persoon {
     }
 
     /**
-     *
      * @return de initialen gevolgd door een eventueel tussenvoegsel en
      * afgesloten door de achternaam; initialen, voorzetsel en achternaam zijn
      * gescheiden door een spatie
      */
-    public String getNaam() {
+    public String getNaam()
+    {
         return getInitialen() + " " + getTussenvoegsel() + " " + getAchternaam();
     }
 
     /**
      * @return het nummer van deze persoon
      */
-    public int getNr() {
+    public int getNr()
+    {
         return nr;
     }
 
     /**
      * @return het ouderlijk gezin van deze persoon, indien bekend, anders null
      */
-    public Gezin getOuderlijkGezin() {
+    public Gezin getOuderlijkGezin()
+    {
         return ouderlijkGezin;
     }
 
@@ -118,16 +125,19 @@ public class Persoon {
      * @return het tussenvoegsel van de naam van deze persoon (kan een lege
      * string zijn)
      */
-    public String getTussenvoegsel() {
+    public String getTussenvoegsel()
+    {
         return tussenvoegsel;
     }
 
     /**
      * @return alle voornamen onderling gescheiden door een spatie
      */
-    public String getVoornamen() {
+    public String getVoornamen()
+    {
         StringBuilder init = new StringBuilder();
-        for (String s : voornamen) {
+        for (String s : voornamen)
+        {
             init.append(s).append(' ');
         }
         return init.toString().trim();
@@ -136,19 +146,22 @@ public class Persoon {
     /**
      * @return de standaardgegevens van deze mens: naam (geslacht) geboortedatum
      */
-    public String standaardgegevens() {
+    public String standaardgegevens()
+    {
         return getNaam() + " (" + getGeslacht() + ") " + StringUtilities.datumString(gebDat);
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return standaardgegevens();
     }
 
     /**
      * @return de gezinnen waar deze persoon bij betrokken is
      */
-    public List<Gezin> getAlsOuderBetrokkenIn() {
+    public List<Gezin> getAlsOuderBetrokkenIn()
+    {
         return (List<Gezin>) Collections.unmodifiableList(alsOuderBetrokkenIn);
     }
 
@@ -161,7 +174,8 @@ public class Persoon {
      * @param ouderlijkGezin
      * @return of ouderlijk gezin kon worden toegevoegd
      */
-    boolean setOuders(Gezin ouderlijkGezin) {
+    boolean setOuders(Gezin ouderlijkGezin)
+    {
         if (getOuderlijkGezin() == null)
         {
             ouderlijkGezin.breidUitMet(this);
@@ -176,21 +190,26 @@ public class Persoon {
      * geboortedatum, namen van de ouders, mits bekend, en nummers van de
      * gezinnen waarbij deze persoon betrokken is (geweest)
      */
-    public String beschrijving() {
+    public String beschrijving()
+    {
         StringBuilder sb = new StringBuilder();
 
         sb.append(standaardgegevens());
 
-        if (ouderlijkGezin != null) {
+        if (ouderlijkGezin != null)
+        {
             sb.append("; 1e ouder: ").append(ouderlijkGezin.getOuder1().getNaam());
-            if (ouderlijkGezin.getOuder2() != null) {
+            if (ouderlijkGezin.getOuder2() != null)
+            {
                 sb.append("; 2e ouder: ").append(ouderlijkGezin.getOuder2().getNaam());
             }
         }
-        if (!alsOuderBetrokkenIn.isEmpty()) {
+        if (!alsOuderBetrokkenIn.isEmpty())
+        {
             sb.append("; is ouder in gezin ");
 
-            for (Gezin g : alsOuderBetrokkenIn) {
+            for (Gezin g : alsOuderBetrokkenIn)
+            {
                 sb.append(g.getNr()).append(" ");
             }
         }
@@ -203,42 +222,45 @@ public class Persoon {
      * persoon geregistreerd en anders verandert er niets
      *
      * @param g een nieuw gezin waarin deze persoon een ouder is
-     *
      */
-    void wordtOuderIn(Gezin g) {
-        if (!alsOuderBetrokkenIn.contains(g)) {
+    void wordtOuderIn(Gezin g)
+    {
+        if (!alsOuderBetrokkenIn.contains(g))
+        {
             alsOuderBetrokkenIn.add(g);
         }
     }
 
     /**
-     *
-     *
      * @param andereOuder mag null zijn
      * @return het ongehuwde gezin met de andere ouder ; mits bestaand anders
      * null
      */
-    public Gezin heeftOngehuwdGezinMet(Persoon andereOuder) {
-        if (andereOuder != null){
+    public Gezin heeftOngehuwdGezinMet(Persoon andereOuder)
+    {
+        if (andereOuder != null)
+        {
             for (Gezin gezin : this.getAlsOuderBetrokkenIn())
             {
-               if (gezin.getOuder1().equals(andereOuder) || gezin.getOuder2().equals(andereOuder))
-               {
-                   return gezin;
-               }
+                if (gezin.getOuder1().equals(andereOuder) || gezin.getOuder2().equals(andereOuder))
+                {
+                    return gezin;
+                }
             }
         }
-            return null;
+        return null;
     }
 
     /**
-     *
-     * @param datum
+     * @param datum a date
      * @return true als persoon op datum getrouwd is, anders false
      */
-    public boolean isGetrouwdOp(Calendar datum) {
-        for (Gezin gezin : alsOuderBetrokkenIn) {
-            if (gezin.heeftGetrouwdeOudersOp(datum)) {
+    public boolean isGetrouwdOp(Calendar datum)
+    {
+        for (Gezin gezin : alsOuderBetrokkenIn)
+        {
+            if (gezin.heeftGetrouwdeOudersOp(datum))
+            {
                 return true;
             }
         }
@@ -246,25 +268,30 @@ public class Persoon {
     }
 
     /**
-     *
-     * @param datum
+     * @param datum a date
      * @return true als de persoon kan trouwen op datum, hierbij wordt rekening
      * gehouden met huwelijken in het verleden en in de toekomst
      * Alleen meerderjarige (18+) personen kunnen trouwen.
      */
-    public boolean kanTrouwenOp(Calendar datum) {
-        Calendar meerderjarigDatum = ((GregorianCalendar)this.gebDat.clone());
+    public boolean kanTrouwenOp(Calendar datum)
+    {
+        Calendar meerderjarigDatum = ((GregorianCalendar) this.gebDat.clone());
         meerderjarigDatum.add(Calendar.YEAR, 18);
-        if(datum.compareTo(meerderjarigDatum) < 1){
+        if (datum.compareTo(meerderjarigDatum) < 1)
+        {
             return false;
         }
 
-        for (Gezin gezin : alsOuderBetrokkenIn) {
-            if (gezin.heeftGetrouwdeOudersOp(datum)) {
+        for (Gezin gezin : alsOuderBetrokkenIn)
+        {
+            if (gezin.heeftGetrouwdeOudersOp(datum))
+            {
                 return false;
-            } else {
+            } else
+            {
                 Calendar huwdatum = gezin.getHuwelijksdatum();
-                if (huwdatum != null && huwdatum.after(datum)) {
+                if (huwdatum != null && huwdatum.after(datum))
+                {
                     return false;
                 }
             }
@@ -273,15 +300,17 @@ public class Persoon {
     }
 
     /**
-     *
-     * @param datum
+     * @param datum a date
      * @return true als persoon op datum gescheiden is, anders false
      */
-    public boolean isGescheidenOp(Calendar datum) {
-        for (Gezin gezin : this.getAlsOuderBetrokkenIn()){
+    public boolean isGescheidenOp(Calendar datum)
+    {
+        for (Gezin gezin : this.getAlsOuderBetrokkenIn())
+        {
             if (gezin.getScheidingsdatum() != null)
             {
-                if (gezin.getScheidingsdatum() == datum){
+                if (gezin.getScheidingsdatum() == datum)
+                {
                     return true;
                 }
             }
@@ -293,11 +322,11 @@ public class Persoon {
      * ********* de rest wordt in opgave 2 verwerkt ****************
      */
     /**
-     *
      * @return het aantal personen in de stamboom van deze persoon (ouders,
      * grootouders etc); de persoon zelf telt ook mee
      */
-    public int afmetingStamboom() {
+    public int afmetingStamboom()
+    {
         //todo opgave 2
         return -1;
     }
@@ -311,15 +340,15 @@ public class Persoon {
      * (mits bekend) (het generatienummer van de ouders is steeds 1 hoger)
      *
      * @param lijst
-     * @param g >=0, het nummer van de generatie waaraan deze persoon is
-     * toegewezen;
+     * @param g     >=0, het nummer van de generatie waaraan deze persoon is
+     *              toegewezen;
      */
-    void voegJouwStamboomToe(ArrayList<PersoonMetGeneratie> lijst, int g) {
+    void voegJouwStamboomToe(ArrayList<PersoonMetGeneratie> lijst, int g)
+    {
         //todo opgave 2
     }
 
     /**
-     *
      * @return de stamboomgegevens van deze persoon in de vorm van een String:
      * op de eerste regel de standaardgegevens van deze persoon, gevolgd door de
      * stamboomgegevens van de eerste ouder (mits bekend) en gevolgd door de
@@ -327,10 +356,10 @@ public class Persoon {
      * persoon staat op een aparte regel en afhankelijk van het
      * generatieverschil worden er per persoon 2*generatieverschil spaties
      * ingesprongen;
-     *
+     * <p>
      * bijv voor M.G. Pieterse met ouders, grootouders en overgrootouders,
      * inspringen is in dit geval met underscore gemarkeerd: <br>
-     *
+     * <p>
      * M.G. Pieterse (VROUW) 5-5-2004<br>
      * __L. van Maestricht (MAN) 27-6-1953<br>
      * ____A.G. von Bisterfeld (VROUW) 13-4-1911<br>
@@ -341,7 +370,8 @@ public class Persoon {
      * ____M.A.C. Hagel (VROUW) 12-0-1943<br>
      * ____J.A. Pieterse (MAN) 4-8-1923<br>
      */
-    public String stamboomAlsString() {
+    public String stamboomAlsString()
+    {
         StringBuilder builder = new StringBuilder();
         //todo opgave 2
 
