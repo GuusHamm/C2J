@@ -1,10 +1,13 @@
 package stamboom.domain;
 
+import java.lang.String;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.List;
+
+import stamboom.controller.StamboomController;
 import stamboom.util.StringUtilities;
 
 public class Persoon {
@@ -31,12 +34,16 @@ public class Persoon {
      * geconverteerd naar kleine letters.
      *
      */
-    Persoon(int persNr, String[] vnamen, String anaam, String tvoegsel,
-            Calendar gebdat, String gebplaats, Geslacht g, Gezin ouderlijkGezin) {
-        //todo opgave 1
-        throw new UnsupportedOperationException();
+    public Persoon(int nr, String[] voornamen, String achternaam, String tussenvoegsel, Calendar gebDat, String gebPlaats, List<Gezin> alsOuderBetrokkenIn, Geslacht geslacht) {
+        this.nr = nr;
+        this.voornamen = voornamen;
+        this.achternaam = achternaam;
+        this.tussenvoegsel = tussenvoegsel;
+        this.gebDat = gebDat;
+        this.gebPlaats = gebPlaats;
+        this.alsOuderBetrokkenIn = alsOuderBetrokkenIn;
+        this.geslacht = geslacht;
     }
-
     // ********methoden****************************************
     /**
      * @return de achternaam van deze persoon
@@ -74,8 +81,13 @@ public class Persoon {
      * door een punt
      */
     public String getInitialen() {
-        //todo opgave 1
-        return null;
+        String initialen;
+        initialen = "";
+        for (String i : voornamen)
+        {
+            initialen += i.charAt(0) + ".";
+        }
+        return initialen;
     }
 
     /**
@@ -85,8 +97,7 @@ public class Persoon {
      * gescheiden door een spatie
      */
     public String getNaam() {
-        //todo opgave 1
-        return null;
+        return getInitialen() + " " + getTussenvoegsel() + " " + getAchternaam();
     }
 
     /**
@@ -151,7 +162,12 @@ public class Persoon {
      * @return of ouderlijk gezin kon worden toegevoegd
      */
     boolean setOuders(Gezin ouderlijkGezin) {
-        //todo opgave 1
+        if (getOuderlijkGezin() == null)
+        {
+            ouderlijkGezin.breidUitMet(this);
+            setOuders(ouderlijkGezin);
+            return true;
+        }
         return false;
     }
 
@@ -203,8 +219,16 @@ public class Persoon {
      * null
      */
     public Gezin heeftOngehuwdGezinMet(Persoon andereOuder) {
-        //todo opgave 1
-        return null;
+        if (andereOuder != null){
+            for (Gezin gezin : this.getAlsOuderBetrokkenIn())
+            {
+               if (gezin.getOuder1().equals(andereOuder) || gezin.getOuder2().equals(andereOuder))
+               {
+                   return gezin;
+               }
+            }
+        }
+            return null;
     }
 
     /**
@@ -254,7 +278,14 @@ public class Persoon {
      * @return true als persoon op datum gescheiden is, anders false
      */
     public boolean isGescheidenOp(Calendar datum) {
-        //todo opgave 1
+        for (Gezin gezin : this.getAlsOuderBetrokkenIn()){
+            if (gezin.getScheidingsdatum() != null)
+            {
+                if (gezin.getScheidingsdatum() == datum){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
