@@ -44,12 +44,6 @@ public class Persoon {
         this.alsOuderBetrokkenIn = alsOuderBetrokkenIn;
         this.geslacht = geslacht;
     }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/master
     // ********methoden****************************************
     /**
      * @return de achternaam van deze persoon

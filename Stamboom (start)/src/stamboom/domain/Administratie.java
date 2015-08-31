@@ -75,8 +75,8 @@ public class Administratie {
         if (gebplaats.trim().isEmpty()) {
             throw new IllegalArgumentException("lege geboorteplaats is niet toegestaan");
         }
-        Persoon huidig = new Persoon(nextPersNr, vnamen, anaam, tvoegsel, gebdat, gebplaats, geslacht, ouderlijkGezin);
-
+        Persoon huidig = new Persoon(getNextPersNr(), vnamen, anaam, tvoegsel, gebdat, gebplaats, null, geslacht);
+        //todo check this null
         if(this.personen.contains(huidig))
         {
             return null;
