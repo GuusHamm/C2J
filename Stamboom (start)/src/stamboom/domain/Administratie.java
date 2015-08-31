@@ -10,6 +10,15 @@ public class Administratie {
     private final List<Persoon> personen;
     private final List<Gezin> gezinnen;
 
+    private int getNextGezinsNr()
+    {
+        return nextGezinsNr+=1;
+    }
+    private  int getNextPersNr()
+    {
+        return  nextGezinsNr+=1;
+    }
+
     //***********************constructoren***********************************
     /**
      * er wordt een lege administratie aangemaakt.
@@ -20,6 +29,8 @@ public class Administratie {
         //todo opgave 1
         this.personen = null;
         this.gezinnen = null;
+        this.nextGezinsNr =1;
+        this.nextPersNr=1;
     }
 
     //**********************methoden****************************************
@@ -64,9 +75,15 @@ public class Administratie {
         if (gebplaats.trim().isEmpty()) {
             throw new IllegalArgumentException("lege geboorteplaats is niet toegestaan");
         }
+        Persoon huidig = new Persoon(nextPersNr, vnamen, anaam, tvoegsel, gebdat, gebplaats, geslacht, ouderlijkGezin);
 
+        if(this.personen.contains(huidig))
+        {
+            return null;
+        }
         //todo opgave 1
-        return null;
+
+        return huidig;
     }
 
     /**
@@ -180,7 +197,10 @@ public class Administratie {
      */
     public Gezin addHuwelijk(Persoon ouder1, Persoon ouder2, Calendar huwdatum) {
         //todo opgave 1
-        return null;
+        if(ouder1 ==ouder2 || !ouder1.kanTrouwenOp(huwdatum) || !ouder2.kanTrouwenOp(huwdatum))
+            return null;
+
+        return new Gezin(getNextGezinsNr(),ouder1, ouder2);
     }
 
     /**
@@ -208,6 +228,13 @@ public class Administratie {
     public Persoon getPersoon(int nr) {
         //todo opgave 1
         //aanname: er worden geen personen verwijderd
+        for (Persoon p : personen)
+        {
+            if(p.getNr()==nr)
+            {
+                return p;
+            }
+        }
         return null;
     }
 
@@ -217,7 +244,20 @@ public class Administratie {
      * achternaam (ongeacht hoofd- en kleine letters)
      */
     public ArrayList<Persoon> getPersonenMetAchternaam(String achternaam) {
-        //todo opgave 1
+
+        ArrayList<Persoon> p = new ArrayList<>();
+        String achternaamLaag = achternaam.toLowerCase();
+        for(Persoon per : personen )
+        {
+            if(per.getAchternaam().toLowerCase() == achternaamLaag)
+            {
+                p.add(per);
+            }
+        }
+        if(p.size()>0)
+        {
+            return p;
+        }
         return null;
     }
 
@@ -227,7 +267,7 @@ public class Administratie {
      */
     public List<Persoon> getPersonen() {
         // todo opgave 1
-        return null;
+        return personen;
     }
 
     /**
@@ -244,6 +284,18 @@ public class Administratie {
     public Persoon getPersoon(String[] vnamen, String anaam, String tvoegsel,
             Calendar gebdat, String gebplaats) {
         //todo opgave 1
+
+
+        for(Persoon p : personen)
+        {
+            if(vnamen.toString() == p.getVoornamen() && tvoegsel ==p.getTussenvoegsel() && p.getAchternaam() ==anaam && p.getGebDat() == gebdat)
+            {
+                if((gebplaats.isEmpty() || gebplaats == p.getGebPlaats()))
+                {
+                    return p;
+                }
+            }
+        }
         return null;
     }
 
