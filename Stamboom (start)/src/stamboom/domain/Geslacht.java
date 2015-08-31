@@ -1,5 +1,8 @@
 package stamboom.domain;
 
 
-public enum Geslacht {	MAN, VROUW }
+public enum Geslacht
+{
+    MAN, VROUW
+}
 

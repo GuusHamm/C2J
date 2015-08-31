@@ -19,12 +19,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- *
  * @author frankpeeters
  */
-public class Dialog extends Stage {
+public class Dialog extends Stage
+{
 
-    public Dialog(Stage owner, String header, String message) {
+    public Dialog(Stage owner, String header, String message)
+    {
         super();
         initOwner(owner);
         initModality(Modality.APPLICATION_MODAL);
@@ -50,9 +51,11 @@ public class Dialog extends Stage {
         gridPane.add(taMessage, 0, 0);
 
         Button btClose = new Button("Close");
-        btClose.setOnAction(new EventHandler<ActionEvent>() {
+        btClose.setOnAction(new EventHandler<ActionEvent>()
+        {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event)
+            {
                 close();
             }
         });

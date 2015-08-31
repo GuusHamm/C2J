@@ -6,10 +6,12 @@ package stamboom.controller;
 
 import java.io.File;
 import java.io.IOException;
+
 import stamboom.domain.Administratie;
 import stamboom.storage.IStorageMediator;
 
-public class StamboomController {
+public class StamboomController
+{
 
     private Administratie admin;
     private IStorageMediator storageMediator;
@@ -18,19 +20,22 @@ public class StamboomController {
      * creatie van stamboomcontroller met lege administratie en onbekend
      * opslagmedium
      */
-    public StamboomController() {
+    public StamboomController()
+    {
         admin = new Administratie();
         storageMediator = null;
     }
 
-    public Administratie getAdministratie() {
+    public Administratie getAdministratie()
+    {
         return admin;
     }
 
     /**
      * administratie wordt leeggemaakt (geen personen en geen gezinnen)
      */
-    public void clearAdministratie() {
+    public void clearAdministratie()
+    {
         admin = new Administratie();
     }
 
@@ -40,9 +45,10 @@ public class StamboomController {
      * @param bestand
      * @throws IOException
      */
-    public void serialize(File bestand) throws IOException {
+    public void serialize(File bestand) throws IOException
+    {
         //todo opgave 2
-        
+
     }
 
     /**
@@ -51,13 +57,15 @@ public class StamboomController {
      * @param bestand
      * @throws IOException
      */
-    public void deserialize(File bestand) throws IOException {
+    public void deserialize(File bestand) throws IOException
+    {
         //todo opgave 2
-  
+
     }
-    
+
     // opgave 4
-    private void initDatabaseMedium() throws IOException {
+    private void initDatabaseMedium() throws IOException
+    {
 //        if (!(storageMediator instanceof DatabaseMediator)) {
 //            Properties props = new Properties();
 //            try (FileInputStream in = new FileInputStream("database.properties")) {
@@ -66,13 +74,14 @@ public class StamboomController {
 //            storageMediator = new DatabaseMediator(props);
 //        }
     }
-    
+
     /**
      * administratie wordt vanuit standaarddatabase opgehaald
      *
      * @throws IOException
      */
-    public void loadFromDatabase() throws IOException {
+    public void loadFromDatabase() throws IOException
+    {
         //todo opgave 4
     }
 
@@ -81,7 +90,8 @@ public class StamboomController {
      *
      * @throws IOException
      */
-    public void saveToDatabase() throws IOException {
+    public void saveToDatabase() throws IOException
+    {
         //todo opgave 4
     }
 

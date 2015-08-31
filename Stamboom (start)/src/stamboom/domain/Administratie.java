@@ -2,7 +2,8 @@ package stamboom.domain;
 
 import java.util.*;
 
-public class Administratie {
+public class Administratie
+{
 
     //************************datavelden*************************************
     private int nextGezinsNr;
@@ -11,18 +12,21 @@ public class Administratie {
     private final List<Gezin> gezinnen;
 
     //***********************constructoren***********************************
+
     /**
      * er wordt een lege administratie aangemaakt.
      * personen en gezinnen die in de toekomst zullen worden gecreeerd, worden
      * (apart) opvolgend genummerd vanaf 1
      */
-    public Administratie() {
+    public Administratie()
+    {
         //todo opgave 1
         this.personen = null;
         this.gezinnen = null;
     }
 
     //**********************methoden****************************************
+
     /**
      * er wordt een persoon met de gegeven parameters aangemaakt; de persoon
      * krijgt een uniek nummer toegewezen, en de persoon is voortaan ook bij het
@@ -33,35 +37,40 @@ public class Administratie {
      * verwijderd
      *
      * @param geslacht
-     * @param vnamen vnamen.length>0; alle strings zijn niet leeg
-     * @param anaam niet leeg
-     * @param tvoegsel mag leeg zijn
+     * @param vnamen         vnamen.length>0; alle strings zijn niet leeg
+     * @param anaam          niet leeg
+     * @param tvoegsel       mag leeg zijn
      * @param gebdat
-     * @param gebplaats niet leeg
+     * @param gebplaats      niet leeg
      * @param ouderlijkGezin mag de waarde null (=onbekend) hebben
-     *
      * @return de nieuwe persoon.
      * Als de persoon al bekend was (op basis van combinatie van getNaam(),
      * geboorteplaats en geboortedatum), wordt er null geretourneerd.
      */
     public Persoon addPersoon(Geslacht geslacht, String[] vnamen, String anaam,
-            String tvoegsel, Calendar gebdat,
-            String gebplaats, Gezin ouderlijkGezin) {
+                              String tvoegsel, Calendar gebdat,
+                              String gebplaats, Gezin ouderlijkGezin)
+    {
 
-        if (vnamen.length == 0) {
+        if (vnamen.length == 0)
+        {
             throw new IllegalArgumentException("ten minste 1 voornaam");
         }
-        for (String voornaam : vnamen) {
-            if (voornaam.trim().isEmpty()) {
+        for (String voornaam : vnamen)
+        {
+            if (voornaam.trim().isEmpty())
+            {
                 throw new IllegalArgumentException("lege voornaam is niet toegestaan");
             }
         }
 
-        if (anaam.trim().isEmpty()) {
+        if (anaam.trim().isEmpty())
+        {
             throw new IllegalArgumentException("lege achternaam is niet toegestaan");
         }
 
-        if (gebplaats.trim().isEmpty()) {
+        if (gebplaats.trim().isEmpty())
+        {
             throw new IllegalArgumentException("lege geboorteplaats is niet toegestaan");
         }
 
@@ -77,28 +86,32 @@ public class Administratie {
      *
      * @param ouder1
      * @param ouder2 mag null zijn
-     *
      * @return het nieuwe gezin. null als ouder1 = ouder2 of als een van de volgende
      * voorwaarden wordt overtreden:
      * 1) een van de ouders is op dit moment getrouwd
      * 2) het koppel vormt al een ander gezin
      */
-    public Gezin addOngehuwdGezin(Persoon ouder1, Persoon ouder2) {
-        if (ouder1 == ouder2) {
+    public Gezin addOngehuwdGezin(Persoon ouder1, Persoon ouder2)
+    {
+        if (ouder1 == ouder2)
+        {
             return null;
         }
 
-        if (ouder1.getGebDat().compareTo(Calendar.getInstance()) > 0) {
+        if (ouder1.getGebDat().compareTo(Calendar.getInstance()) > 0)
+        {
             return null;
         }
-        if (ouder2 != null && ouder2.getGebDat().compareTo(Calendar.getInstance()) > 0) {
+        if (ouder2 != null && ouder2.getGebDat().compareTo(Calendar.getInstance()) > 0)
+        {
             return null;
         }
 
         Calendar nu = Calendar.getInstance();
         if (ouder1.isGetrouwdOp(nu) || (ouder2 != null
                 && ouder2.isGetrouwdOp(nu))
-                || ongehuwdGezinBestaat(ouder1, ouder2)) {
+                || ongehuwdGezinBestaat(ouder1, ouder2))
+        {
             return null;
         }
 
@@ -107,7 +120,8 @@ public class Administratie {
         gezinnen.add(gezin);
 
         ouder1.wordtOuderIn(gezin);
-        if (ouder2 != null) {
+        if (ouder2 != null)
+        {
             ouder2.wordtOuderIn(gezin);
         }
 
@@ -124,7 +138,8 @@ public class Administratie {
      * @param ouderlijkGezin
      * @return of ouderlijk gezin kon worden toegevoegd.
      */
-    public boolean setOuders(Persoon persoon, Gezin ouderlijkGezin) {
+    public boolean setOuders(Persoon persoon, Gezin ouderlijkGezin)
+    {
         return persoon.setOuders(ouderlijkGezin);
     }
 
@@ -137,7 +152,8 @@ public class Administratie {
      * @param datum
      * @return true als scheiding geaccepteerd, anders false
      */
-    public boolean setScheiding(Gezin gezin, Calendar datum) {
+    public boolean setScheiding(Gezin gezin, Calendar datum)
+    {
         return gezin.setScheiding(datum);
     }
 
@@ -150,17 +166,18 @@ public class Administratie {
      * @param datum de huwelijksdatum
      * @return false als huwelijk niet mocht worden voltrokken, anders true
      */
-    public boolean setHuwelijk(Gezin gezin, Calendar datum) {
+    public boolean setHuwelijk(Gezin gezin, Calendar datum)
+    {
         return gezin.setHuwelijk(datum);
     }
 
     /**
-     *
      * @param ouder1
      * @param ouder2
      * @return true als dit koppel (ouder1,ouder2) al een ongehuwd gezin vormt
      */
-    boolean ongehuwdGezinBestaat(Persoon ouder1, Persoon ouder2) {
+    boolean ongehuwdGezinBestaat(Persoon ouder1, Persoon ouder2)
+    {
         return ouder1.heeftOngehuwdGezinMet(ouder2) != null;
     }
 
@@ -178,34 +195,35 @@ public class Administratie {
      * @return null als ouder1 = ouder2 of als een van de ouders getrouwd is
      * anders het gehuwde gezin
      */
-    public Gezin addHuwelijk(Persoon ouder1, Persoon ouder2, Calendar huwdatum) {
+    public Gezin addHuwelijk(Persoon ouder1, Persoon ouder2, Calendar huwdatum)
+    {
         //todo opgave 1
         return null;
     }
 
     /**
-     *
      * @return het aantal geregistreerde personen
      */
-    public int aantalGeregistreerdePersonen() {
+    public int aantalGeregistreerdePersonen()
+    {
         return nextPersNr - 1;
     }
 
     /**
-     *
      * @return het aantal geregistreerde gezinnen
      */
-    public int aantalGeregistreerdeGezinnen() {
+    public int aantalGeregistreerdeGezinnen()
+    {
         return nextGezinsNr - 1;
     }
 
     /**
-     *
      * @param nr
      * @return de persoon met nummer nr, als die niet bekend is wordt er null
      * geretourneerd
      */
-    public Persoon getPersoon(int nr) {
+    public Persoon getPersoon(int nr)
+    {
         //todo opgave 1
         //aanname: er worden geen personen verwijderd
         return null;
@@ -216,22 +234,22 @@ public class Administratie {
      * @return alle personen met een achternaam gelijk aan de meegegeven
      * achternaam (ongeacht hoofd- en kleine letters)
      */
-    public ArrayList<Persoon> getPersonenMetAchternaam(String achternaam) {
+    public ArrayList<Persoon> getPersonenMetAchternaam(String achternaam)
+    {
         //todo opgave 1
         return null;
     }
 
     /**
-     *
      * @return de geregistreerde personen
      */
-    public List<Persoon> getPersonen() {
+    public List<Persoon> getPersonen()
+    {
         // todo opgave 1
         return null;
     }
 
     /**
-     *
      * @param vnamen
      * @param anaam
      * @param tvoegsel
@@ -242,28 +260,30 @@ public class Administratie {
      * anders null
      */
     public Persoon getPersoon(String[] vnamen, String anaam, String tvoegsel,
-            Calendar gebdat, String gebplaats) {
+                              Calendar gebdat, String gebplaats)
+    {
         //todo opgave 1
         return null;
     }
 
     /**
-     *
      * @return de geregistreerde gezinnen
      */
-    public List<Gezin> getGezinnen() {
+    public List<Gezin> getGezinnen()
+    {
         return null;
     }
 
     /**
-     *
      * @param gezinsNr
      * @return het gezin met nummer nr. Als dat niet bekend is wordt er null
      * geretourneerd
      */
-    public Gezin getGezin(int gezinsNr) {
+    public Gezin getGezin(int gezinsNr)
+    {
         // aanname: er worden geen gezinnen verwijderd
-        if (gezinnen != null && 1 <= gezinsNr && 1 <= gezinnen.size()) {
+        if (gezinnen != null && 1 <= gezinsNr && 1 <= gezinnen.size())
+        {
             return gezinnen.get(gezinsNr - 1);
         }
         return null;

@@ -1,6 +1,7 @@
 package stamboom.console;
 
-public enum MenuItem {
+public enum MenuItem
+{
 
     EXIT("exit"),
     NEW_PERS("registreer persoon"),
@@ -9,18 +10,20 @@ public enum MenuItem {
     SCHEIDING("registreer scheiding"),
     SHOW_PERS("toon gegevens persoon"),
     SHOW_GEZIN("toon gegevens gezin");
-    
+
     private final String omschr;
 
-    private MenuItem(String omschr) {
+    private MenuItem(String omschr)
+    {
         this.omschr = omschr;
     }
 
     /**
-     * @return  the omschr
-     * @uml.property  name="omschr"
+     * @return the omschr
+     * @uml.property name="omschr"
      */
-    public String getOmschr() {
+    public String getOmschr()
+    {
         return omschr;
     }
 }

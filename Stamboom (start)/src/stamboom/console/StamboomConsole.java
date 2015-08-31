@@ -1,28 +1,35 @@
 package stamboom.console;
 
 import stamboom.domain.*;
+
 import java.util.*;
+
 import stamboom.util.StringUtilities;
 import stamboom.controller.StamboomController;
 
-public class StamboomConsole {
+public class StamboomConsole
+{
 
     // **********datavelden**********************************************
     private final Scanner input;
     private final StamboomController controller;
 
     // **********constructoren*******************************************
-    public StamboomConsole(StamboomController controller) {
+    public StamboomConsole(StamboomController controller)
+    {
         input = new Scanner(System.in);
         this.controller = controller;
         this.startMenu();
     }
 
     // ***********methoden***********************************************
-    public void startMenu() {
+    public void startMenu()
+    {
         MenuItem choice = kiesMenuItem();
-        while (choice != MenuItem.EXIT) {
-            switch (choice) {
+        while (choice != MenuItem.EXIT)
+        {
+            switch (choice)
+            {
                 case NEW_PERS:
                     invoerNieuwePersoon();
                     break;
@@ -46,18 +53,23 @@ public class StamboomConsole {
         }
     }
 
-    Administratie getAdmin() {
+    Administratie getAdmin()
+    {
         return controller.getAdministratie();
     }
 
-    void invoerNieuwePersoon() {
+    void invoerNieuwePersoon()
+    {
         Geslacht geslacht = null;
-        while (geslacht == null) {
+        while (geslacht == null)
+        {
             String g = readString("wat is het geslacht (m/v)");
-            if (g.toLowerCase().charAt(0) == 'm') {
+            if (g.toLowerCase().charAt(0) == 'm')
+            {
                 geslacht = Geslacht.MAN;
             }
-            if (g.toLowerCase().charAt(0) == 'v') {
+            if (g.toLowerCase().charAt(0) == 'v')
+            {
                 geslacht = Geslacht.VROUW;
             }
         }
@@ -80,9 +92,11 @@ public class StamboomConsole {
         Gezin ouders;
         toonGezinnen();
         String gezinsString = readString("gezinsnummer van eventueel ouderlijk gezin");
-        if (gezinsString.equals("")) {
+        if (gezinsString.equals(""))
+        {
             ouders = null;
-        } else {
+        } else
+        {
             ouders = getAdmin().getGezin(Integer.parseInt(gezinsString));
         }
 
@@ -90,61 +104,74 @@ public class StamboomConsole {
                 gebplaats, ouders);
     }
 
-    void invoerNieuwGezin() {
+    void invoerNieuwGezin()
+    {
         System.out.println("wie is de eerste partner?");
         Persoon partner1 = selecteerPersoon();
-        if (partner1 == null) {
+        if (partner1 == null)
+        {
             System.out.println("onjuiste invoer eerste partner");
             return;
         }
         System.out.println("wie is de tweede partner?");
         Persoon partner2 = selecteerPersoon();
         Gezin gezin = getAdmin().addOngehuwdGezin(partner1, partner2);
-        if (gezin == null) {
+        if (gezin == null)
+        {
             System.out.println("gezin is niet geaccepteerd");
         }
     }
 
-    void invoerHuwelijk() {
+    void invoerHuwelijk()
+    {
         System.out.println("wie is de eerste partner?");
         Persoon partner1 = selecteerPersoon();
-        if (partner1 == null) {
+        if (partner1 == null)
+        {
             System.out.println("onjuiste invoer eerste partner");
             return;
         }
         System.out.println("wie is de tweede partner?");
         Persoon partner2 = selecteerPersoon();
-        if (partner2 == null) {
+        if (partner2 == null)
+        {
             System.out.println("onjuiste invoer tweede partner");
             return;
         }
         Calendar datum = readDate("datum van huwelijk");
         Gezin g = getAdmin().addHuwelijk(partner1, partner2, datum);
-        if (g == null) {
+        if (g == null)
+        {
             System.out.println("huwelijk niet voltrokken");
         }
     }
 
-    void invoerScheiding() {
+    void invoerScheiding()
+    {
         selecteerGezin();
         int gezinsNr = readInt("kies gezinsnummer");
         input.nextLine();
         Calendar datum = readDate("datum van scheiding");
         Gezin g = getAdmin().getGezin(gezinsNr);
-        if (g != null) {
-            boolean gelukt = getAdmin().setScheiding(g,datum);
-            if (!gelukt) {
+        if (g != null)
+        {
+            boolean gelukt = getAdmin().setScheiding(g, datum);
+            if (!gelukt)
+            {
                 System.out.println("scheiding niet geaccepteerd");
             }
-        } else {
+        } else
+        {
             System.out.println("gezin onbekend");
         }
     }
 
-    Persoon selecteerPersoon() {
+    Persoon selecteerPersoon()
+    {
         String naam = readString("wat is de achternaam");
         ArrayList<Persoon> personen = getAdmin().getPersonenMetAchternaam(naam);
-        for (Persoon p : personen) {
+        for (Persoon p : personen)
+        {
             System.out.println(p.getNr() + "\t" + p.getNaam() + " " + datumString(p.getGebDat()));
         }
         int invoer = readInt("selecteer persoonsnummer");
@@ -153,14 +180,17 @@ public class StamboomConsole {
         return p;
     }
 
-    Gezin selecteerGezin() {
+    Gezin selecteerGezin()
+    {
         String naam = readString("gezin van persoon met welke achternaam");
         ArrayList<Persoon> kandidaten = getAdmin().getPersonenMetAchternaam(naam);
-        for (Persoon p : kandidaten) {
+        for (Persoon p : kandidaten)
+        {
             List<Gezin> gezinnen = p.getAlsOuderBetrokkenIn();
             System.out.print(p.getNr() + "\t" + p.getNaam() + " " + datumString(p.getGebDat()));
             System.out.print(" gezinnen: ");
-            for (Gezin gezin : gezinnen){
+            for (Gezin gezin : gezinnen)
+            {
                 System.out.print(" " + gezin.getNr());
             }
             System.out.println();
@@ -170,72 +200,91 @@ public class StamboomConsole {
         return getAdmin().getGezin(invoer);
     }
 
-    MenuItem kiesMenuItem() {
+    MenuItem kiesMenuItem()
+    {
         System.out.println();
-        for (MenuItem m : MenuItem.values()) {
+        for (MenuItem m : MenuItem.values())
+        {
             System.out.println(m.ordinal() + "\t" + m.getOmschr());
         }
         System.out.println();
         int maxNr = MenuItem.values().length - 1;
         int nr = readInt("maak een keuze uit 0 t/m " + maxNr);
-        while (nr < 0 || nr > maxNr) {
+        while (nr < 0 || nr > maxNr)
+        {
             nr = readInt("maak een keuze uit 0 t/m " + maxNr);
         }
         input.nextLine();
         return MenuItem.values()[nr];
     }
 
-    void toonPersoonsgegevens() {
+    void toonPersoonsgegevens()
+    {
         Persoon p = selecteerPersoon();
-        if (p == null) {
+        if (p == null)
+        {
             System.out.println("persoon onbekend");
-        } else {
+        } else
+        {
             System.out.println(p.beschrijving());
         }
     }
 
-    void toonGezinsgegevens() {
+    void toonGezinsgegevens()
+    {
         Gezin g = selecteerGezin();
-        if (g == null) {
+        if (g == null)
+        {
             System.out.println("gezin onbekend");
-        } else {
+        } else
+        {
             System.out.println(g.beschrijving());
         }
     }
 
-    void toonGezinnen() {
+    void toonGezinnen()
+    {
         int nr = 1;
         Gezin r = getAdmin().getGezin(nr);
-        while (r != null) {
+        while (r != null)
+        {
             System.out.println(r.toString());
             nr++;
             r = getAdmin().getGezin(nr);
         }
     }
 
-    static void printSpaties(int n) {
+    static void printSpaties(int n)
+    {
         System.out.print(StringUtilities.spaties(n));
     }
 
-    Calendar readDate(String helptekst) {
+    Calendar readDate(String helptekst)
+    {
         String datumString = readString(helptekst + "; voer datum in (dd-mm-jjjj)");
-        try {
+        try
+        {
             return StringUtilities.datum(datumString);
-        } catch (IllegalArgumentException exc) {
+        } catch (IllegalArgumentException exc)
+        {
             System.out.println(exc.getMessage());
             return readDate(helptekst);
         }
     }
 
-    int readInt(String helptekst) {
+    int readInt(String helptekst)
+    {
         boolean invoerOk = false;
         int invoer = -1;
-        while (!invoerOk) {
-            try {
+        while (!invoerOk)
+        {
+            try
+            {
                 System.out.print(helptekst + " ");
                 invoer = input.nextInt();
                 invoerOk = true;
-            } catch (InputMismatchException exc) {
+            } catch (InputMismatchException exc)
+            {
                 System.out.println("Let op, invoer moet een getal zijn!");
                 input.nextLine();
             }
@@ -244,17 +293,20 @@ public class StamboomConsole {
         return invoer;
     }
 
-    String readString(String helptekst) {
+    String readString(String helptekst)
+    {
         System.out.print(helptekst + " ");
         String invoer = input.nextLine();
         return invoer;
     }
 
-    String datumString(Calendar datum) {
+    String datumString(Calendar datum)
+    {
         return StringUtilities.datumString(datum);
     }
 
-    public static void main(String[] arg) {
+    public static void main(String[] arg)
+    {
         StamboomController controller = new StamboomController();
 
         StamboomConsole console = new StamboomConsole(controller);
