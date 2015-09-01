@@ -39,10 +39,10 @@ public class Persoon
     {
         this.nr = nr;
         this.voornamen = voornamen;
-        this.achternaam = achternaam;
+        this.achternaam = achternaam.substring(0,1).toUpperCase()+achternaam.substring(1);;
         this.tussenvoegsel = tussenvoegsel;
         this.gebDat = gebDat;
-        this.gebPlaats = gebPlaats;
+        this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1);
         this.alsOuderBetrokkenIn = alsOuderBetrokkenIn;
         this.geslacht = geslacht;
     }
@@ -102,7 +102,14 @@ public class Persoon
      */
     public String getNaam()
     {
-        return getInitialen() + " " + getTussenvoegsel() + " " + getAchternaam();
+        if (getTussenvoegsel() != "")
+        {
+            return getInitialen() + " " + getTussenvoegsel() + " " + getAchternaam();
+        }
+        else
+        {
+            return getInitialen() + " " + getAchternaam();
+        }
     }
 
     /**
