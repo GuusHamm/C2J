@@ -282,14 +282,7 @@ public class Gezin
      */
     public boolean isHuwelijkOp(Calendar datum)
     {
-        if(huwelijksdatum.compareTo(datum) <= 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return huwelijksdatum.compareTo(datum) <= 0;
     }
 
     /**
