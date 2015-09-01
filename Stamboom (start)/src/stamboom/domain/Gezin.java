@@ -205,7 +205,7 @@ public class Gezin
     {
         StringBuilder sb = new StringBuilder();
         
-        sb.append(nr).append(" ").append(ouder1.getNaam()).append(" ").append(ouder2.getNaam());
+        sb.append(nr).append(" ").append(ouder1.getNaam()).append(" met ").append(ouder2.getNaam());
 
         if (huwelijksdatum != null)
         {
@@ -213,11 +213,11 @@ public class Gezin
         }
         if (!kinderen.isEmpty())
         {
-            sb.append(" ; kinderen:',");
+            sb.append("; kinderen:");
             
             for (Persoon kind : kinderen) 
             {
-                sb.append("' -'").append(kind.getVoornamen());
+                sb.append(" -").append(kind.getVoornamen());
             }
         }
         
