@@ -90,7 +90,7 @@ public class Administratie {
             return null;
         }
         //todo opgave 1
-
+        this.personen.add(huidig);
         return huidig;
     }
 
@@ -258,19 +258,21 @@ public class Administratie {
     public ArrayList<Persoon> getPersonenMetAchternaam(String achternaam) {
 
         ArrayList<Persoon> p = new ArrayList<>();
-        String achternaamLaag = achternaam.toLowerCase();
-        for(Persoon per : personen )
+        String achternaamLaag = achternaam.toLowerCase().trim();
+
+            System.out.println(getPersonen().size());
+
+        System.out.println(getPersonen().toArray().toString());
+
+        for(Persoon per : getPersonen() )
         {
-            if(per.getAchternaam().toLowerCase() == achternaamLaag)
+            System.out.println(per.getAchternaam().toLowerCase().trim() + ":" + achternaamLaag);
+            if(per.getAchternaam().toLowerCase().trim().equals(achternaamLaag))
             {
                 p.add(per);
             }
         }
-        if(p.size()>0)
-        {
-            return p;
-        }
-        return null;
+        return p;
     }
 
     /**
