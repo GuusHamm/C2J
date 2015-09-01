@@ -260,13 +260,10 @@ public class Administratie {
         ArrayList<Persoon> p = new ArrayList<>();
         String achternaamLaag = achternaam.toLowerCase().trim();
 
-            System.out.println(getPersonen().size());
-
-        System.out.println(getPersonen().toArray().toString());
 
         for(Persoon per : getPersonen() )
         {
-            System.out.println(per.getAchternaam().toLowerCase().trim() + ":" + achternaamLaag);
+
             if(per.getAchternaam().toLowerCase().trim().equals(achternaamLaag))
             {
                 p.add(per);
