@@ -176,12 +176,16 @@ public class Persoon
      */
     boolean setOuders(Gezin ouderlijkGezin)
     {
-        if (getOuderlijkGezin() == null)
-        {
-            ouderlijkGezin.breidUitMet(this);
-            setOuders(ouderlijkGezin);
-            return true;
-        }
+        try {
+            this.ouderlijkGezin = ouderlijkGezin;
+        }catch (Exception e){return false;}
+//
+//        if (getOuderlijkGezin() == null)
+//        {
+//            ouderlijkGezin.breidUitMet(this);
+//            setOuders(ouderlijkGezin);
+//            return true;
+//        }
         return false;
     }
 
@@ -257,11 +261,15 @@ public class Persoon
      */
     public boolean isGetrouwdOp(Calendar datum)
     {
-        for (Gezin gezin : alsOuderBetrokkenIn)
+
+        if(alsOuderBetrokkenIn !=null)
         {
-            if (gezin.heeftGetrouwdeOudersOp(datum))
+            for (Gezin gezin : alsOuderBetrokkenIn)
             {
-                return true;
+                if (gezin.heeftGetrouwdeOudersOp(datum))
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -275,28 +283,26 @@ public class Persoon
      */
     public boolean kanTrouwenOp(Calendar datum)
     {
+
         Calendar meerderjarigDatum = ((GregorianCalendar) this.gebDat.clone());
         meerderjarigDatum.add(Calendar.YEAR, 18);
-        if (datum.compareTo(meerderjarigDatum) < 1)
-        {
+        if (datum.compareTo(meerderjarigDatum) < 1) {
             return false;
         }
-
-        for (Gezin gezin : alsOuderBetrokkenIn)
-        {
-            if (gezin.heeftGetrouwdeOudersOp(datum))
-            {
-                return false;
-            } else
-            {
-                Calendar huwdatum = gezin.getHuwelijksdatum();
-                if (huwdatum != null && huwdatum.after(datum))
-                {
+        if(alsOuderBetrokkenIn!=null) {
+            for (Gezin gezin : alsOuderBetrokkenIn) {
+                if (gezin.heeftGetrouwdeOudersOp(datum)) {
                     return false;
+                } else {
+                    Calendar huwdatum = gezin.getHuwelijksdatum();
+                    if (huwdatum != null && huwdatum.after(datum)) {
+                        return false;
+                    }
                 }
             }
         }
         return true;
+
     }
 
     /**

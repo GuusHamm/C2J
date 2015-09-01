@@ -7,8 +7,8 @@ public class Administratie {
     //************************datavelden*************************************
     private int nextGezinsNr;
     private int nextPersNr;
-    private final List<Persoon> personen;
-    private final List<Gezin> gezinnen;
+    private final ArrayList<Persoon> personen;
+    private final ArrayList<Gezin> gezinnen;
 
     private int getNextGezinsNr()
     {
@@ -27,10 +27,11 @@ public class Administratie {
      */
     public Administratie() {
         //todo opgave 1
-        this.personen = null;
-        this.gezinnen = null;
+        this.personen = new ArrayList<Persoon>();
+        this.gezinnen = new ArrayList<Gezin>(); 
         this.nextGezinsNr =1;
         this.nextPersNr=1;
+        
     }
 
     //**********************methoden****************************************
@@ -75,7 +76,14 @@ public class Administratie {
         if (gebplaats.trim().isEmpty()) {
             throw new IllegalArgumentException("lege geboorteplaats is niet toegestaan");
         }
-        Persoon huidig = new Persoon(getNextPersNr(), vnamen, anaam, tvoegsel, gebdat, gebplaats, null, geslacht);
+        Persoon huidig=null;
+        try{
+        //Persoon
+        huidig = new Persoon(getNextPersNr(), vnamen, anaam, tvoegsel, gebdat, gebplaats, null, geslacht);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
         //todo check this null
         if(this.personen.contains(huidig))
         {
@@ -197,10 +205,14 @@ public class Administratie {
      */
     public Gezin addHuwelijk(Persoon ouder1, Persoon ouder2, Calendar huwdatum) {
         //todo opgave 1
-        if(ouder1 ==ouder2 || !ouder1.kanTrouwenOp(huwdatum) || !ouder2.kanTrouwenOp(huwdatum))
-            return null;
 
-        return new Gezin(getNextGezinsNr(),ouder1, ouder2);
+            if (ouder1 == ouder2 || !ouder1.kanTrouwenOp(huwdatum) || !ouder2.kanTrouwenOp(huwdatum))
+                return null;
+
+            Gezin g = new Gezin(getNextGezinsNr(), ouder1, ouder2);
+            gezinnen.add(g);
+
+        return g;
     }
 
     /**
