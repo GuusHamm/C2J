@@ -191,8 +191,8 @@ public class Gezin
      */
     boolean setHuwelijk(Calendar datum)
     {
-        //todo opgave 1
-        return false;
+        Calendar cal = Calendar.getInstance();
+        return !(huwelijksdatum != null || ouder1.kanTrouwenOp(cal) || ouder2.kanTrouwenOp(cal));
     }
 
     /**
