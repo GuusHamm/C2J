@@ -203,8 +203,26 @@ public class Gezin
      */
     public String beschrijving()
     {
-        //todo opgave 1
-        return null;
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append(nr).append(" ").append(ouder1.getNaam()).append(" ").append(ouder2.getNaam());
+
+        if (huwelijksdatum != null)
+        {
+            sb.append(" ").append(huwelijksdatum);
+        }
+        if (!kinderen.isEmpty())
+        {
+            sb.append(" ; kinderen:',");
+            
+            for (Persoon kind : kinderen) 
+            {
+                sb.append("' -'").append(kind.getVoornamen());
+            }
+        }
+        
+        String beschrijving = sb.toString();
+        return beschrijving;
     }
 
     /**
@@ -264,8 +282,14 @@ public class Gezin
      */
     public boolean isHuwelijkOp(Calendar datum)
     {
-        //todo opgave 1
-        return false;
+        if(huwelijksdatum.compareTo(datum) <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -282,7 +306,13 @@ public class Gezin
      */
     public boolean heeftGescheidenOudersOp(Calendar datum)
     {
-        //todo opgave 1
-        return false;
+        if(scheidingsdatum.compareTo(datum) <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
