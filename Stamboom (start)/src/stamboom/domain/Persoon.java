@@ -185,14 +185,8 @@ public class Persoon
     {
         try {
             this.ouderlijkGezin = ouderlijkGezin;
+            ouderlijkGezin.breidUitMet(this);
         }catch (Exception e){return false;}
-//
-//        if (getOuderlijkGezin() == null)
-//        {
-//            ouderlijkGezin.breidUitMet(this);
-//            setOuders(ouderlijkGezin);
-//            return true;
-//        }
         return false;
     }
 
