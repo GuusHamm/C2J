@@ -278,7 +278,7 @@ public class Administratie {
      */
     public List<Persoon> getPersonen() {
         // todo opgave 1
-        return personen;
+        return Collections.unmodifiableList(personen);
     }
 
     /**
@@ -296,12 +296,20 @@ public class Administratie {
             Calendar gebdat, String gebplaats) {
         //todo opgave 1
 
+        String initialen;
+        initialen = "";
+        for (String i : vnamen)
+        {
+            initialen += i.charAt(0) + ".";
+        }
+        initialen = initialen.toUpperCase();
 
         for(Persoon p : personen)
         {
-            if(vnamen.toString() == p.getVoornamen() && tvoegsel ==p.getTussenvoegsel() && p.getAchternaam() ==anaam && p.getGebDat() == gebdat)
+
+            if(initialen.equals(p.getInitialen()) && tvoegsel.equals(p.getTussenvoegsel()) && p.getAchternaam().toUpperCase().equals(anaam.toUpperCase()) && p.getGebDat().equals(gebdat))
             {
-                if((gebplaats.isEmpty() || gebplaats == p.getGebPlaats()))
+                if((gebplaats.isEmpty() || gebplaats.toUpperCase().equals(p.getGebPlaats().toUpperCase())))
                 {
                     return p;
                 }
