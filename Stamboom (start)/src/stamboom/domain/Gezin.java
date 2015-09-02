@@ -137,9 +137,12 @@ public class Gezin
             s.append(" met ");
             s.append(ouder2.getNaam());
         }
-        if (heeftGetrouwdeOudersOp(Calendar.getInstance()))
+        if (huwelijksdatum != null)
         {
-            s.append(" ").append(StringUtilities.datumString(huwelijksdatum));
+            if (heeftGetrouwdeOudersOp(Calendar.getInstance()))
+            {
+                s.append(" ").append(StringUtilities.datumString(huwelijksdatum));
+            }
         }
         return s.toString();
     }

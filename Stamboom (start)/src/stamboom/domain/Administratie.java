@@ -16,7 +16,7 @@ public class Administratie {
     }
     private  int getNextPersNr()
     {
-        return  nextGezinsNr+=1;
+        return  nextPersNr+=1;
     }
 
     //***********************constructoren***********************************
@@ -29,8 +29,8 @@ public class Administratie {
         //todo opgave 1
         this.personen = new ArrayList<Persoon>();
         this.gezinnen = new ArrayList<Gezin>(); 
-        this.nextGezinsNr =1;
-        this.nextPersNr=1;
+        this.nextGezinsNr =0;
+        this.nextPersNr=0;
         
     }
 
@@ -79,7 +79,7 @@ public class Administratie {
         Persoon huidig=null;
         try{
         //Persoon
-        huidig = new Persoon(getNextPersNr(), vnamen, anaam, tvoegsel, gebdat, gebplaats, null, geslacht);
+        huidig = new Persoon(getNextPersNr(), vnamen, anaam, tvoegsel, gebdat, gebplaats,geslacht, ouderlijkGezin);
         }
         catch(Exception e){
             System.out.println(e);

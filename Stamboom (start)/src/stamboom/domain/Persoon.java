@@ -35,7 +35,7 @@ public class Persoon
      * kleine letters; het tussenvoegsel is zo nodig in zijn geheel
      * geconverteerd naar kleine letters.
      */
-    public Persoon(int nr, String[] voornamen, String achternaam, String tussenvoegsel, Calendar gebDat, String gebPlaats, List<Gezin> alsOuderBetrokkenIn, Geslacht geslacht)
+    public Persoon(int nr, String[] voornamen, String achternaam, String tussenvoegsel, Calendar gebDat, String gebPlaats, Geslacht geslacht, Gezin ouderlijkGezin)
     {
         this.nr = nr;
         this.voornamen = voornamen;
@@ -43,8 +43,10 @@ public class Persoon
         this.tussenvoegsel = tussenvoegsel;
         this.gebDat = gebDat;
         this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1);
-        this.alsOuderBetrokkenIn = alsOuderBetrokkenIn;
         this.geslacht = geslacht;
+        this.ouderlijkGezin = ouderlijkGezin;
+        this.alsOuderBetrokkenIn = new ArrayList<>();
+
     }
     // ********methoden****************************************
 
