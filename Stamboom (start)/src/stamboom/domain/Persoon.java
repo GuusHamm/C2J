@@ -55,7 +55,7 @@ public class Persoon
      */
     public String getAchternaam()
     {
-        return achternaam;
+        return achternaam.substring(0,1).toUpperCase() + achternaam.substring(1).toLowerCase();
     }
 
     /**
@@ -71,7 +71,7 @@ public class Persoon
      */
     public String getGebPlaats()
     {
-        return gebPlaats;
+        return gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
     }
 
     /**
@@ -136,7 +136,7 @@ public class Persoon
      */
     public String getTussenvoegsel()
     {
-        return tussenvoegsel;
+        return tussenvoegsel.toLowerCase();
     }
 
     /**
@@ -147,7 +147,8 @@ public class Persoon
         StringBuilder init = new StringBuilder();
         for (String s : voornamen)
         {
-            init.append(s).append(' ');
+            String voornaam = s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
+            init.append(voornaam).append(' ');
         }
         return init.toString().trim();
     }

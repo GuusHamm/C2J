@@ -91,6 +91,10 @@ public class Administratie {
         }
         //todo opgave 1
         this.personen.add(huidig);
+        if (ouderlijkGezin != null)
+        {
+            ouderlijkGezin.breidUitMet(huidig);
+        }
         return huidig;
     }
 
