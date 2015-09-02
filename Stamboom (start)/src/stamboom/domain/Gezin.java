@@ -169,12 +169,8 @@ public class Gezin
      */
     boolean setScheiding(Calendar datum)
     {
-        boolean a = scheidingsdatum == null;//true
-        boolean b = huwelijksdatum !=null;//false           huwelijksdatum is null
-        boolean c = datum.after(huwelijksdatum);//false     huwelijksdatum word niet goed gezet
-        boolean d = datum!=null;//true
 
-        if (this.scheidingsdatum == null && huwelijksdatum != null   && datum.after(huwelijksdatum) && datum != null)
+        if ( this.scheidingsdatum == null &&((huwelijksdatum != null  && datum.after(huwelijksdatum)))  && datum != null)
         {
             this.scheidingsdatum = datum;
             return true;
@@ -194,7 +190,7 @@ public class Gezin
      * @return false als huwelijk niet mocht worden voltrokken, anders true
      */
     boolean setHuwelijk(Calendar datum)
-    {                                           //huwelijk wordt niet goed gezet, bij setscheiding is huwelijk null
+    {
         Calendar cal = Calendar.getInstance();
         if(huwelijksdatum == null && ouder1.kanTrouwenOp(cal) && ouder2.kanTrouwenOp(cal))
         {
