@@ -220,6 +220,7 @@ public class Administratie {
             Gezin g = new Gezin(getNextGezinsNr(), ouder1, ouder2);
             gezinnen.add(g);
 
+
         return g;
     }
 

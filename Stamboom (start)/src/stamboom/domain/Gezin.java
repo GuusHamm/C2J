@@ -173,7 +173,7 @@ public class Gezin
     boolean setScheiding(Calendar datum)
     {
 
-        if ( this.scheidingsdatum == null &&((huwelijksdatum != null  && datum.after(huwelijksdatum)))  && datum != null)
+        if ( this.scheidingsdatum == null &&(((huwelijksdatum != null  && datum.after(huwelijksdatum))) || huwelijksdatum == null)  && datum != null)
         {
             this.scheidingsdatum = datum;
             return true;
@@ -307,7 +307,8 @@ public class Gezin
      */
     public boolean heeftGescheidenOudersOp(Calendar datum)
     {
-        if(scheidingsdatum.compareTo(datum) <= 0)
+
+        if(scheidingsdatum!=null && scheidingsdatum.compareTo(datum) <= 0)
         {
             return true;
         }
