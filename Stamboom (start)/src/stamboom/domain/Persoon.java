@@ -38,11 +38,19 @@ public class Persoon
     public Persoon(int nr, String[] voornamen, String achternaam, String tussenvoegsel, Calendar gebDat, String gebPlaats, Geslacht geslacht, Gezin ouderlijkGezin)
     {
         this.nr = nr;
+        int i = 0;
+        for (String s : voornamen)
+        {
+            String voornaam = s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
+            voornamen[i] = voornaam;
+            i++;
+        }
         this.voornamen = voornamen;
-        this.achternaam = achternaam.substring(0,1).toUpperCase()+achternaam.substring(1);;
-        this.tussenvoegsel = tussenvoegsel;
+        String anaam = achternaam.substring(0,1).toUpperCase()+achternaam.substring(1).toLowerCase();
+        this.achternaam = anaam;
+        this.tussenvoegsel = tussenvoegsel.toLowerCase();
         this.gebDat = gebDat;
-        this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1);
+        this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
         this.geslacht = geslacht;
         this.ouderlijkGezin = ouderlijkGezin;
         this.alsOuderBetrokkenIn = new ArrayList<>();
@@ -55,7 +63,7 @@ public class Persoon
      */
     public String getAchternaam()
     {
-        return achternaam.substring(0,1).toUpperCase() + achternaam.substring(1).toLowerCase();
+        return achternaam;
     }
 
     /**
@@ -71,7 +79,7 @@ public class Persoon
      */
     public String getGebPlaats()
     {
-        return gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
+        return gebPlaats;
     }
 
     /**
@@ -147,8 +155,7 @@ public class Persoon
         StringBuilder init = new StringBuilder();
         for (String s : voornamen)
         {
-            String voornaam = s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
-            init.append(voornaam).append(' ');
+            init.append(s).append(' ');
         }
         return init.toString().trim();
     }

@@ -85,9 +85,13 @@ public class Administratie {
             System.out.println(e);
         }
         //todo check this null
-        if(this.personen.contains(huidig))
+
+        for (Persoon p : personen)
         {
-            return null;
+            if (p.getNaam().equals(huidig.getNaam()) && p.getGebPlaats().equals(huidig.getGebPlaats()) && p.getGebDat().equals(huidig.getGebDat()))
+            {
+                return null;
+            }
         }
         //todo opgave 1
         this.personen.add(huidig);

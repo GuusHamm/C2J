@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f115257b-5f3e-4958-8cca-54ada884fa08" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -19,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Stamboom (start)$DomeinTest.coverage" NAME="DomeinTest Coverage Results" MODIFIED="1441205643807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Stamboom (start)$DomeinTest.coverage" NAME="DomeinTest Coverage Results" MODIFIED="1441203902507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>stamboom.domain.*</FILTER>
     </SUITE>
   </component>
@@ -32,29 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="42" selection-start-line="138" selection-start-column="42" selection-end-line="138" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2416#2417#0" expanded="true" />
-                <element signature="e#2514#2515#0" expanded="true" />
-                <element signature="e#2616#2617#0" expanded="true" />
-                <element signature="e#2647#2648#0" expanded="true" />
-                <element signature="e#3908#3909#0" expanded="true" />
-                <element signature="e#3958#3959#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DomeinTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,42 +47,36 @@
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="172" column="34" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
+              <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
               <folding>
-                <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-                <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-                <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-                <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-                <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-                <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-                <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+                <element signature="e#2907#2908#0" expanded="true" />
+                <element signature="e#2984#2985#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Administratie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Administratie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6888112">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9444444">
+              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,6 +137,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,11 +214,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stamboom (start)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stamboom (start)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stamboom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,32 +272,6 @@
       <option name="MAIN_CLASS_NAME" value="stamboom.domain.DomeinTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="DomeinTest.testScheiding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="stamboom.domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Stamboom (start)" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="stamboom.domain" />
-      <option name="MAIN_CLASS_NAME" value="stamboom.domain.DomeinTest" />
-      <option name="METHOD_NAME" value="testScheiding" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -759,15 +730,13 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.DomeinTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DomeinTest.testScheiding" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JUnit.DomeinTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DomeinTest.testScheiding" />
       </list>
     </recent_temporary>
   </component>
@@ -793,13 +762,44 @@
       <workItem from="1441106879352" duration="5822000" />
       <workItem from="1441114902556" duration="1117000" />
       <workItem from="1441133758710" duration="4395000" />
-      <workItem from="1441196448359" duration="5844000" />
-      <workItem from="1441205548621" duration="1211000" />
+      <workItem from="1441196448359" duration="995000" />
+      <workItem from="1441200139731" duration="5290000" />
+      <workItem from="1441206846511" duration="1192000" />
+      <workItem from="1441269434501" duration="828000" />
     </task>
-    <servers />
+    <task id="LOCAL-00001" summary="Fixed testGetPersoonEnPersonen">
+      <created>1441201872861</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1441201872861</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixing testAddPerson">
+      <created>1441205433983</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1441205433983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers>
+      <GitHub shared="false" url="https://github.com">
+        <commitMessageFormat>{id} {summary}</commitMessageFormat>
+        <password />
+        <token>df9edfc8df99df9fdfcfdfcfdf9fdfcbdf9cdf9cdfcbdfcedfcbdfcbdf92df9cdf9ddfccdf9cdf93dfcedf9cdfc9df98df9edfcedf9edf9edf9edf9ddf9edfccdfcedfc8dfc8dfc9df93df98df9edf99</token>
+        <option name="loginAnonymously" value="false" />
+        <option name="preferredCloseTaskState" />
+        <option name="preferredOpenTaskState" />
+        <option name="repoAuthor" value="GuusHamm" />
+        <option name="repoName" value="C2J" />
+        <option name="shouldFormatCommitMessage" value="false" />
+        <option name="useHttpAuthentication" value="false" />
+        <option name="useProxy" value="false" />
+        <option name="user" value="GuusHamm" />
+        <username />
+      </GitHub>
+    </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25051000" />
+    <option name="totallyTimeSpent" value="26301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -812,32 +812,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3300866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39723927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34039333" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6809816" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1633888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1580938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5184049" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4095092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -852,40 +852,27 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed testGetPersoonEnPersonen" />
+    <MESSAGE value="Fixing testAddPerson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing testAddPerson" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java</url>
-          <line>172</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java</url>
-          <line>436</line>
+          <line>92</line>
           <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java</url>
-          <line>97</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="24" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="ouder1" />
-        <watch expression="ouder2" />
+        <watch expression="piet" />
+        <watch expression="teuntje" />
         <watch expression="pietEnTeuntje" />
       </configuration>
     </watches-manager>
@@ -895,10 +882,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+          <folding>
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="436" column="65" selection-start-line="436" selection-start-column="65" selection-end-line="436" selection-end-column="65" />
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+          <folding>
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="15" selection-start-line="119" selection-start-column="15" selection-end-line="119" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -908,15 +969,9 @@
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="256" column="5" selection-start-line="256" selection-start-column="5" selection-end-line="256" selection-end-column="5" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -924,31 +979,10 @@
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="218" column="35" selection-start-line="218" selection-start-column="35" selection-end-line="218" selection-end-column="35" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -957,7 +991,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="176" column="7" selection-start-line="176" selection-start-column="7" selection-end-line="176" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -977,12 +1014,6 @@
           <caret line="117" column="18" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -992,29 +1023,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,7 +1033,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,29 +1045,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1063,7 +1055,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,12 +1078,6 @@
           <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1098,29 +1087,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="221" column="5" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1129,7 +1097,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1149,12 +1120,6 @@
           <caret line="187" column="11" selection-start-line="180" selection-start-column="43" selection-end-line="187" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1164,29 +1129,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1195,7 +1139,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,12 +1152,6 @@
           <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1220,29 +1161,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1251,7 +1171,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1261,12 +1184,6 @@
           <caret line="239" column="34" selection-start-line="233" selection-start-column="3" selection-end-line="239" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1276,29 +1193,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1307,7 +1203,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1381,13 +1280,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.mf">
@@ -1397,58 +1296,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="172" column="34" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.33241758">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33231708">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3837535">
+          <caret line="2993" column="0" selection-start-line="2993" selection-start-column="0" selection-end-line="2993" selection-end-column="0" />
           <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="e#117955#117956#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3837535">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="42" selection-start-line="138" selection-start-column="42" selection-end-line="138" selection-end-column="42" />
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2416#2417#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3958#3959#0" expanded="true" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4074073">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1457,9 +1358,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6888112">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9444444">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
