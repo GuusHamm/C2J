@@ -41,6 +41,7 @@ public class Persoon
         int i = 0;
         for (String s : voornamen)
         {
+            s = s.replaceAll("\\s","");
             String voornaam = s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
             voornamen[i] = voornaam;
             i++;
