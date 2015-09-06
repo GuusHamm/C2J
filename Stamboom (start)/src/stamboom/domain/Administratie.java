@@ -12,12 +12,10 @@ public class Administratie {
 
     private int getNextGezinsNr()
     {
-        return nextGezinsNr+=1;
+        nextGezinsNr+=1;
+        return nextGezinsNr;
     }
-    private  int getNextPersNr()
-    {
-        return  nextPersNr+=1;
-    }
+    private  int getNextPersNr()  { return (nextPersNr  +=1); }
 
     //***********************constructoren***********************************
     /**
@@ -121,6 +119,11 @@ public class Administratie {
             return null;
         }
 
+        if((ouder1!=null && (!ouder1.kanTrouwenOp(Calendar.getInstance()))) || (ouder2!=null && (!ouder2.kanTrouwenOp(Calendar.getInstance()))) )
+        {
+            return null;
+        }
+
         if (ouder1.getGebDat().compareTo(Calendar.getInstance()) > 0) {
             return null;
         }
@@ -135,8 +138,8 @@ public class Administratie {
             return null;
         }
 
-        Gezin gezin = new Gezin(nextGezinsNr, ouder1, ouder2);
-        nextGezinsNr++;
+        Gezin gezin = new Gezin(getNextGezinsNr(), ouder1, ouder2);
+        //nextGezinsNr++;
         gezinnen.add(gezin);
 
         ouder1.wordtOuderIn(gezin);
@@ -231,6 +234,7 @@ public class Administratie {
         }
 
         g.setHuwelijk(huwdatum);
+        gezinnen.add(g);
         return g;
     }
 
@@ -238,16 +242,14 @@ public class Administratie {
      *
      * @return het aantal geregistreerde personen
      */
-    public int aantalGeregistreerdePersonen() {
-        return nextPersNr - 1;
-    }
+    public int aantalGeregistreerdePersonen() { return nextPersNr ;   }
 
     /**
      *
      * @return het aantal geregistreerde gezinnen
      */
     public int aantalGeregistreerdeGezinnen() {
-        return nextGezinsNr - 1;
+        return nextGezinsNr ;
     }
 
     /**
