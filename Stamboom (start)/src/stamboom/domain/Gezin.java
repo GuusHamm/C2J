@@ -290,6 +290,10 @@ public class Gezin
      */
     public boolean isHuwelijkOp(Calendar datum)
     {
+        if(datum==null || huwelijksdatum ==null)
+        {
+            return false;
+        }
         return huwelijksdatum.compareTo(datum) <= 0;
     }
 
