@@ -215,12 +215,22 @@ public class Administratie {
         //todo opgave 1
 
             if (ouder1 == ouder2 || !ouder1.kanTrouwenOp(huwdatum) || !ouder2.kanTrouwenOp(huwdatum))
+            {
                 return null;
+            }
 
-            Gezin g = new Gezin(getNextGezinsNr(), ouder1, ouder2);
-            gezinnen.add(g);
+        Gezin g;
 
+        if (ongehuwdGezinBestaat(ouder1,ouder2))
+        {
+            g = ouder1.heeftOngehuwdGezinMet(ouder2);
+        }
+        else
+        {
+            g = new Gezin(getNextGezinsNr(), ouder1, ouder2);
+        }
 
+        g.setHuwelijk(huwdatum);
         return g;
     }
 
@@ -332,7 +342,7 @@ public class Administratie {
      * @return de geregistreerde gezinnen
      */
     public List<Gezin> getGezinnen() {
-        return null;
+        return Collections.unmodifiableList(this.gezinnen);
     }
 
     /**

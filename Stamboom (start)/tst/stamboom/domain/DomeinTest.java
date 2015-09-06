@@ -52,6 +52,7 @@ public class DomeinTest extends TestCase{
                 new GregorianCalendar(1949, Calendar.MAY, 5), "Amersfoort", null);
         pietEnTeuntje = adm.addHuwelijk(piet, teuntje, new GregorianCalendar(1970, Calendar.MAY, 23));
         nu = GregorianCalendar.getInstance();
+
     }
 
     /**
@@ -161,18 +162,18 @@ public class DomeinTest extends TestCase{
 
     @Test
     public void testBeschrijvingGezin() {
-        assertEquals("beschrijving gezin onjuist",
+        assertEquals("beschrijving gezin onjuist 1",
                 pietEnTeuntje.toString(), pietEnTeuntje.beschrijving());
         Persoon mark = adm.addPersoon(Geslacht.MAN, new String[]{"Markus", "  Anna   "}, " sWinkelS  ",
                 "", new GregorianCalendar(1986, Calendar.APRIL, 13), "venLO",
                 pietEnTeuntje);
-        assertEquals("beschrijving gezin onjuist",
+        assertEquals("beschrijving gezin onjuist 2",
                 pietEnTeuntje.toString() + "; kinderen: -Markus Anna",
                 pietEnTeuntje.beschrijving());
         Persoon leentje = adm.addPersoon(Geslacht.VROUW, new String[]{"Leentje"}, "sWinkelS",
                 "", new GregorianCalendar(1987, Calendar.APRIL, 13), "venLO",
                 pietEnTeuntje);
-        assertEquals("beschrijving gezin onjuist",
+        assertEquals("beschrijving gezin onjuist 3",
                 pietEnTeuntje.toString() + "; kinderen: -Markus Anna -Leentje",
                 pietEnTeuntje.beschrijving());
     }

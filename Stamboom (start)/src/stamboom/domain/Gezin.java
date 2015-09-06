@@ -217,7 +217,7 @@ public class Gezin
 
         if (huwelijksdatum != null)
         {
-            sb.append(" ").append(huwelijksdatum);
+            sb.append(" ").append(StringUtilities.datumString(huwelijksdatum));
         }
         if (!kinderen.isEmpty())
         {
