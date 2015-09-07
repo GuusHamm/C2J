@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f115257b-5f3e-4958-8cca-54ada884fa08" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Stamboom (start).iws" />
@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DomeinTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DomeinTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,14 +44,13 @@
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-6.3461537">
-              <caret line="121" column="94" selection-start-line="121" selection-start-column="94" selection-end-line="121" selection-end-column="94" />
+              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding>
                 <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#addPersoon#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-                <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
                 <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -68,11 +67,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="JUnit38ClassRunner.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JUnitCore.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/runner/JUnitCore.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6">
+              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Gezin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding>
                 <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
@@ -82,10 +101,15 @@
                 <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+                <element signature="e#3335#3336#0" expanded="true" />
+                <element signature="e#3364#3365#0" expanded="true" />
                 <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+                <element signature="e#3508#3509#0" expanded="true" />
                 <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
                 <element signature="method#toString#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+                <element signature="e#4383#4384#0" expanded="true" />
+                <element signature="e#4420#4421#0" expanded="true" />
                 <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
                 <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -98,9 +122,7 @@
                 <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
                 <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-                <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-                <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
                 <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
                 <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -109,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.230769">
-              <caret line="245" column="31" selection-start-line="245" selection-start-column="12" selection-end-line="245" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.21693122">
+              <caret line="257" column="9" selection-start-line="257" selection-start-column="9" selection-end-line="257" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,10 +156,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
         <option value="$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
+        <option value="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
       </list>
     </option>
   </component>
@@ -165,7 +187,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -176,7 +198,21 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stamboom (start)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -579,6 +615,7 @@
       <workItem from="1441269434501" duration="9328000" />
       <workItem from="1441553593576" duration="502000" />
       <workItem from="1441565872209" duration="6084000" />
+      <workItem from="1441625168541" duration="859000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed testGetPersoonEnPersonen">
       <created>1441201872861</created>
@@ -624,7 +661,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41387000" />
+    <option name="totallyTimeSpent" value="42246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,10 +684,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3582251" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3582251" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1580938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15761448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20074548" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -715,12 +752,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java</url>
-          <line>249</line>
+          <line>261</line>
           <properties />
-          <option name="timeStamp" value="68" />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="69" />
+      <option name="time" value="70" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -751,10 +788,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -767,9 +809,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -787,7 +827,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -826,10 +865,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -842,9 +886,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -862,7 +904,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -909,10 +950,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -925,9 +971,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -945,7 +989,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1002,10 +1045,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1018,9 +1066,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1038,7 +1084,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1085,10 +1130,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1101,9 +1151,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1121,7 +1169,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1150,10 +1197,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1166,9 +1218,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1186,7 +1236,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1233,10 +1282,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1249,9 +1303,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1269,7 +1321,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1316,10 +1367,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1332,9 +1388,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1352,7 +1406,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1391,10 +1444,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1407,9 +1465,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1427,7 +1483,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1466,10 +1521,15 @@
             <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
             <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
             <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="method#toString#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
             <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
             <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
@@ -1482,9 +1542,7 @@
             <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
             <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
             <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
@@ -1502,7 +1560,6 @@
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1597,20 +1654,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/runner/JUnitCore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33231708">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323263">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.mf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05666667">
@@ -1619,66 +1662,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="method#toString#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
-            <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="method#setHuwelijk#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="method#beschrijving#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
-            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.6">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+    <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.230769">
-          <caret line="245" column="31" selection-start-line="245" selection-start-column="12" selection-end-line="245" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="261" column="0" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.3461537">
-          <caret line="121" column="94" selection-start-line="121" selection-start-column="94" selection-end-line="121" selection-end-column="94" />
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
           <folding>
             <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addPersoon#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
             <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
@@ -1694,11 +1703,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tst/stamboom/domain/DomeinTest.java">
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="249" column="0" selection-start-line="249" selection-start-column="0" selection-end-line="249" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;field#huwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;field#scheidingsdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#Gezin#0;class#Gezin#0" expanded="false" />
+            <element signature="method#Gezin#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#getKinderen#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#aantalKinderen#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#getNr#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#getOuder1#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3335#3336#0" expanded="true" />
+            <element signature="e#3364#3365#0" expanded="true" />
+            <element signature="docComment;method#getOuder2#0;class#Gezin#0" expanded="false" />
+            <element signature="e#3508#3509#0" expanded="true" />
+            <element signature="docComment;method#toString#0;class#Gezin#0" expanded="false" />
+            <element signature="method#toString#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#getHuwelijksdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="e#4420#4421#0" expanded="true" />
+            <element signature="docComment;method#getScheidingsdatum#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#setScheiding#0;class#Gezin#0" expanded="false" />
+            <element signature="method#setScheiding#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#setHuwelijk#0;class#Gezin#0" expanded="false" />
+            <element signature="method#setHuwelijk#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#beschrijving#0;class#Gezin#0" expanded="false" />
+            <element signature="method#beschrijving#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#breidUitMet#0;class#Gezin#0" expanded="false" />
+            <element signature="method#breidUitMet#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#isFamilieVan#0;class#Gezin#0" expanded="false" />
+            <element signature="method#isFamilieVan#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#heeftGetrouwdeOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#isHuwelijkOp#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#isOngehuwd#0;class#Gezin#0" expanded="false" />
+            <element signature="docComment;method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+            <element signature="method#heeftGescheidenOudersOp#0;class#Gezin#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.7.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21693122">
+          <caret line="257" column="9" selection-start-line="257" selection-start-column="9" selection-end-line="257" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

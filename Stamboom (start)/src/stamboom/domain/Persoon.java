@@ -258,7 +258,7 @@ public class Persoon
         {
             for (Gezin gezin : this.getAlsOuderBetrokkenIn())
             {
-                if (gezin.getOuder1().equals(andereOuder) || gezin.getOuder2().equals(andereOuder))
+                if (gezin.getOuder1().equals(andereOuder) ||( gezin.getOuder2()!=null && gezin.getOuder2().equals(andereOuder)))
                 {
                     return gezin;
                 }
