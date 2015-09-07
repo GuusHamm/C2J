@@ -230,11 +230,13 @@ public class Administratie {
         }
         else
         {
-            g = new Gezin(getNextGezinsNr(), ouder1, ouder2);
+            g = new Gezin(getNextGezinsNr(), ouder1, ouder2);           
         }
 
         g.setHuwelijk(huwdatum);
         gezinnen.add(g);
+        ouder1.wordtOuderIn(g);
+        ouder2.wordtOuderIn(g);
         return g;
     }
 
