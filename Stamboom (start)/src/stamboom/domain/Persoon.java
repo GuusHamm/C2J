@@ -408,6 +408,25 @@ public class Persoon
         StringBuilder builder = new StringBuilder();
         //todo opgave 2
 
+        if(ouderlijkGezin==null)
+        {
+            return this.toString() ;
+        }
+        if(ouderlijkGezin.getOuder1()!=null)
+        {
+            Persoon ouder1 = this.ouderlijkGezin.getOuder1();
+            builder.append("__" + ouder1.stamboomAlsString()+"\n");
+        }
+        if(ouderlijkGezin.getOuder2()!=null)
+        {
+            Persoon ouder2 = this.ouderlijkGezin.getOuder1();
+            builder.append("__" + ouder2.stamboomAlsString()+
+
+                    "\n");
+        }
+
+        builder.append(this.toString());
+
         return builder.toString();
     }
 }
