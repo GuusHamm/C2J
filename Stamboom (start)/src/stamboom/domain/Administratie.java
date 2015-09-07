@@ -358,7 +358,7 @@ public class Administratie {
     public Gezin getGezin(int gezinsNr) {
         // aanname: er worden geen gezinnen verwijderd
         if (gezinnen != null && 1 <= gezinsNr && 1 <= gezinnen.size()) {
-            return gezinnen.get(gezinsNr - 1);
+            return gezinnen.get(gezinsNr);
         }
         return null;
     }
