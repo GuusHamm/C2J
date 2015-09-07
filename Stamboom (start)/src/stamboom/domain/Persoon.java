@@ -346,7 +346,22 @@ public class Persoon
     public int afmetingStamboom()
     {
         //todo opgave 2
-        return -1;
+        int counter =1;
+        if(ouderlijkGezin==null)
+        {
+            return counter;
+        }
+        if(ouderlijkGezin.getOuder1()!=null)
+        {
+            Persoon ouder1 = this.ouderlijkGezin.getOuder1();
+            counter +=ouder1.afmetingStamboom();
+        }
+        if(ouderlijkGezin.getOuder2()!=null)
+        {
+            Persoon ouder2 = this.ouderlijkGezin.getOuder2();
+            counter +=ouder2.afmetingStamboom();
+        }
+        return counter;
     }
 
     /**
