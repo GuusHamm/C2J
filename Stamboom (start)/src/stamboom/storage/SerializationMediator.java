@@ -5,8 +5,14 @@
 package stamboom.storage;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.Properties;
+import java.io.ObjectOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import stamboom.domain.Administratie;
 
@@ -36,9 +42,30 @@ public class SerializationMediator implements IStorageMediator
         {
             throw new RuntimeException("Serialization mediator isn't initialized correctly.");
         }
-
-        // todo opgave 2
-        return null;
+        
+        File testOpslag = new File("testOpslag.txt");
+        FileInputStream fis;
+        ObjectInputStream ois;
+        Object obj;
+        Administratie admin = null;
+        
+        try {
+            fis = new FileInputStream(testOpslag);
+            ois = new ObjectInputStream(fis);
+            
+            while ((obj = ois.readObject()) != null){
+                if(obj instanceof Administratie){
+                    admin = (Administratie)obj;
+                }
+            }           
+            ois.close();
+            fis.close();
+        } 
+        
+        catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        } 
+        return admin;
     }
 
     @Override
@@ -48,9 +75,18 @@ public class SerializationMediator implements IStorageMediator
         {
             throw new RuntimeException("Serialization mediator isn't initialized correctly.");
         }
-
-        // todo opgave 2
-
+        
+        File testOpslag = new File("testOpslag.txt");
+        if(!testOpslag.exists()){
+            testOpslag.createNewFile();
+        }
+        
+        FileOutputStream fos = new FileOutputStream(testOpslag);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        
+        oos.writeObject(admin);
+        oos.close();
+        fos.close();
     }
 
     /**
