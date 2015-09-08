@@ -43,14 +43,13 @@ public class SerializationMediator implements IStorageMediator
             throw new RuntimeException("Serialization mediator isn't initialized correctly.");
         }
         
-        File testOpslag = new File("testOpslag.txt");
         FileInputStream fis;
         ObjectInputStream ois;
         Object obj;
         Administratie admin = null;
         
         try {
-            fis = new FileInputStream(testOpslag);
+            fis = new FileInputStream(props.getProperty("file"));
             ois = new ObjectInputStream(fis);
             
             while ((obj = ois.readObject()) != null){
@@ -75,13 +74,8 @@ public class SerializationMediator implements IStorageMediator
         {
             throw new RuntimeException("Serialization mediator isn't initialized correctly.");
         }
-        
-        File testOpslag = new File("testOpslag.txt");
-        if(!testOpslag.exists()){
-            testOpslag.createNewFile();
-        }
-        
-        FileOutputStream fos = new FileOutputStream(testOpslag);
+               
+        FileOutputStream fos = new FileOutputStream(props.getProperty("file"));
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         
         oos.writeObject(admin);
