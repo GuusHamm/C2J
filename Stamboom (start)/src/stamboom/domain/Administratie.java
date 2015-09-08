@@ -25,7 +25,6 @@ public class Administratie implements Serializable {
      * (apart) opvolgend genummerd vanaf 1
      */
     public Administratie() {
-        //todo opgave 1
         this.personen = new ArrayList<Persoon>();
         this.gezinnen = new ArrayList<Gezin>(); 
         this.nextGezinsNr =0;
@@ -83,7 +82,6 @@ public class Administratie implements Serializable {
         catch(Exception e){
             System.out.println(e);
         }
-        //todo check this null
 
         for (Persoon p : personen)
         {
@@ -92,7 +90,6 @@ public class Administratie implements Serializable {
                 return null;
             }
         }
-        //todo opgave 1
         this.personen.add(huidig);
         if (ouderlijkGezin != null)
         {
@@ -216,7 +213,6 @@ public class Administratie implements Serializable {
      * anders het gehuwde gezin
      */
     public Gezin addHuwelijk(Persoon ouder1, Persoon ouder2, Calendar huwdatum) {
-        //todo opgave 1
 
             if (ouder1 == ouder2 || !ouder1.kanTrouwenOp(huwdatum) || !ouder2.kanTrouwenOp(huwdatum))
             {
@@ -262,7 +258,6 @@ public class Administratie implements Serializable {
      * geretourneerd
      */
     public Persoon getPersoon(int nr) {
-        //todo opgave 1
         //aanname: er worden geen personen verwijderd
         for (Persoon p : personen)
         {
@@ -301,7 +296,6 @@ public class Administratie implements Serializable {
      * @return de geregistreerde personen
      */
     public List<Persoon> getPersonen() {
-        // todo opgave 1
         return Collections.unmodifiableList(personen);
     }
 
@@ -318,7 +312,6 @@ public class Administratie implements Serializable {
      */
     public Persoon getPersoon(String[] vnamen, String anaam, String tvoegsel,
             Calendar gebdat, String gebplaats) {
-        //todo opgave 1
 
         String initialen;
         initialen = "";
