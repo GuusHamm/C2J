@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import stamboom.domain.Administratie;
 import stamboom.storage.IStorageMediator;
+import stamboom.storage.SerializationMediator;
 
 public class StamboomController
 {
@@ -51,12 +52,14 @@ public class StamboomController
         if(!bestand.exists()){
             bestand.createNewFile();
         }
+
         Properties props = new Properties();
-        props.put("file", bestand);
+        props.put("file", bestand.getAbsolutePath());
         
+        storageMediator = new SerializationMediator();
         storageMediator.configure(props);
         storageMediator.save(admin);
-
+        
     }
 
     /**
@@ -71,8 +74,9 @@ public class StamboomController
             bestand.createNewFile();
         }
         Properties props = new Properties();
-        props.put("file", bestand);
+        props.put("file", bestand.getAbsolutePath());
         
+        storageMediator = new SerializationMediator();
         storageMediator.configure(props);
         admin = storageMediator.load();
 
