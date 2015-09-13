@@ -410,19 +410,21 @@ public class Persoon implements Serializable
 
         if(ouderlijkGezin==null)
         {
-            return this.toString() ;
+            return this.toString();
         }
         if(ouderlijkGezin.getOuder1()!=null)
         {
             Persoon ouder1 = this.ouderlijkGezin.getOuder1();
-            builder.append("__" + ouder1.stamboomAlsString()+"\n");
+            builder.append("  " + ouder1.stamboomAlsString()+
+                                   System.getProperty("line.separator").toString()
+            );
         }
         if(ouderlijkGezin.getOuder2()!=null)
         {
             Persoon ouder2 = this.ouderlijkGezin.getOuder1();
-            builder.append("__" + ouder2.stamboomAlsString()+
-
-                    "\n");
+            builder.append("  " + ouder2.stamboomAlsString()+
+                                   System.getProperty("line.separator").toString()
+            );
         }
 
         builder.append(this.toString());
