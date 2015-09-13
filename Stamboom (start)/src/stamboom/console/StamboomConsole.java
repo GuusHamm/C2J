@@ -49,7 +49,7 @@ public class StamboomConsole
                     toonGezinsgegevens();
                     break;
                 case SAVE_ADMINISTRATIE:
-                    //todo mike
+                    saveAdministratie();
                     break;
                 case LOAD_ADMINISTRATIE:
                     //todo mike
@@ -258,6 +258,16 @@ public class StamboomConsole
             nr++;
             r = getAdmin().getGezin(nr);
         }
+    }
+    
+    void saveAdministratie()
+    {
+        //todo mike
+    }
+    
+    void loadAdministratie()
+    {
+        //todo mike
     }
 
     static void printSpaties(int n)
