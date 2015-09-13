@@ -382,8 +382,8 @@ public class Persoon implements Serializable
         lijst.add(g, new PersoonMetGeneratie(this.toString(), g));
         if(ouderlijkGezin!=null)
         {
-            if(ouderlijkGezin.getOuder1() !=null){voegJouwStamboomToe(lijst,g+1);}
-            if(ouderlijkGezin.getOuder2() !=null){voegJouwStamboomToe(lijst,g+1);}
+            if(ouderlijkGezin.getOuder1() !=null){ouderlijkGezin.getOuder1().voegJouwStamboomToe(lijst, g + 1);}
+            if(ouderlijkGezin.getOuder2() !=null){ouderlijkGezin.getOuder1().voegJouwStamboomToe(lijst, g + 1);}
         }
     }
 
@@ -412,6 +412,7 @@ public class Persoon implements Serializable
 
         public String stamboomAlsString()
         {
+
             StringBuilder builder = new StringBuilder();
             //todo opgave 2
             builder.append("  " + this.toString() + System.getProperty("line.separator").toString());
