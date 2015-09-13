@@ -48,6 +48,12 @@ public class StamboomConsole
                 case SHOW_GEZIN:
                     toonGezinsgegevens();
                     break;
+                case SAVE_ADMINISTRATIE:
+                    //todo mike
+                    break;
+                case LOAD_ADMINISTRATIE:
+                    //todo mike
+                    break;
             }
             choice = kiesMenuItem();
         }
