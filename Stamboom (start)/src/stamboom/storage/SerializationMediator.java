@@ -23,7 +23,7 @@ public class SerializationMediator implements IStorageMediator
      * bevat de bestandslocatie. Properties is een subclasse van HashTable, een
      * alternatief voor een List. Het verschil is dat een List een volgorde heeft,
      * en een HashTable een key/value index die wordt opgevraagd niet op basis van
-     * positie, maar op key.
+     * positie, maar op key..
      */
     private Properties props;
 
@@ -43,8 +43,8 @@ public class SerializationMediator implements IStorageMediator
             throw new RuntimeException("Serialization mediator isn't initialized correctly.");
         }
         
-        FileInputStream fis;
-        ObjectInputStream ois;
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
         Object obj;
         Administratie admin = null;
         
@@ -57,13 +57,14 @@ public class SerializationMediator implements IStorageMediator
                     admin = (Administratie)obj;
                 }
             }           
-            ois.close();
-            fis.close();
-        } 
-        
-        catch (IOException | ClassNotFoundException e) {
+        }      
+        catch (IOException | ClassNotFoundException e){
             e.printStackTrace();
         } 
+        finally {
+            ois.close();
+            fis.close();
+        }
         return admin;
     }
 
@@ -74,13 +75,23 @@ public class SerializationMediator implements IStorageMediator
         {
             throw new RuntimeException("Serialization mediator isn't initialized correctly.");
         }
-               
-        FileOutputStream fos = new FileOutputStream(props.getProperty("file"));
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
         
-        oos.writeObject(admin);
-        oos.close();
-        fos.close();
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+        
+        try{
+            fos = new FileOutputStream(props.getProperty("file"));
+            oos = new ObjectOutputStream(fos);
+        
+            oos.writeObject(admin);  
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        finally{
+            oos.close();
+            fos.close();
+        } 
     }
 
     /**
