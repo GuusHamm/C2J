@@ -1,5 +1,7 @@
 package stamboom.console;
 
+import java.io.File;
+import java.io.IOException;
 import stamboom.domain.*;
 
 import java.util.*;
@@ -52,7 +54,7 @@ public class StamboomConsole
                     saveAdministratie();
                     break;
                 case LOAD_ADMINISTRATIE:
-                    //todo mike
+                    loadAdministratie();
                     break;
             }
             choice = kiesMenuItem();
@@ -262,12 +264,31 @@ public class StamboomConsole
     
     void saveAdministratie()
     {
-        //todo mike
+        //Serialize in a default file called: 'administration'.
+        File administrationFile = new File("administration");
+        try{
+            controller.serialize(administrationFile);
+            System.out.println("Serialization is gelukt.");
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Serialization is mislukt.");
+        }
     }
     
     void loadAdministratie()
     {
-        //todo mike
+        //Deserialize in a default file called: 'administration'.
+        File administrationFile = new File("administration");
+        try{
+            controller.deserialize(administrationFile);
+            System.out.println("Serialization is gelukt.");
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Serialization is mislukt.");
+        }
+        
     }
 
     static void printSpaties(int n)
