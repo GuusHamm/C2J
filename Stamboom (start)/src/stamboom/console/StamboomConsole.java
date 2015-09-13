@@ -48,11 +48,25 @@ public class StamboomConsole
                 case SHOW_GEZIN:
                     toonGezinsgegevens();
                     break;
+                case SHOW_LINEAGE:
+                    toonStamboomPersoon();
             }
             choice = kiesMenuItem();
         }
     }
-
+    void toonStamboomPersoon()
+    {
+        String naam = readString("wat is de achternaam");
+        ArrayList<Persoon> personen = getAdmin().getPersonenMetAchternaam(naam);
+        for (Persoon p : personen)
+        {
+            System.out.println(p.getNr() + "\t" + p.getNaam() + " " + datumString(p.getGebDat()));
+        }
+        int invoer = readInt("selecteer persoonsnummer");
+        input.nextLine();
+        Persoon p = getAdmin().getPersoon(invoer);
+        System.out.println(p.stamboomAlsString());
+    }
     Administratie getAdmin()
     {
         return controller.getAdministratie();
@@ -254,6 +268,7 @@ public class StamboomConsole
         }
     }
 
+
     static void printSpaties(int n)
     {
         System.out.print(StringUtilities.spaties(n));
@@ -310,6 +325,6 @@ public class StamboomConsole
         StamboomController controller = new StamboomController();
 
         StamboomConsole console = new StamboomConsole(controller);
-        //console.startMenu();
+        console.startMenu();
     }
 }

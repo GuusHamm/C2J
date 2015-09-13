@@ -11,7 +11,8 @@ public enum MenuItem
     SHOW_PERS("toon gegevens persoon"),
     SHOW_GEZIN("toon gegevens gezin"),
     SAVE_ADMINISTRATIE("sla administratie op"),
-    LOAD_ADMINISTRATIE("laadt administratie");
+    LOAD_ADMINISTRATIE("laadt administratie"),
+    SHOW_LINEAGE("toon stamboom van een persoon");
 
     private final String omschr;
 
