@@ -9,7 +9,9 @@ public enum MenuItem
     NEW_HUWELIJK("registreer huwelijk"),
     SCHEIDING("registreer scheiding"),
     SHOW_PERS("toon gegevens persoon"),
-    SHOW_GEZIN("toon gegevens gezin");
+    SHOW_GEZIN("toon gegevens gezin"),
+    SAVE_ADMINISTRATIE("sla administratie op"),
+    LOAD_ADMINISTRATIE("laadt administratie");
 
     private final String omschr;
 
