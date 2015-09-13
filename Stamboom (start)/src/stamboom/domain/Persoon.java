@@ -383,7 +383,7 @@ public class Persoon implements Serializable
         if(ouderlijkGezin!=null)
         {
             if(ouderlijkGezin.getOuder1() !=null){ouderlijkGezin.getOuder1().voegJouwStamboomToe(lijst, g + 1);}
-            if(ouderlijkGezin.getOuder2() !=null){ouderlijkGezin.getOuder1().voegJouwStamboomToe(lijst, g + 1);}
+            if(ouderlijkGezin.getOuder2() !=null){ouderlijkGezin.getOuder2().voegJouwStamboomToe(lijst, g + 1);}
         }
     }
 
@@ -410,32 +410,63 @@ public class Persoon implements Serializable
      * ____J.A. Pieterse (MAN) 4-8-1923<br>
      */
 
-        public String stamboomAlsString()
+    public String stamboomAlsString()
+    {
+        StringBuilder builder = new StringBuilder();
+
+        ArrayList<PersoonMetGeneratie> personen = new ArrayList<>();
+        voegJouwStamboomToe(personen, 0);
+        for(PersoonMetGeneratie p: personen)
         {
-
-            StringBuilder builder = new StringBuilder();
-            //todo opgave 2
-            builder.append("  " + this.toString() + System.getProperty("line.separator").toString());
-
-            if(ouderlijkGezin==null)
+            for (int i=0; i<p.getGeneratie();i++)
             {
-                return  "  " + this.toString();
+                builder.append("  ");
             }
-            if(ouderlijkGezin.getOuder1()!=null)
-            {
-                Persoon ouder1 = this.ouderlijkGezin.getOuder1();
-                builder.append("  " + ouder1.stamboomAlsString()+
-                                       System.getProperty("line.separator").toString()
-                );
-            }
-            if(ouderlijkGezin.getOuder2()!=null)
-            {
-                Persoon ouder2 = this.ouderlijkGezin.getOuder1();
-                builder.append("  " + ouder2.stamboomAlsString()+
-                                       System.getProperty("line.separator").toString()
-                );
-            }
-            return builder.toString();
+            builder.append(p.getPersoonsgegevens() + System.getProperty("line.separator"));
         }
+
+        return builder.toString();
+    }
+//    public String stamboomAlsString()
+//    {
+//        StringBuilder builder = new StringBuilder();
+//
+//        ArrayList<PersoonMetGeneratie> personen = new ArrayList<>();
+//        voegJouwStamboomToe(personen, 0);
+//        for(PersoonMetGeneratie p: personen)
+//        {
+//            builder.append(p.toString() + System.getProperty("line.separator"));
+//        }
+//
+//        return builder.toString();
+//    }
+
+//        public String stamboomAlsString()
+//        {
+//
+//            StringBuilder builder = new StringBuilder();
+//            //todo opgave 2
+//            builder.append("  " + this.toString() + System.getProperty("line.separator").toString());
+//
+//            if(ouderlijkGezin==null)
+//            {
+//                return  "  " + this.toString();
+//            }
+//            if(ouderlijkGezin.getOuder1()!=null)
+//            {
+//                Persoon ouder1 = this.ouderlijkGezin.getOuder1();
+//                builder.append("  " + ouder1.stamboomAlsString()+
+//                                       System.getProperty("line.separator").toString()
+//                );
+//            }
+//            if(ouderlijkGezin.getOuder2()!=null)
+//            {
+//                Persoon ouder2 = this.ouderlijkGezin.getOuder1();
+//                builder.append("  " + ouder2.stamboomAlsString()+
+//                                       System.getProperty("line.separator").toString()
+//                );
+//            }
+//            return builder.toString();
+//        }
 
 }
