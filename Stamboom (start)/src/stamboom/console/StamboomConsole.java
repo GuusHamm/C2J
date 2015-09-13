@@ -50,6 +50,12 @@ public class StamboomConsole
                     break;
                 case SHOW_LINEAGE:
                     toonStamboomPersoon();
+                case SAVE_ADMINISTRATIE:
+                    saveAdministratie();
+                    break;
+                case LOAD_ADMINISTRATIE:
+                    //todo mike
+                    break;
             }
             choice = kiesMenuItem();
         }
@@ -266,6 +272,16 @@ public class StamboomConsole
             nr++;
             r = getAdmin().getGezin(nr);
         }
+    }
+    
+    void saveAdministratie()
+    {
+        //todo mike
+    }
+    
+    void loadAdministratie()
+    {
+        //todo mike
     }
 
 
