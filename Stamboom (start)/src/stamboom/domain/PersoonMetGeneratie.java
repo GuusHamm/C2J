@@ -23,15 +23,4 @@ public class PersoonMetGeneratie
     {
         return persoonsgegevens;
     }
-
-    public String toString()
-    {
-        String value="";
-        for(int i=0; i< generatie; i++)
-        {
-            value += "  ";
-        }
-        value += getPersoonsgegevens();
-        return value;
-    }
 }
