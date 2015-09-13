@@ -407,10 +407,11 @@ public class Persoon implements Serializable
     {
         StringBuilder builder = new StringBuilder();
         //todo opgave 2
+        builder.append("  " + this.toString() + System.getProperty("line.separator").toString());
 
         if(ouderlijkGezin==null)
         {
-            return this.toString();
+            return  "  " +this.toString();
         }
         if(ouderlijkGezin.getOuder1()!=null)
         {
@@ -426,9 +427,8 @@ public class Persoon implements Serializable
                                    System.getProperty("line.separator").toString()
             );
         }
-
-        builder.append(this.toString());
-
         return builder.toString();
     }
+
+
 }

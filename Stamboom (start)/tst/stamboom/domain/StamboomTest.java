@@ -2,6 +2,8 @@ package stamboom.domain;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
+import com.sun.deploy.util.ArrayUtil;
 import junit.framework.TestCase;
 import org.junit.*;
 
@@ -52,9 +54,12 @@ public class StamboomTest extends TestCase {
         assertEquals("afmeting boom onjuist", 8, jaron.afmetingStamboom());
         String stamboomstring = jaron.stamboomAlsString();
         String[] regels = stamboomstring.split(System.getProperty("line.separator"));
+        for(int i =0; i< regels.length; i++)
+        {
+            System.out.println(regels[i]);
+        }
         assertEquals("aantal regels", 8, regels.length);
         assertEquals("regel 3 onjuist", "    T. de Vries (VROUW) 5-5-1927", regels[2]);
-
         System.out.println(stamboomstring);
     }
 }
