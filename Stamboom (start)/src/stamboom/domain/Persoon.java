@@ -382,8 +382,8 @@ public class Persoon implements Serializable
         lijst.add(g, new PersoonMetGeneratie(this.toString(), g));
         if(ouderlijkGezin!=null)
         {
-            if(ouderlijkGezin.getOuder1() !=null){ouderlijkGezin.getOuder1().voegJouwStamboomToe(lijst, g + 1);}
             if(ouderlijkGezin.getOuder2() !=null){ouderlijkGezin.getOuder2().voegJouwStamboomToe(lijst, g + 1);}
+            if(ouderlijkGezin.getOuder1() !=null){ouderlijkGezin.getOuder1().voegJouwStamboomToe(lijst, g + 1);}
         }
     }
 
