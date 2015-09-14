@@ -71,7 +71,7 @@ public class StamboomController
     public void deserialize(File bestand) throws IOException
     {
         if(!bestand.exists()){
-            bestand.createNewFile();
+            throw new IOException();
         }
         Properties props = new Properties();
         props.put("file", bestand.getAbsolutePath());

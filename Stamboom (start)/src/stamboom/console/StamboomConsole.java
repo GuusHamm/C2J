@@ -293,13 +293,13 @@ public class StamboomConsole
     void loadAdministratie()
     {
         //Deserialize in a default file called: 'administration'.
-        File administrationFile = new File("administration");
         try{
+            File administrationFile = new File("administration");
             controller.deserialize(administrationFile);
             System.out.println("Serialization is gelukt.");
         }
         catch(IOException e){
-            e.printStackTrace();
+            //e.printStackTrace();
             System.out.println("Serialization is mislukt.");
         }
         
