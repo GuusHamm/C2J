@@ -19,6 +19,7 @@ public class StamboomConsole
     // **********constructoren*******************************************
     public StamboomConsole(StamboomController controller)
     {
+//        this.getAdmin().addPersoon(new Geslacht("m",))
         input = new Scanner(System.in);
         this.controller = controller;
         this.startMenu();
@@ -217,7 +218,7 @@ public class StamboomConsole
             }
             System.out.println();
         }
-        int invoer = readInt("selecteer gezinsnummer");
+        int invoer = readInt("selecteer gezinsnummer")-1;
         input.nextLine();
         return getAdmin().getGezin(invoer);
     }
@@ -271,8 +272,9 @@ public class StamboomConsole
         while (r != null)
         {
             System.out.println(r.toString());
-            nr++;
             r = getAdmin().getGezin(nr);
+            nr++;
+
         }
     }
     
