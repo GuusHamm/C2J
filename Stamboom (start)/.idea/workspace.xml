@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f115257b-5f3e-4958-8cca-54ada884fa08" name="Default" comment="Removed Todo's of opgave 1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administration" afterPath="$PROJECT_DIR$/administration" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java" afterPath="$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Stamboom (start).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="StamboomConsole.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5689046">
+            <state vertical-scroll-proportion="0.56537104">
               <caret line="220" column="57" selection-start-line="220" selection-start-column="57" selection-end-line="220" selection-end-column="57" />
               <folding />
             </state>
@@ -960,7 +959,7 @@
       <workItem from="1442172259250" duration="2464000" />
       <workItem from="1442219547044" duration="44000" />
       <workItem from="1442219648395" duration="642000" />
-      <workItem from="1442225783971" duration="2773000" />
+      <workItem from="1442225783971" duration="4014000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed testGetPersoonEnPersonen">
       <created>1441201872861</created>
@@ -1012,7 +1011,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66544000" />
+    <option name="totallyTimeSpent" value="67785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,7 +1023,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1318,7 +1317,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5689046">
+        <state vertical-scroll-proportion="0.56537104">
           <caret line="220" column="57" selection-start-line="220" selection-start-column="57" selection-end-line="220" selection-end-column="57" />
           <folding />
         </state>
