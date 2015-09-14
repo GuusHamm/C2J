@@ -71,7 +71,7 @@ public class StamboomConsole
         {
             System.out.println(p.getNr() + "\t" + p.getNaam() + " " + datumString(p.getGebDat()));
         }
-        int invoer = readInt("selecteer persoonsnummer")-1;
+        int invoer = readInt("selecteer persoonsnummer");
         input.nextLine();
         Persoon p = getAdmin().getPersoon(invoer);
         System.out.println(p.stamboomAlsString());
@@ -218,7 +218,7 @@ public class StamboomConsole
             }
             System.out.println();
         }
-        int invoer = readInt("selecteer gezinsnummer")-1;
+        int invoer = readInt("selecteer gezinsnummer");
         input.nextLine();
         return getAdmin().getGezin(invoer);
     }

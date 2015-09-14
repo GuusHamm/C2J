@@ -345,7 +345,6 @@ public class Persoon implements Serializable
      */
     public int afmetingStamboom()
     {
-        //todo opgave 2
         int counter =1;
         if(ouderlijkGezin==null)
         {
@@ -378,7 +377,6 @@ public class Persoon implements Serializable
      */
     void voegJouwStamboomToe(ArrayList<PersoonMetGeneratie> lijst, int g)
     {
-        //todo opgave 2
         lijst.add(g, new PersoonMetGeneratie(this.toString(), g));
         if(ouderlijkGezin!=null)
         {
@@ -427,46 +425,4 @@ public class Persoon implements Serializable
 
         return builder.toString();
     }
-//    public String stamboomAlsString()
-//    {
-//        StringBuilder builder = new StringBuilder();
-//
-//        ArrayList<PersoonMetGeneratie> personen = new ArrayList<>();
-//        voegJouwStamboomToe(personen, 0);
-//        for(PersoonMetGeneratie p: personen)
-//        {
-//            builder.append(p.toString() + System.getProperty("line.separator"));
-//        }
-//
-//        return builder.toString();
-//    }
-
-//        public String stamboomAlsString()
-//        {
-//
-//            StringBuilder builder = new StringBuilder();
-//            //todo opgave 2
-//            builder.append("  " + this.toString() + System.getProperty("line.separator").toString());
-//
-//            if(ouderlijkGezin==null)
-//            {
-//                return  "  " + this.toString();
-//            }
-//            if(ouderlijkGezin.getOuder1()!=null)
-//            {
-//                Persoon ouder1 = this.ouderlijkGezin.getOuder1();
-//                builder.append("  " + ouder1.stamboomAlsString()+
-//                                       System.getProperty("line.separator").toString()
-//                );
-//            }
-//            if(ouderlijkGezin.getOuder2()!=null)
-//            {
-//                Persoon ouder2 = this.ouderlijkGezin.getOuder1();
-//                builder.append("  " + ouder2.stamboomAlsString()+
-//                                       System.getProperty("line.separator").toString()
-//                );
-//            }
-//            return builder.toString();
-//        }
-
 }
