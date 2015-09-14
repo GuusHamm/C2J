@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f115257b-5f3e-4958-8cca-54ada884fa08" name="Default" comment="Removed Todo's of opgave 1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java" afterPath="$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Stamboom (start).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +43,7 @@
       <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.1034484">
+            <state vertical-scroll-proportion="0.0">
               <caret line="387" column="5" selection-start-line="387" selection-start-column="5" selection-end-line="387" selection-end-column="5" />
               <folding>
                 <element signature="docComment;method#stamboomAlsString#0;class#Persoon#0" expanded="false" />
@@ -120,14 +121,9 @@
       <file leaf-file-name="StamboomConsole.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60465115">
-              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-              <folding>
-                <element signature="e#2362#2363#0" expanded="true" />
-                <element signature="e#2414#2415#0" expanded="true" />
-                <element signature="e#9384#9385#0" expanded="true" />
-                <element signature="e#9441#9442#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.3063063">
+              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,6 +167,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
@@ -202,7 +205,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -373,8 +376,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -872,6 +875,7 @@
       <workItem from="1442163895796" duration="1916000" />
       <workItem from="1442168148217" duration="3794000" />
       <workItem from="1442172259250" duration="2464000" />
+      <workItem from="1442219059386" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed testGetPersoonEnPersonen">
       <created>1441201872861</created>
@@ -923,7 +927,7 @@
     </servers>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63085000" />
+    <option name="totallyTimeSpent" value="63092000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -940,13 +944,11 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3261339" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32677597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28884026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -955,12 +957,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4047619" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4047619" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32677597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1031,20 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,7 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,20 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,20 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="176" column="7" selection-start-line="176" selection-start-column="7" selection-end-line="176" selection-end-column="7" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,7 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="434" column="32" selection-start-line="434" selection-start-column="19" selection-end-line="434" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1272,20 +1231,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1331,20 +1276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1352,7 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1408,20 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1429,7 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1485,20 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1554,20 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1623,20 +1510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1710,20 +1583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="312" column="48" selection-start-line="312" selection-start-column="48" selection-end-line="312" selection-end-column="48" />
-          <folding>
-            <element signature="method#getNextPersNr#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addOngehuwdGezin#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#setHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#ongehuwdGezinBestaat#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#addHuwelijk#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#aantalGeregistreerdeGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonenMetAchternaam#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersonen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getPersoon#1;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezinnen#0;class#Administratie#0" expanded="false" />
-            <element signature="docComment;method#getGezin#0;class#Administratie#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1731,7 +1590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="387" column="0" selection-start-line="387" selection-start-column="0" selection-end-line="387" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1753,7 +1611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2874149">
           <caret line="78" column="36" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1805,7 +1662,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1034484">
+        <state vertical-scroll-proportion="0.0">
           <caret line="387" column="5" selection-start-line="387" selection-start-column="5" selection-end-line="387" selection-end-column="5" />
           <folding>
             <element signature="docComment;method#stamboomAlsString#0;class#Persoon#0" expanded="false" />
@@ -1845,14 +1702,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/console/StamboomConsole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60465115">
-          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-          <folding>
-            <element signature="e#2362#2363#0" expanded="true" />
-            <element signature="e#2414#2415#0" expanded="true" />
-            <element signature="e#9384#9385#0" expanded="true" />
-            <element signature="e#9441#9442#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.3063063">
+          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
