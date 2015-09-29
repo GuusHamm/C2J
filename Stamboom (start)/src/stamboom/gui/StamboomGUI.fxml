@@ -35,7 +35,7 @@
                                                                 <FXCollections fx:factory="observableArrayList">
                                                                     <String fx:value="Item 1" />
                                                                     <String fx:value="Item 2" />
-                                                                    <String fx:value="Item 3" />
+                                                                    <String fx:value="Item 3" /> 
                                                                 </FXCollections>
                                                             </items>
                                                             <BorderPane.margin>
@@ -70,7 +70,7 @@
                                                                         <FXCollections fx:factory="observableArrayList">
                                                                             <String fx:value="Item 1" />
                                                                             <String fx:value="Item 2" />
-                                                                            <String fx:value="Item 3" />
+                                                                            <String fx:value="Item 3" /> 
                                                                         </FXCollections>
                                                                     </items>
                                                                 </ComboBox>
@@ -118,7 +118,14 @@
                                           <BorderPane layoutX="14.0" prefHeight="286.0" prefWidth="346.0">
                                              <top>
                                                 <ComboBox id="cbGezinnen" fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
-                                                   <BorderPane.margin>
+                                                    <items>
+                                                        <FXCollections fx:factory="observableArrayList">
+                                                            <String fx:value="Item 1" />
+                                                            <String fx:value="Item 2" />
+                                                            <String fx:value="Item 3" /> 
+                                                        </FXCollections>
+                                                    </items>
+                                                    <BorderPane.margin>
                                                       <Insets left="10.0" right="10.0" top="10.0" />
                                                    </BorderPane.margin>
                                                 </ComboBox>
@@ -204,8 +211,24 @@
                                                 <TextField id="tfAchternaamInvoer" fx:id="tfAchternaamInvoer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <TextField id="tfGeboortedatumInvoer" fx:id="tfGeboortedatumInvoer" promptText="dd-mm-jjjj" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                 <TextField id="tfGeboorteplaatsInvoer" fx:id="tfGeboorteplaatsInvoer" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                <ComboBox id="cbGeslachtInvoer" fx:id="cbGesclachtInvoer" prefHeight="25.0" prefWidth="350.0" promptText="kies geslacht" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <ComboBox id="cbOuderlijkGezinInvoer" fx:id="cbOuderlijkGezinInvoer" prefHeight="25.0" prefWidth="348.0" promptText="kies (zo mogelijk) ouderlijk gezin" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <ComboBox id="cbGeslachtInvoer" fx:id="cbGeslachtInvoer" prefHeight="25.0" prefWidth="350.0" promptText="kies geslacht" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                    <items>
+                                                        <FXCollections fx:factory="observableArrayList">
+                                                            <String fx:value="Item 1" />
+                                                            <String fx:value="Item 2" />
+                                                            <String fx:value="Item 3" /> 
+                                                        </FXCollections>
+                                                    </items>
+                                                </ComboBox>
+                                                <ComboBox id="cbOuderlijkGezinInvoer" fx:id="cbOuderlijkGezinInvoer" prefHeight="25.0" prefWidth="348.0" promptText="kies (zo mogelijk) ouderlijk gezin" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                    <items>
+                                                        <FXCollections fx:factory="observableArrayList">
+                                                            <String fx:value="Item 1" />
+                                                            <String fx:value="Item 2" />
+                                                            <String fx:value="Item 3" /> 
+                                                        </FXCollections>
+                                                    </items>
+                                                </ComboBox>
                                              </children>
                                              <padding>
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
