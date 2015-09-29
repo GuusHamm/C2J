@@ -2,17 +2,19 @@ package stamboom.domain;
 
 import java.io.Serializable;
 import java.util.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import stamboom.util.StringUtilities;
 
-public class Gezin implements Serializable
+public class Gezin extends Observable implements Serializable
 {
 
     // *********datavelden*************************************
     private final int nr;
     private final Persoon ouder1;
     private final Persoon ouder2;
-    private final List<Persoon> kinderen;
+    private final ObservableList<Persoon> observableKinderen;
     /**
      * kan onbekend zijn (dan is het een ongehuwd gezin):
      */
@@ -71,7 +73,7 @@ public class Gezin implements Serializable
         this.nr = gezinsNr;
         this.ouder1 = ouder1;
         this.ouder2 = ouder2;
-        this.kinderen = new ArrayList<>();
+        this.observableKinderen = FXCollections.observableArrayList();
         this.huwelijksdatum = null;
         this.scheidingsdatum = null;
     }
@@ -81,9 +83,10 @@ public class Gezin implements Serializable
     /**
      * @return alle kinderen uit dit gezin
      */
-    public List<Persoon> getKinderen()
+    public ObservableList<Persoon> getKinderen()
     {
-        return (List<Persoon>) Collections.unmodifiableList(kinderen);
+        return (ObservableList<Persoon>)
+                FXCollections.unmodifiableObservableList(observableKinderen);
     }
 
     /**
@@ -91,7 +94,7 @@ public class Gezin implements Serializable
      */
     public int aantalKinderen()
     {
-        return kinderen.size();
+        return observableKinderen.size();
     }
 
     /**
@@ -216,11 +219,11 @@ public class Gezin implements Serializable
         {
             sb.append(" ").append(StringUtilities.datumString(huwelijksdatum));
         }
-        if (!kinderen.isEmpty())
+        if (!observableKinderen.isEmpty())
         {
             sb.append("; kinderen:");
             
-            for (Persoon kind : kinderen) 
+            for (Persoon kind : observableKinderen) 
             {
                 sb.append(" -").append(kind.getVoornamen());
             }
@@ -238,9 +241,9 @@ public class Gezin implements Serializable
      */
     void breidUitMet(Persoon kind)
     {
-        if (!kinderen.contains(kind) && !this.isFamilieVan(kind))
+        if (!observableKinderen.contains(kind) && !this.isFamilieVan(kind))
         {
-            kinderen.add(kind);
+            observableKinderen.add(kind);
         }
     }
 
@@ -254,7 +257,7 @@ public class Gezin implements Serializable
     {
         if (this.ouder1.getNr() == input.getNr()
                 || (this.ouder2 != null && this.ouder2.getNr() == input.getNr())
-                || kinderen.contains(input))
+                || observableKinderen.contains(input))
         {
             return true;
         }
