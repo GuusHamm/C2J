@@ -7,10 +7,13 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import stamboom.util.StringUtilities;
 
-public class Persoon implements Serializable
+public class Persoon extends Observable implements Serializable
 {
 
     // ********datavelden**************************************
@@ -21,7 +24,7 @@ public class Persoon implements Serializable
     private final Calendar gebDat;
     private final String gebPlaats;
     private Gezin ouderlijkGezin;
-    private final List<Gezin> alsOuderBetrokkenIn;
+    private final ObservableList<Gezin> observableAlsOuderBetrokkenIn;
     private final Geslacht geslacht;
 
     // ********constructoren***********************************
@@ -54,8 +57,7 @@ public class Persoon implements Serializable
         this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
         this.geslacht = geslacht;
         this.ouderlijkGezin = ouderlijkGezin;
-        this.alsOuderBetrokkenIn = new ArrayList<>();
-
+        this.observableAlsOuderBetrokkenIn = FXCollections.observableArrayList();
     }
     // ********methoden****************************************
 
@@ -180,7 +182,7 @@ public class Persoon implements Serializable
      */
     public List<Gezin> getAlsOuderBetrokkenIn()
     {
-        return (List<Gezin>) Collections.unmodifiableList(alsOuderBetrokkenIn);
+        return (List<Gezin>) Collections.unmodifiableList(observableAlsOuderBetrokkenIn);
     }
 
     /**
@@ -220,11 +222,11 @@ public class Persoon implements Serializable
                 sb.append("; 2e ouder: ").append(ouderlijkGezin.getOuder2().getNaam());
             }
         }
-        if (!alsOuderBetrokkenIn.isEmpty())
+        if (!observableAlsOuderBetrokkenIn.isEmpty())
         {
             sb.append("; is ouder in gezin ");
 
-            for (Gezin g : alsOuderBetrokkenIn)
+            for (Gezin g : observableAlsOuderBetrokkenIn)
             {
                 sb.append(g.getNr()).append(" ");
             }
@@ -241,9 +243,9 @@ public class Persoon implements Serializable
      */
     void wordtOuderIn(Gezin g)
     {
-        if (!alsOuderBetrokkenIn.contains(g))
+        if (!observableAlsOuderBetrokkenIn.contains(g))
         {
-            alsOuderBetrokkenIn.add(g);
+            observableAlsOuderBetrokkenIn.add(g);
         }
     }
 
@@ -274,9 +276,9 @@ public class Persoon implements Serializable
     public boolean isGetrouwdOp(Calendar datum)
     {
 
-        if(alsOuderBetrokkenIn !=null)
+        if(observableAlsOuderBetrokkenIn !=null)
         {
-            for (Gezin gezin : alsOuderBetrokkenIn)
+            for (Gezin gezin : observableAlsOuderBetrokkenIn)
             {
                 if (gezin.heeftGetrouwdeOudersOp(datum))
                 {
@@ -301,8 +303,8 @@ public class Persoon implements Serializable
         if (datum.compareTo(meerderjarigDatum) < 1) {
             return false;
         }
-        if(alsOuderBetrokkenIn!=null) {
-            for (Gezin gezin : alsOuderBetrokkenIn) {
+        if(observableAlsOuderBetrokkenIn!=null) {
+            for (Gezin gezin : observableAlsOuderBetrokkenIn) {
                 if (gezin.heeftGetrouwdeOudersOp(datum)) {
                     return false;
                 } else {
