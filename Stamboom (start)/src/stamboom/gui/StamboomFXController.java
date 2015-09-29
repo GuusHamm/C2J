@@ -16,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import stamboom.controller.StamboomController;
 import stamboom.domain.Administratie;
+import stamboom.domain.Geslacht;
 import stamboom.domain.Gezin;
 import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
@@ -96,13 +97,17 @@ public class StamboomFXController extends StamboomController implements Initiali
     @FXML
     TextField tfAchternaamInvoer;
     @FXML
-    ComboBox  cbGesclachtInvoer;
+    ComboBox  cbGeslachtInvoer;
     @FXML
     TextField tfGeboortedatumInvoer;
     @FXML
     TextField tfGeboorteplaatsInvoer;
     @FXML
     ComboBox cbOuderlijkGezinInvoer;
+    @FXML
+    Button btOK;
+    @FXML
+    Button btCancel;
 
     //INVOER GEZIN
     @FXML
@@ -128,14 +133,19 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         stamboomController = new StamboomController();
         admin = stamboomController.getAdministratie();
+        
         initComboboxes();
+        
         withDatabase = false;
     }
 
     private void initComboboxes()
     {
-        cbPersonen.setItems(admin.getPersonen());
-        cbGezinnen.setItems(admin.getGezinnen());
+        cbPersonen = new ComboBox(admin.getPersonen());
+        cbGezinnen = new ComboBox(admin.getGezinnen());
+        cbOuderlijkGezin = new ComboBox(admin.getGezinnen());
+        cbOuderlijkGezinInvoer = new ComboBox(admin.getGezinnen());
+        cbGeslachtInvoer = new ComboBox(FXCollections.observableArrayList(Geslacht.values()));
     }
 
     public void selectPersoon(Event evt)
