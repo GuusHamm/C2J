@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import stamboom.controller.StamboomController;
+import stamboom.domain.Administratie;
 import stamboom.domain.Gezin;
 import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
@@ -119,18 +120,22 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     //opgave 4
     private boolean withDatabase;
-
+    private Administratie admin;
+    private StamboomController stamboomController;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
+        stamboomController = new StamboomController();
+        admin = stamboomController.getAdministratie();
         initComboboxes();
         withDatabase = false;
     }
 
     private void initComboboxes()
     {
-        //todo opgave 3 
-
+        cbPersonen.setItems(admin.getPersonen());
+        cbGezinnen.setItems(admin.getGezinnen());
     }
 
     public void selectPersoon(Event evt)
