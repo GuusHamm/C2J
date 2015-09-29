@@ -70,6 +70,38 @@ public class StamboomFXController extends StamboomController implements Initiali
     ListView lvAlsOuderBetrokkenBij;
     @FXML
     Button btStamboom;
+    
+    //GEZIN
+    @FXML
+    ComboBox cbGezinnen;
+    @FXML
+    TextField tfGezinNr;
+    @FXML
+    TextField tfOuder1;
+    @FXML
+    TextField tfOuder2;
+    @FXML
+    TextField tfHuwelijk;
+    @FXML
+    TextField tfScheiding;
+    @FXML
+    ListView lvKinderen;
+    
+    //INVOER PERSOON
+    @FXML
+    TextField tfVoornamenInvoer;
+    @FXML
+    TextField tfTussenvoegselInvoer;
+    @FXML
+    TextField tfAchternaamInvoer;
+    @FXML
+    ComboBox  cbGesclachtInvoer;
+    @FXML
+    TextField tfGeboortedatumInvoer;
+    @FXML
+    TextField tfGeboorteplaatsInvoer;
+    @FXML
+    ComboBox cbOuderlijkGezinInvoer;
 
     //INVOER GEZIN
     @FXML
