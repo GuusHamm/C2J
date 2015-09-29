@@ -30,7 +30,7 @@
                                                         </Button>
                                                     </bottom>
                                                     <top>
-                                                        <ComboBox fx:id="cbPersonen" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectPersoon" prefHeight="25.0" prefWidth="237.0" promptText="kies persoon">
+                                                        <ComboBox id="btStamboom" fx:id="cbPersonen" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectPersoon" prefHeight="25.0" prefWidth="237.0" promptText="kies persoon">
                                                             <items>
                                                                 <FXCollections fx:factory="observableArrayList">
                                                                     <String fx:value="Item 1" />
@@ -117,7 +117,7 @@
                                        <children>
                                           <BorderPane layoutX="14.0" prefHeight="286.0" prefWidth="346.0">
                                              <top>
-                                                <ComboBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
+                                                <ComboBox id="cbGezinnen" fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
                                                    <BorderPane.margin>
                                                       <Insets left="10.0" right="10.0" top="10.0" />
                                                    </BorderPane.margin>
@@ -148,12 +148,12 @@
                                                 <Label text="Huwelijk" GridPane.rowIndex="3" />
                                                 <Label text="Scheiding" GridPane.rowIndex="4" />
                                                 <Label text="Kinderen" GridPane.rowIndex="5" />
-                                                <TextField GridPane.columnIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+                                                <TextField id="tfGezinNr" fx:id="tfGezinNr" GridPane.columnIndex="1" />
+                                                <TextField id="tfOuder1" fx:id="tfOuder1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField id="tfOuder2" fx:id="tfOuder2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField id="tfHuwelijk" fx:id="tfHuwelijk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField id="tfScheiding" fx:id="tfScheiding" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <ListView id="lvKinderen" fx:id="lvKinderen" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="2" />
                                              </children>
                                              <opaqueInsets>
                                                 <Insets />
@@ -199,13 +199,13 @@
                                                 <Label text="Geboortedatum" GridPane.rowIndex="4" />
                                                 <Label text="Geboorteplaats" GridPane.rowIndex="5" />
                                                 <Label text="Ouderlijk Gezin" GridPane.rowIndex="6" />
-                                                <TextField GridPane.columnIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <TextField promptText="dd-mm-jjjj" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                <ComboBox prefHeight="25.0" prefWidth="350.0" promptText="kies geslacht" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <ComboBox prefHeight="25.0" prefWidth="348.0" promptText="kies (zo mogelijk) ouderlijk gezin" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                <TextField id="tfVoornamenInvoer" fx:id="tfVoornamenInvoer" GridPane.columnIndex="1" />
+                                                <TextField id="tfTussenvoegselInvoer" fx:id="tfTussenvoegselInvoer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField id="tfAchternaamInvoer" fx:id="tfAchternaamInvoer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField id="tfGeboortedatumInvoer" fx:id="tfGeboortedatumInvoer" promptText="dd-mm-jjjj" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField id="tfGeboorteplaatsInvoer" fx:id="tfGeboorteplaatsInvoer" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <ComboBox id="cbGeslachtInvoer" fx:id="cbGesclachtInvoer" prefHeight="25.0" prefWidth="350.0" promptText="kies geslacht" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <ComboBox id="cbOuderlijkGezinInvoer" fx:id="cbOuderlijkGezinInvoer" prefHeight="25.0" prefWidth="348.0" promptText="kies (zo mogelijk) ouderlijk gezin" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                              </children>
                                              <padding>
                                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -215,8 +215,8 @@
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
-                                          <Button layoutX="642.0" layoutY="22.0" mnemonicParsing="false" text="OK" />
-                                          <Button layoutX="583.0" layoutY="22.0" mnemonicParsing="false" text="Cancel" />
+                                          <Button id="btOK" fx:id="btOK" layoutX="642.0" layoutY="22.0" mnemonicParsing="false" onAction="#okGezinInvoer" text="OK" />
+                                          <Button id="btCancel" fx:id="btCancel" layoutX="583.0" layoutY="22.0" mnemonicParsing="false" onAction="#cancelPersoonInvoer" text="Cancel" />
                                        </children>
                                     </AnchorPane>
                                 </items>
