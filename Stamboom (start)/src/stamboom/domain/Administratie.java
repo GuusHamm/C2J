@@ -2,13 +2,15 @@ package stamboom.domain;
 
 import java.io.Serializable;
 import java.util.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Administratie implements Serializable {
 
     //************************datavelden*************************************
     private int nextGezinsNr;
     private int nextPersNr;
-    private final ArrayList<Persoon> personen;
+    private final ObservableList<Persoon> observablePersonen;
     private final ArrayList<Gezin> gezinnen;
 
     private int getNextGezinsNr()
@@ -25,11 +27,10 @@ public class Administratie implements Serializable {
      * (apart) opvolgend genummerd vanaf 1
      */
     public Administratie() {
-        this.personen = new ArrayList<Persoon>();
-        this.gezinnen = new ArrayList<Gezin>(); 
+        this.gezinnen = new ArrayList<>(); 
         this.nextGezinsNr =0;
-        this.nextPersNr=0;
-        
+        this.nextPersNr=0; 
+        this.observablePersonen = FXCollections.observableArrayList();
     }
 
     //**********************methoden****************************************
@@ -83,14 +84,14 @@ public class Administratie implements Serializable {
             System.out.println(e);
         }
 
-        for (Persoon p : personen)
+        for (Persoon p : observablePersonen)
         {
             if (p.getNaam().equals(huidig.getNaam()) && p.getGebPlaats().equals(huidig.getGebPlaats()) && p.getGebDat().equals(huidig.getGebDat()))
             {
                 return null;
             }
         }
-        this.personen.add(huidig);
+        this.observablePersonen.add(huidig);
         if (ouderlijkGezin != null)
         {
             ouderlijkGezin.breidUitMet(huidig);
@@ -259,7 +260,7 @@ public class Administratie implements Serializable {
      */
     public Persoon getPersoon(int nr) {
         //aanname: er worden geen personen verwijderd
-        for (Persoon p : personen)
+        for (Persoon p : observablePersonen)
         {
             if(p.getNr()==nr)
             {
@@ -295,10 +296,11 @@ public class Administratie implements Serializable {
      *
      * @return de geregistreerde personen
      */
-    public List<Persoon> getPersonen() {
-        return Collections.unmodifiableList(personen);
+    public ObservableList<Persoon> getPersonen() {
+        return (ObservableList<Persoon>)
+                FXCollections.unmodifiableObservableList(observablePersonen);
     }
-
+    
     /**
      *
      * @param vnamen
@@ -321,7 +323,7 @@ public class Administratie implements Serializable {
         }
         initialen = initialen.toUpperCase();
 
-        for(Persoon p : personen)
+        for(Persoon p : observablePersonen)
         {
 
             if(initialen.equals(p.getInitialen()) && tvoegsel.equals(p.getTussenvoegsel()) && p.getAchternaam().toUpperCase().equals(anaam.toUpperCase()) && p.getGebDat().equals(gebdat))
