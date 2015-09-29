@@ -19,6 +19,7 @@ public class StamboomConsole
     // **********constructoren*******************************************
     public StamboomConsole(StamboomController controller)
     {
+//        this.getAdmin().addPersoon(new Geslacht("m",))
         input = new Scanner(System.in);
         this.controller = controller;
         this.startMenu();
@@ -271,8 +272,9 @@ public class StamboomConsole
         while (r != null)
         {
             System.out.println(r.toString());
-            nr++;
             r = getAdmin().getGezin(nr);
+            nr++;
+
         }
     }
     
