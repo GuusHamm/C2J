@@ -5,10 +5,12 @@
 package stamboom.gui;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -145,7 +147,11 @@ public class StamboomFXController extends StamboomController implements Initiali
         cbGezinnen = new ComboBox(admin.getGezinnen());
         cbOuderlijkGezin = new ComboBox(admin.getGezinnen());
         cbOuderlijkGezinInvoer = new ComboBox(admin.getGezinnen());
-        cbGeslachtInvoer = new ComboBox(FXCollections.observableArrayList(Geslacht.values()));
+        
+        ObservableList<String> enumValues = FXCollections.observableArrayList();
+        enumValues.add(Geslacht.MAN.toString());
+        enumValues.add(Geslacht.VROUW.toString());
+        cbGeslachtInvoer = new ComboBox(enumValues);
     }
 
     public void selectPersoon(Event evt)
