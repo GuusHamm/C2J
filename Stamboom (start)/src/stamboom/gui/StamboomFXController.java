@@ -5,8 +5,8 @@
 package stamboom.gui;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -17,7 +17,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import stamboom.controller.StamboomController;
-import stamboom.domain.Administratie;
 import stamboom.domain.Geslacht;
 import stamboom.domain.Gezin;
 import stamboom.domain.Persoon;
@@ -127,15 +126,11 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     //opgave 4
     private boolean withDatabase;
-    private Administratie admin;
     private StamboomController stamboomController;
     
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        stamboomController = new StamboomController();
-        admin = stamboomController.getAdministratie();
-        
         initComboboxes();
         
         withDatabase = false;
@@ -143,15 +138,19 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void initComboboxes()
     {
-        cbPersonen = new ComboBox(admin.getPersonen());
-        cbGezinnen = new ComboBox(admin.getGezinnen());
-        cbOuderlijkGezin = new ComboBox(admin.getGezinnen());
-        cbOuderlijkGezinInvoer = new ComboBox(admin.getGezinnen());
+
+        admin.addPersoon(Geslacht.MAN, new String[]{"Piet", "Franciscus"}, "Swinkels",
+                "", new GregorianCalendar(1950, Calendar.APRIL, 23), "ede", null);
+        cbPersonen.setItems(admin.getPersonen());
+        cbGezinnen.setItems(admin.getGezinnen());
+        cbOuderlijkGezin.setItems(admin.getGezinnen());
+        cbOuderlijkGezinInvoer.setItems(admin.getGezinnen());
         
         ObservableList<String> enumValues = FXCollections.observableArrayList();
-        enumValues.add(Geslacht.MAN.toString());
-        enumValues.add(Geslacht.VROUW.toString());
-        cbGeslachtInvoer = new ComboBox(enumValues);
+        enumValues.add(Geslacht.MAN.toString().toLowerCase());
+        enumValues.add(Geslacht.VROUW.toString().toLowerCase());
+        cbGeslachtInvoer.setItems(enumValues);
+
     }
 
     public void selectPersoon(Event evt)
