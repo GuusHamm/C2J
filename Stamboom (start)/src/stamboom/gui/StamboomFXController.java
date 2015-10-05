@@ -149,8 +149,7 @@ public class StamboomFXController extends StamboomController implements Initiali
         ObservableList<String> enumValues = FXCollections.observableArrayList();
         enumValues.add(Geslacht.MAN.toString().toLowerCase());
         enumValues.add(Geslacht.VROUW.toString().toLowerCase());
-       // cbGeslachtInvoer.setItems(enumValues);
-        cbGeslachtInvoer  = new ComboBox(enumValues);
+        cbGeslachtInvoer.setItems(enumValues);
     }
 
     public void selectPersoon(Event evt)
