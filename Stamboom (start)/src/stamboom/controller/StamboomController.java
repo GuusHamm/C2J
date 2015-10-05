@@ -9,15 +9,15 @@ import java.io.IOException;
 import java.util.Properties;
 
 import stamboom.domain.Administratie;
+import stamboom.domain.Geslacht;
 import stamboom.storage.IStorageMediator;
 import stamboom.storage.SerializationMediator;
 
 public class StamboomController
 {
 
-    private Administratie admin;
+    protected Administratie admin;
     private IStorageMediator storageMediator;
-
     /**
      * creatie van stamboomcontroller met lege administratie en onbekend
      * opslagmedium
