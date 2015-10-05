@@ -30,7 +30,7 @@
                                                         </Button>
                                                     </bottom>
                                                     <top>
-                                                        <ComboBox id="btStamboom" fx:id="cbPersonen" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectPersoon" prefHeight="25.0" prefWidth="237.0" promptText="kies persoon">
+                                                        <ComboBox fx:id="cbPersonen" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectPersoon" prefHeight="25.0" prefWidth="237.0" promptText="kies persoon">
                                                             <items>
                                                                 <FXCollections fx:factory="observableArrayList">
                                                                     <String fx:value="Item 1" />
@@ -117,7 +117,7 @@
                                        <children>
                                           <BorderPane layoutX="14.0" prefHeight="286.0" prefWidth="346.0">
                                              <top>
-                                                <ComboBox id="cbGezinnen" fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
+                                                <ComboBox fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
                                                     <items>
                                                         <FXCollections fx:factory="observableArrayList">
                                                             <String fx:value="Item 1" />
@@ -211,7 +211,7 @@
                                                 <TextField id="tfAchternaamInvoer" fx:id="tfAchternaamInvoer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                                 <TextField id="tfGeboortedatumInvoer" fx:id="tfGeboortedatumInvoer" promptText="dd-mm-jjjj" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                 <TextField id="tfGeboorteplaatsInvoer" fx:id="tfGeboorteplaatsInvoer" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                <ComboBox id="cbGeslachtInvoer" fx:id="cbGeslachtInvoer" prefHeight="25.0" prefWidth="350.0" promptText="kies geslacht" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                <ComboBox fx:id="cbGeslachtInvoer" prefHeight="25.0" prefWidth="350.0" promptText="kies geslacht" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                     <items>
                                                         <FXCollections fx:factory="observableArrayList">
                                                             <String fx:value="Item 1" />
@@ -220,7 +220,7 @@
                                                         </FXCollections>
                                                     </items>
                                                 </ComboBox>
-                                                <ComboBox id="cbOuderlijkGezinInvoer" fx:id="cbOuderlijkGezinInvoer" prefHeight="25.0" prefWidth="348.0" promptText="kies (zo mogelijk) ouderlijk gezin" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                <ComboBox fx:id="cbOuderlijkGezinInvoer" prefHeight="25.0" prefWidth="348.0" promptText="kies (zo mogelijk) ouderlijk gezin" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                     <items>
                                                         <FXCollections fx:factory="observableArrayList">
                                                             <String fx:value="Item 1" />
