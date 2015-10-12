@@ -117,7 +117,7 @@
                                        <children>
                                           <BorderPane layoutX="14.0" prefHeight="286.0" prefWidth="346.0">
                                              <top>
-                                                <ComboBox fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
+                                                <ComboBox fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectGezin" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
                                                     <items>
                                                         <FXCollections fx:factory="observableArrayList">
                                                             <String fx:value="Item 1" />
@@ -158,8 +158,8 @@
                                                 <TextField id="tfGezinNr" fx:id="tfGezinNr" GridPane.columnIndex="1" />
                                                 <TextField id="tfOuder1" fx:id="tfOuder1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                 <TextField id="tfOuder2" fx:id="tfOuder2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <TextField id="tfHuwelijk" fx:id="tfHuwelijk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <TextField id="tfScheiding" fx:id="tfScheiding" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField id="tfHuwelijk" fx:id="tfHuwelijk" onKeyTyped="#setHuwdatum" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField id="tfScheiding" fx:id="tfScheiding" onKeyTyped="#setScheidingsdatum" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                 <ListView id="lvKinderen" fx:id="lvKinderen" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="2" />
                                              </children>
                                              <opaqueInsets>
@@ -238,7 +238,7 @@
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
-                                          <Button id="btOK" fx:id="btOK" layoutX="642.0" layoutY="22.0" mnemonicParsing="false" onAction="#okGezinInvoer" text="OK" />
+                                          <Button id="btOK" fx:id="btOK" layoutX="642.0" layoutY="22.0" mnemonicParsing="false" onAction="#okPersoonInvoer" text="OK" />
                                           <Button id="btCancel" fx:id="btCancel" layoutX="583.0" layoutY="22.0" mnemonicParsing="false" onAction="#cancelPersoonInvoer" text="Cancel" />
                                        </children>
                                     </AnchorPane>

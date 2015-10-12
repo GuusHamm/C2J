@@ -4,11 +4,6 @@
  */
 package stamboom.gui;
 
-import java.net.URL;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.ResourceBundle;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -21,6 +16,14 @@ import stamboom.domain.Geslacht;
 import stamboom.domain.Gezin;
 import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
+
+import javax.swing.*;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.ResourceBundle;
+
 
 /**
  * @author frankpeeters
@@ -138,9 +141,8 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void initComboboxes()
     {
-
-        admin.addPersoon(Geslacht.MAN, new String[]{"Piet", "Franciscus"}, "Swinkels",
-                "", new GregorianCalendar(1950, Calendar.APRIL, 23), "ede", null);
+        cbOuder1Invoer.setItems(admin.getPersonen());
+        cbOuder2Invoer.setItems(admin.getPersonen());
         cbPersonen.setItems(admin.getPersonen());
         cbGezinnen.setItems(admin.getGezinnen());
         cbOuderlijkGezin.setItems(admin.getGezinnen());
@@ -155,6 +157,7 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void selectPersoon(Event evt)
     {
         Persoon persoon = (Persoon) cbPersonen.getSelectionModel().getSelectedItem();
+        lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         showPersoon(persoon);
     }
 
@@ -179,9 +182,6 @@ public class StamboomFXController extends StamboomController implements Initiali
             {
                 cbOuderlijkGezin.getSelectionModel().clearSelection();
             }
-
-            //todo opgave 3
-            //lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         }
     }
 
@@ -210,37 +210,130 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void selectGezin(Event evt)
     {
         // todo opgave 3
-
+        Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
+        lvKinderen.setItems(g.getKinderen());
+        showGezin(g);
     }
 
     private void showGezin(Gezin gezin)
     {
         // todo opgave 3
+        clearTabGezin();
 
+        if (gezin == null)
+        {
+            return;
+        }
+        else
+        {
+            tfGezinNr.setText(gezin.getNr()+"");
+            if(gezin.getOuder1()!=null)
+                tfOuder1.setText(gezin.getOuder1().toString());
+            if(gezin.getOuder2()!=null)
+                tfOuder2.setText(gezin.getOuder2().toString());
+
+            if(gezin.getHuwelijksdatum()!=null){
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                tfHuwelijk.setText(sdf.format(gezin.getHuwelijksdatum().getTime()));
+            }
+            if(gezin.getScheidingsdatum()!=null)
+                tfScheiding.setText(gezin.getScheidingsdatum().toString());
+
+
+        }
     }
 
-    public void setHuwdatum(Event evt)
+    public void setHuwdatum(javafx.scene.input.KeyEvent evt)
     {
-        // todo opgave 3
+        Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
 
+        // todo opgave 3
+        if(evt.getCharacter().toString().toUpperCase()!="ENTER")
+        {
+            return;
+        }
+
+        if(g==null)
+        {
+            JOptionPane.showMessageDialog(null, "Geen gezin is geselecteerd");
+        }
+        else
+        {
+            String[] date = tfHuwelijk.getText().split("-");
+
+            try
+            {
+                admin.setHuwelijk(g,
+                        new GregorianCalendar(
+                                Integer.parseInt(date[2]),
+                                Integer.parseInt(date[1]),
+                                Integer.parseInt(date[0])
+                        )
+                );
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "Controleer of de datum in het correcte format is /nformat : DD-MM-YYYY");
+            }
+        }
     }
 
-    public void setScheidingsdatum(Event evt)
+    public void setScheidingsdatum(javafx.scene.input.KeyEvent evt)
     {
+        Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
         // todo opgave 3
+
+        if(evt.getCharacter().toString().toUpperCase()!="ENTER")
+        {
+            return;
+        }
+        if(g==null )
+        {
+            JOptionPane.showMessageDialog(null, "Geen gezin is geselecteerd");
+        }
+        else
+        {
+            String[] date = tfHuwelijk.getText().split("-");
+
+            try
+            {
+                admin.setScheiding(g,
+                        new GregorianCalendar(
+                                Integer.parseInt(date[2]),
+                                Integer.parseInt(date[1]),
+                                Integer.parseInt(date[0])
+                        )
+                );
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "Controleer of de datum in het correcte format is /nformat : DD-MM-YYYY");
+            }
+        }
 
     }
 
     public void cancelPersoonInvoer(Event evt)
     {
-        // todo opgave 3
+        clearTabPersoonInvoer();
 
     }
 
     public void okPersoonInvoer(Event evt)
     {
-        // todo opgave 3
+        String voornamenString = tfVoornamenInvoer.getText();
+        String[] voornamen = voornamenString.split(" ");
+        String tussenvoegsel = tfTussenvoegselInvoer.getText();
+        String achternaam = tfAchternaamInvoer.getText();
+        Geslacht geslacht = Geslacht.valueOf(cbGeslachtInvoer.getSelectionModel().getSelectedItem().toString().toUpperCase());
+        String geboortedatumString = tfGeboortedatumInvoer.getText();
+        String[] date = geboortedatumString.split("-");
+        GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
+        String geboorteplaats = tfGeboorteplaatsInvoer.getText();
+        Gezin ouderlijkGezin = (Gezin)cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
 
+        admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin );
+        clearTabPersoonInvoer();
     }
 
     public void okGezinInvoer(Event evt)
@@ -303,8 +396,13 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void showStamboom(Event evt)
     {
-        // todo opgave 3
-
+        Persoon persoon = (Persoon)cbPersonen.getSelectionModel().getSelectedItem();
+        if(persoon == null){
+            showDialog(null, "Geen persoon geselecteerd");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, persoon.stamboomAlsString());
+        }
     }
 
     public void createEmptyStamboom(Event evt)
@@ -371,15 +469,22 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void clearTabPersoonInvoer()
     {
-        //todo opgave 3
-
+        tfVoornamenInvoer.clear();
+        tfTussenvoegsel.clear();
+        tfAchternaamInvoer.clear();
+        cbGeslachtInvoer.getSelectionModel().clearSelection();
+        tfGeboortedatumInvoer.clear();
+        tfGeboorteplaatsInvoer.clear();
+        cbOuderlijkGezinInvoer.getSelectionModel().clearSelection();
     }
 
 
     private void clearTabGezinInvoer()
     {
-        //todo opgave 3
-
+        cbOuder1Invoer.getSelectionModel().clearSelection();
+        cbOuder2Invoer.getSelectionModel().clearSelection();
+        tfHuwelijkInvoer.clear();
+        tfScheidingInvoer.clear();
     }
 
     private void clearTabPersoon()

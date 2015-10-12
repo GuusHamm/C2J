@@ -180,9 +180,9 @@ public class Persoon extends Observable implements Serializable
     /**
      * @return de gezinnen waar deze persoon bij betrokken is
      */
-    public List<Gezin> getAlsOuderBetrokkenIn()
+    public ObservableList<Gezin> getAlsOuderBetrokkenIn()
     {
-        return (List<Gezin>) Collections.unmodifiableList(observableAlsOuderBetrokkenIn);
+        return (ObservableList<Gezin>) FXCollections.unmodifiableObservableList(observableAlsOuderBetrokkenIn);
     }
 
     /**
