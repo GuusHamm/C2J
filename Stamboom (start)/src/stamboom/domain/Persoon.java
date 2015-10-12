@@ -182,7 +182,7 @@ public class Persoon extends Observable implements Serializable
      */
     public ObservableList<Gezin> getAlsOuderBetrokkenIn()
     {
-        return (ObservableList<Gezin>) Collections.unmodifiableList(observableAlsOuderBetrokkenIn);
+        return (ObservableList<Gezin>) FXCollections.unmodifiableObservableList(observableAlsOuderBetrokkenIn);
     }
 
     /**

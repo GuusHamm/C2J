@@ -336,6 +336,7 @@ public class StamboomFXController extends StamboomController implements Initiali
         Gezin ouderlijkGezin = (Gezin)cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
 
         admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin );
+        clearTabPersoonInvoer();
     }
 
     public void okGezinInvoer(Event evt)
