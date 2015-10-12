@@ -1,11 +1,12 @@
 package stamboom.domain;
 
-import java.io.Serializable;
-import java.util.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import stamboom.util.StringUtilities;
+
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Observable;
 
 public class Gezin extends Observable implements Serializable
 {

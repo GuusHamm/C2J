@@ -1,9 +1,11 @@
 package stamboom.domain;
 
-import java.io.Serializable;
-import java.util.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Administratie implements Serializable {
 
@@ -160,6 +162,9 @@ public class Administratie implements Serializable {
      * @return of ouderlijk gezin kon worden toegevoegd.
      */
     public boolean setOuders(Persoon persoon, Gezin ouderlijkGezin) {
+        if(ouderlijkGezin.getOuder1()==persoon || ouderlijkGezin.getOuder2()==persoon)
+            return false;
+
         return persoon.setOuders(ouderlijkGezin);
     }
 

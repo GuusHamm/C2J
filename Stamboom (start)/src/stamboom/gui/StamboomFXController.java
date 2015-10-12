@@ -242,10 +242,7 @@ public class StamboomFXController extends StamboomController implements Initiali
             if(gezin.getScheidingsdatum()!=null)
                 tfScheiding.setText(gezin.getScheidingsdatum().toString());
 
-            for(Persoon kind : gezin.getKinderen())
-            {
-                
-            }
+
         }
     }
 
