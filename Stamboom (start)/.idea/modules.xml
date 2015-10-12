@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Stamboom (start).iml" filepath="$PROJECT_DIR$/.idea/Stamboom (start).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stamboom (start).iml" filepath="$PROJECT_DIR$/Stamboom (start).iml" />
     </modules>
   </component>
 </project>
