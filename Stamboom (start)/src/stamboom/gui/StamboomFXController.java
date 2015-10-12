@@ -182,9 +182,6 @@ public class StamboomFXController extends StamboomController implements Initiali
             {
                 cbOuderlijkGezin.getSelectionModel().clearSelection();
             }
-
-            //todo opgave 3
-            //lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         }
     }
 
