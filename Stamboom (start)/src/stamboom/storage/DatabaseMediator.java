@@ -5,8 +5,7 @@
 package stamboom.storage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 import stamboom.domain.Administratie;
@@ -27,7 +26,8 @@ public class DatabaseMediator implements IStorageMediator
     @Override
     public void save(Administratie admin) throws IOException
     {
-        //todo opgave 4     
+        //todo opgave 4
+
     }
 
     /**
@@ -57,7 +57,13 @@ public class DatabaseMediator implements IStorageMediator
             System.err.println(ex.getMessage());
             this.props = null;
             return false;
-        } finally
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+            return false;x
+        }
+        finally
         {
             closeConnection();
         }
@@ -95,9 +101,62 @@ public class DatabaseMediator implements IStorageMediator
         return true;
     }
 
-    private void initConnection() throws SQLException
+    private void initConnection() throws SQLException, ClassNotFoundException
     {
-        //opgave 4
+        // TODO opgave 4
+        Class.forName("org.sqlite.JDBC");
+
+        Connection connection = null;
+        try
+        {
+            // create a database connection
+            connection = DriverManager.getConnection(props.getProperty("url"));
+            Statement statement = connection.createStatement();
+            statement.setQueryTimeout(30);  // set timeout to 30 sec.
+
+
+
+            statement.executeUpdate("CREATE TABLE `Persoon` (\n" +
+                                            "\t`persoonsNummer`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                                            "\t`achternaam`\tTEXT,\n" +
+                                            "\t`voornamen`\tTEXT,\n" +
+                                            "\t`tussenvoegsel`\tTEXT,\n" +
+                                            "\t`geboortedatum`\tTEXT,\n" +
+                                            "\t`geboorteplaats`\tTEXT,\n" +
+                                            "\t`geslacht`\tTEXT,\n" +
+                                            "\t`ouders`\tTEXT NOT NULL,\n" +
+                                            "\t FOREIGN KEY(ouders)\tREFERENCES gezin(gezinsnummer)\n" +
+                                            ");");
+            statement.executeUpdate("CREATE TABLE `Gezin` (\n" +
+                                            "\t`gezinsNummer`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                                            "\t`ouder1`\tTEXT,\n" +
+                                            "\t`ouder2`\tTEXT NOT NULL,\n" +
+                                            "\t`huwelijksdatum`\tTEXT,\n" +
+                                            "\t`scheidingsdatum`\tTEXT NOT NULL,\n" +
+                                            "\t FOREIGN KEY(ouder1)\tREFERENCES persoon(persoonsnummer)\n," +
+                                            "\t FOREIGN KEY(ouder2)\tREFERENCES persoon(persoonsnummer)\n" +
+                                            ");");
+        }
+        catch(SQLException e)
+        {
+            // if the error message is "out of memory",
+            // it probably means no database file is found
+            System.err.println(e.getMessage());
+        }
+        finally
+        {
+            try
+            {
+                if(connection != null)
+                    connection.close();
+            }
+            catch(SQLException e)
+            {
+                // connection close failed.
+                System.err.println(e);
+            }
+        }
+
     }
 
     private void closeConnection()
