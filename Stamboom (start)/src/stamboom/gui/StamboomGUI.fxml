@@ -117,7 +117,7 @@
                                        <children>
                                           <BorderPane layoutX="14.0" prefHeight="286.0" prefWidth="346.0">
                                              <top>
-                                                <ComboBox fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
+                                                <ComboBox fx:id="cbGezinnen" minHeight="-Infinity" minWidth="-Infinity" onAction="#selectGezin" prefHeight="25.0" prefWidth="237.0" promptText="kies gezin">
                                                     <items>
                                                         <FXCollections fx:factory="observableArrayList">
                                                             <String fx:value="Item 1" />

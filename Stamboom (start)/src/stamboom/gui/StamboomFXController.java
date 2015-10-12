@@ -218,18 +218,24 @@ public class StamboomFXController extends StamboomController implements Initiali
     private void showGezin(Gezin gezin)
     {
         // todo opgave 3
+        clearTabGezin();
 
         if (gezin == null)
         {
-            clearTabGezin();
+            return;
         }
         else
         {
             tfGezinNr.setText(gezin.getNr()+"");
-            tfOuder1.setText(gezin.getOuder1().toString());
-            tfOuder2.setText(gezin.getOuder2().toString());
-            tfHuwelijk.setText(gezin.getHuwelijksdatum().toString());
-            tfScheiding.setText(gezin.getScheidingsdatum().toString());
+            if(gezin.getOuder1()!=null)
+                tfOuder1.setText(gezin.getOuder1().toString());
+            if(gezin.getOuder2()!=null)
+                tfOuder2.setText(gezin.getOuder2().toString());
+
+            if(gezin.getHuwelijksdatum()!=null)
+                tfHuwelijk.setText((gezin.getHuwelijksdatum()).getTime().toString());
+            if(gezin.getScheidingsdatum()!=null)
+                tfScheiding.setText(gezin.getScheidingsdatum().toString());
 
             for(Persoon kind : gezin.getKinderen())
             {
