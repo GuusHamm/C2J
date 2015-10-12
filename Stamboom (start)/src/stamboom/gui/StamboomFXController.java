@@ -391,7 +391,12 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void showStamboom(Event evt)
     {
         Persoon persoon = (Persoon)cbPersonen.getSelectionModel().getSelectedItem();
-        JOptionPane.showMessageDialog(null, persoon.stamboomAlsString());
+        if(persoon == null){
+            showDialog(null, "Geen persoon geselecteerd");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, persoon.stamboomAlsString());
+        }
     }
 
     public void createEmptyStamboom(Event evt)
