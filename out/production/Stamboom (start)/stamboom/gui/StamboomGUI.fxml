@@ -158,8 +158,8 @@
                                                 <TextField id="tfGezinNr" fx:id="tfGezinNr" GridPane.columnIndex="1" />
                                                 <TextField id="tfOuder1" fx:id="tfOuder1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                                 <TextField id="tfOuder2" fx:id="tfOuder2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <TextField id="tfHuwelijk" fx:id="tfHuwelijk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <TextField id="tfScheiding" fx:id="tfScheiding" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField id="tfHuwelijk" fx:id="tfHuwelijk" onKeyTyped="#setHuwdatum" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField id="tfScheiding" fx:id="tfScheiding" onKeyTyped="#setScheidingsdatum" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                 <ListView id="lvKinderen" fx:id="lvKinderen" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.rowSpan="2" />
                                              </children>
                                              <opaqueInsets>
