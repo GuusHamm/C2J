@@ -19,6 +19,7 @@ import stamboom.util.StringUtilities;
 
 import javax.swing.*;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
@@ -233,14 +234,16 @@ public class StamboomFXController extends StamboomController implements Initiali
             if(gezin.getOuder2()!=null)
                 tfOuder2.setText(gezin.getOuder2().toString());
 
-            if(gezin.getHuwelijksdatum()!=null)
-                tfHuwelijk.setText((gezin.getHuwelijksdatum()).getTime().toString());
+            if(gezin.getHuwelijksdatum()!=null){
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                tfHuwelijk.setText(sdf.format(gezin.getHuwelijksdatum().getTime()));
+            }
             if(gezin.getScheidingsdatum()!=null)
                 tfScheiding.setText(gezin.getScheidingsdatum().toString());
 
             for(Persoon kind : gezin.getKinderen())
             {
-                lvKinderen.getItems().add(kind);
+                
             }
         }
     }
