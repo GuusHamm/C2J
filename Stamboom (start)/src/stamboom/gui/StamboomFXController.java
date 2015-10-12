@@ -140,9 +140,8 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void initComboboxes()
     {
-
-        admin.addPersoon(Geslacht.MAN, new String[]{"Piet", "Franciscus"}, "Swinkels",
-                "", new GregorianCalendar(1950, Calendar.APRIL, 23), "ede", null);
+        cbOuder1Invoer.setItems(admin.getPersonen());
+        cbOuder2Invoer.setItems(admin.getPersonen());
         cbPersonen.setItems(admin.getPersonen());
         cbGezinnen.setItems(admin.getGezinnen());
         cbOuderlijkGezin.setItems(admin.getGezinnen());
