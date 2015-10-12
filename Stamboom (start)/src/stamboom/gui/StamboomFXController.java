@@ -22,6 +22,8 @@ import stamboom.domain.Gezin;
 import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
 
+import javax.swing.*;
+
 /**
  * @author frankpeeters
  */
@@ -211,6 +213,7 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         // todo opgave 3
 
+
     }
 
     private void showGezin(Gezin gezin)
@@ -239,8 +242,18 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void okPersoonInvoer(Event evt)
     {
-        // todo opgave 3
+        String voornamenString = tfVoornamenInvoer.getText();
+        String[] voornamen = voornamenString.split(" ");
+        String tussenvoegsel = tfTussenvoegselInvoer.getText();
+        String achternaam = tfAchternaamInvoer.getText();
+        Geslacht geslacht = (Geslacht)cbGeslachtInvoer.getSelectionModel().getSelectedItem();
+        String geboortedatumString = tfGeboortedatumInvoer.getText();
+        String[] date = geboortedatumString.split("-");
+        GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
+        String geboorteplaats = tfGeboorteplaatsInvoer.getText();
+        Gezin ouderlijkGezin = (Gezin)cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
 
+        admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin );
     }
 
     public void okGezinInvoer(Event evt)
@@ -303,8 +316,8 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void showStamboom(Event evt)
     {
-        // todo opgave 3
-
+        Persoon persoon = (Persoon)cbPersonen.getSelectionModel().getSelectedItem();
+        JOptionPane.showMessageDialog(null, persoon.stamboomAlsString());
     }
 
     public void createEmptyStamboom(Event evt)
@@ -371,15 +384,22 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void clearTabPersoonInvoer()
     {
-        //todo opgave 3
-
+        tfVoornamenInvoer.clear();
+        tfTussenvoegsel.clear();
+        tfAchternaam.clear();
+        cbGeslachtInvoer.getSelectionModel().clearSelection();
+        tfGeboortedatumInvoer.clear();
+        tfGebPlaats.clear();
+        cbOuderlijkGezinInvoer.getSelectionModel().clearSelection();
     }
 
 
     private void clearTabGezinInvoer()
     {
-        //todo opgave 3
-
+        cbOuder1Invoer.getSelectionModel().clearSelection();
+        cbOuder2Invoer.getSelectionModel().clearSelection();
+        tfHuwelijkInvoer.clear();
+        tfScheidingInvoer.clear();
     }
 
     private void clearTabPersoon()

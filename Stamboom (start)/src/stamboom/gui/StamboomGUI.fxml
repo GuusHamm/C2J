@@ -238,7 +238,7 @@
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                        <children>
-                                          <Button id="btOK" fx:id="btOK" layoutX="642.0" layoutY="22.0" mnemonicParsing="false" onAction="#okGezinInvoer" text="OK" />
+                                          <Button id="btOK" fx:id="btOK" layoutX="642.0" layoutY="22.0" mnemonicParsing="false" onAction="#okPersoonInvoer" text="OK" />
                                           <Button id="btCancel" fx:id="btCancel" layoutX="583.0" layoutY="22.0" mnemonicParsing="false" onAction="#cancelPersoonInvoer" text="Cancel" />
                                        </children>
                                     </AnchorPane>
