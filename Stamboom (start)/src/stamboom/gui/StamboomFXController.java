@@ -212,6 +212,7 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         // todo opgave 3
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
+        lvKinderen.setItems(g.getKinderen());
         showGezin(g);
     }
 
