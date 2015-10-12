@@ -320,7 +320,7 @@ public class StamboomFXController extends StamboomController implements Initiali
         String[] voornamen = voornamenString.split(" ");
         String tussenvoegsel = tfTussenvoegselInvoer.getText();
         String achternaam = tfAchternaamInvoer.getText();
-        Geslacht geslacht = (Geslacht)cbGeslachtInvoer.getSelectionModel().getSelectedItem();
+        Geslacht geslacht = Geslacht.valueOf(cbGeslachtInvoer.getSelectionModel().getSelectedItem().toString().toUpperCase());
         String geboortedatumString = tfGeboortedatumInvoer.getText();
         String[] date = geboortedatumString.split("-");
         GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
