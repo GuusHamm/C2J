@@ -61,7 +61,7 @@ public class DatabaseMediator implements IStorageMediator
         catch (ClassNotFoundException e)
         {
             e.printStackTrace();
-            return false;x
+            return false;
         }
         finally
         {
