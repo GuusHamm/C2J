@@ -321,7 +321,7 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void cancelPersoonInvoer(Event evt)
     {
-        // todo opgave 3
+        clearTabPersoonInvoer();
 
     }
 
@@ -476,10 +476,10 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         tfVoornamenInvoer.clear();
         tfTussenvoegsel.clear();
-        tfAchternaam.clear();
+        tfAchternaamInvoer.clear();
         cbGeslachtInvoer.getSelectionModel().clearSelection();
         tfGeboortedatumInvoer.clear();
-        tfGebPlaats.clear();
+        tfGeboorteplaatsInvoer.clear();
         cbOuderlijkGezinInvoer.getSelectionModel().clearSelection();
     }
 
