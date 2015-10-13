@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4f342288-3d50-434d-b835-4abf5055a5cf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin" afterPath="$PROJECT_DIR$/admin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.db" afterPath="$PROJECT_DIR$/test.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" afterPath="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" />
     </list>
     <ignored path="Stamboom (start).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +36,24 @@
       <file leaf-file-name="StamboomFXController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="424" column="29" selection-start-line="424" selection-start-column="29" selection-end-line="424" selection-end-column="29" />
+            <state vertical-scroll-proportion="-3.9655173">
+              <caret line="519" column="17" selection-start-line="519" selection-start-column="17" selection-end-line="519" selection-end-column="17" />
               <folding>
                 <element signature="e#0#14835#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StamboomGUI.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5541045">
+              <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Persoon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82828283">
+            <state vertical-scroll-proportion="0.0">
               <caret line="441" column="69" selection-start-line="441" selection-start-column="69" selection-end-line="441" selection-end-column="69" />
               <folding />
             </state>
@@ -99,6 +112,7 @@
         <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
+        <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" />
       </list>
     </option>
   </component>
@@ -184,28 +198,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stamboom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stamboom (start)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stamboom (start)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tst" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stamboom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,6 +312,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="stamboom.storage" />
       <option name="MAIN_CLASS_NAME" value="stamboom.storage.SerialisatieTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="DatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="stamboom.storage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Stamboom (start)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="stamboom.storage" />
+      <option name="MAIN_CLASS_NAME" value="stamboom.storage.DatabaseTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -542,14 +560,16 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.StamboomGUI" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SerialisatieTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DatabaseTest" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Application.StamboomGUI" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SerialisatieTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DatabaseTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SerialisatieTest" />
       </list>
     </recent_temporary>
   </component>
@@ -567,7 +587,7 @@
       <workItem from="1444648557480" duration="3122000" />
       <workItem from="1444724120353" duration="2974000" />
       <workItem from="1444741096794" duration="4038000" />
-      <workItem from="1444748741122" duration="1966000" />
+      <workItem from="1444748741122" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="Added Database settings">
       <created>1444651597207</created>
@@ -585,7 +605,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13753000" />
+    <option name="totallyTimeSpent" value="14243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,7 +633,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24810892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3274809" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1262,27 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="249" column="99" selection-start-line="249" selection-start-column="90" selection-end-line="249" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="424" column="29" selection-start-line="424" selection-start-column="29" selection-end-line="424" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#14835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1301,8 +1300,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82828283">
+        <state vertical-scroll-proportion="0.0">
           <caret line="441" column="69" selection-start-line="441" selection-start-column="69" selection-end-line="441" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9655173">
+          <caret line="519" column="17" selection-start-line="519" selection-start-column="17" selection-end-line="519" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#14835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5541045">
+          <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
           <folding />
         </state>
       </provider>
