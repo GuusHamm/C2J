@@ -522,7 +522,13 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void clearTabGezin()
     {
-        
+        cbPersonen.getSelectionModel().clearSelection();
+        tfGezinNr.clear();
+        tfOuder1.clear();
+        tfOuder2.clear();
+        tfHuwelijk.clear();
+        tfScheiding.clear();
+        lvKinderen.setItems(FXCollections.emptyObservableList());
 
     }
 
