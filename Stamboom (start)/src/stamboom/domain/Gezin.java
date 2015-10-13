@@ -77,7 +77,7 @@ public class Gezin extends Observable implements Serializable
         this.nr = gezinsNr;
         this.ouder1 = ouder1;
         this.ouder2 = ouder2;
-        this.observableKinderen = FXCollections.observableArrayList(kinderen);
+        this.observableKinderen = FXCollections.observableArrayList();
         this.huwelijksdatum = null;
         this.scheidingsdatum = null;
     }

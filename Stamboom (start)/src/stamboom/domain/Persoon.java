@@ -58,7 +58,7 @@ public class Persoon extends Observable implements Serializable
         this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
         this.geslacht = geslacht;
         this.ouderlijkGezin = ouderlijkGezin;
-        this.observableAlsOuderBetrokkenIn = FXCollections.observableArrayList(alsOuderBetrokkenIn);
+        this.observableAlsOuderBetrokkenIn = FXCollections.observableArrayList();
     }
     // ********methoden****************************************
 

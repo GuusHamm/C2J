@@ -323,19 +323,25 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void okPersoonInvoer(Event evt)
     {
-        String voornamenString = tfVoornamenInvoer.getText();
-        String[] voornamen = voornamenString.split(" ");
-        String tussenvoegsel = tfTussenvoegselInvoer.getText();
-        String achternaam = tfAchternaamInvoer.getText();
-        Geslacht geslacht = Geslacht.valueOf(cbGeslachtInvoer.getSelectionModel().getSelectedItem().toString().toUpperCase());
-        String geboortedatumString = tfGeboortedatumInvoer.getText();
-        String[] date = geboortedatumString.split("-");
-        GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
-        String geboorteplaats = tfGeboorteplaatsInvoer.getText();
-        Gezin ouderlijkGezin = (Gezin)cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
+        try {
 
-        admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin );
-        clearTabPersoonInvoer();
+            String voornamenString = tfVoornamenInvoer.getText();
+            String[] voornamen = voornamenString.split(" ");
+            String tussenvoegsel = tfTussenvoegselInvoer.getText();
+            String achternaam = tfAchternaamInvoer.getText();
+            Geslacht geslacht = Geslacht.valueOf(cbGeslachtInvoer.getSelectionModel().getSelectedItem().toString().toUpperCase());
+            String geboortedatumString = tfGeboortedatumInvoer.getText();
+            String[] date = geboortedatumString.split("-");
+            GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]) - 1, Integer.parseInt(date[0]));
+            String geboorteplaats = tfGeboorteplaatsInvoer.getText();
+            Gezin ouderlijkGezin = (Gezin) cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
+
+
+            admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin);
+            clearTabPersoonInvoer();
+        } catch(Exception e){
+            showDialog(null, "Er is iets misgegaan, controleer of je alles correct hebt ingevuld");
+        }
     }
 
     public void okGezinInvoer(Event evt)
@@ -516,7 +522,7 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void clearTabGezin()
     {
-        // todo opgave 3
+        
 
     }
 

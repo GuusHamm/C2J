@@ -38,10 +38,10 @@ public class Administratie implements Serializable {
      */
     public Administratie() {
 
-        this.observableGezinnen = FXCollections.observableArrayList(gezinnen);
+        this.observableGezinnen = FXCollections.observableArrayList();
         this.nextGezinsNr =0;
         this.nextPersNr=0; 
-        this.observablePersonen = FXCollections.observableArrayList(personen);
+        this.observablePersonen = FXCollections.observableArrayList();
     }
 
     //**********************methoden****************************************
@@ -393,12 +393,14 @@ public class Administratie implements Serializable {
 
     private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
         personen.addAll(observablePersonen);
+        gezinnen.addAll(observableGezinnen);
         oos.defaultWriteObject();
     }
 
     private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
         ois.defaultReadObject();
         observablePersonen = FXCollections.observableList(personen);
+        observableGezinnen = FXCollections.observableList(gezinnen);
     }
 
 }
