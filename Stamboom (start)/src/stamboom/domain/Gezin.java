@@ -5,7 +5,9 @@ import javafx.collections.ObservableList;
 import stamboom.util.StringUtilities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Observable;
 
 public class Gezin extends Observable implements Serializable
@@ -15,7 +17,8 @@ public class Gezin extends Observable implements Serializable
     private final int nr;
     private final Persoon ouder1;
     private final Persoon ouder2;
-    private final ObservableList<Persoon> observableKinderen;
+    private List<Persoon> kinderen = new ArrayList<>();
+    private transient ObservableList<Persoon> observableKinderen;
     /**
      * kan onbekend zijn (dan is het een ongehuwd gezin):
      */
@@ -74,7 +77,7 @@ public class Gezin extends Observable implements Serializable
         this.nr = gezinsNr;
         this.ouder1 = ouder1;
         this.ouder2 = ouder2;
-        this.observableKinderen = FXCollections.observableArrayList();
+        this.observableKinderen = FXCollections.observableArrayList(kinderen);
         this.huwelijksdatum = null;
         this.scheidingsdatum = null;
     }

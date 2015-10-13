@@ -30,6 +30,7 @@ public class StamboomController
         storageMediator = null;
         try
         {
+
             initDatabaseMedium();
         }
         catch (IOException e)
@@ -69,7 +70,6 @@ public class StamboomController
         storageMediator = new SerializationMediator();
         storageMediator.configure(props);
         storageMediator.save(admin);
-        
     }
 
     /**

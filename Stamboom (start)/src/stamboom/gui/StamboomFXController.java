@@ -18,6 +18,8 @@ import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -415,14 +417,24 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void openStamboom(Event evt)
     {
-        // todo opgave 3
+        File file = new File("admin");
+        try{
+            deserialize(file);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
 
     public void saveStamboom(Event evt)
     {
-        // todo opgave 3
+        File file = new File("admin");
+        try{
+            serialize(file);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 

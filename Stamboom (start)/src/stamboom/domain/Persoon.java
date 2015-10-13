@@ -24,7 +24,8 @@ public class Persoon extends Observable implements Serializable
     private final Calendar gebDat;
     private final String gebPlaats;
     private Gezin ouderlijkGezin;
-    private final ObservableList<Gezin> observableAlsOuderBetrokkenIn;
+    private List<Gezin> alsOuderBetrokkenIn = new ArrayList<>();
+    private transient ObservableList<Gezin> observableAlsOuderBetrokkenIn;
     private final Geslacht geslacht;
 
     // ********constructoren***********************************
@@ -57,7 +58,7 @@ public class Persoon extends Observable implements Serializable
         this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
         this.geslacht = geslacht;
         this.ouderlijkGezin = ouderlijkGezin;
-        this.observableAlsOuderBetrokkenIn = FXCollections.observableArrayList();
+        this.observableAlsOuderBetrokkenIn = FXCollections.observableArrayList(alsOuderBetrokkenIn);
     }
     // ********methoden****************************************
 
