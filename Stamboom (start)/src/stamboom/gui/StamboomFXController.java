@@ -218,8 +218,6 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void showGezin(Gezin gezin)
     {
-        clearTabGezin();
-
         if (gezin == null)
         {
             return;
