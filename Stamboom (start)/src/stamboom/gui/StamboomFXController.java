@@ -159,7 +159,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void selectPersoon(Event evt)
     {
         Persoon persoon = (Persoon) cbPersonen.getSelectionModel().getSelectedItem();
-        lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         showPersoon(persoon);
     }
 
@@ -184,6 +183,7 @@ public class StamboomFXController extends StamboomController implements Initiali
             {
                 cbOuderlijkGezin.getSelectionModel().clearSelection();
             }
+            lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         }
     }
 
