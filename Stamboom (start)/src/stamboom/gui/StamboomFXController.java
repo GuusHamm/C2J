@@ -211,15 +211,12 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void selectGezin(Event evt)
     {
-        // todo opgave 3
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
-        lvKinderen.setItems(g.getKinderen());
         showGezin(g);
     }
 
     private void showGezin(Gezin gezin)
     {
-        // todo opgave 3
         clearTabGezin();
 
         if (gezin == null)
@@ -238,10 +235,12 @@ public class StamboomFXController extends StamboomController implements Initiali
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 tfHuwelijk.setText(sdf.format(gezin.getHuwelijksdatum().getTime()));
             }
-            if(gezin.getScheidingsdatum()!=null)
+            if(gezin.getScheidingsdatum()!=null) {
                 tfScheiding.setText(gezin.getScheidingsdatum().toString());
-
-
+            }
+            if(gezin.getKinderen().size() != 0){
+                lvKinderen.setItems(gezin.getKinderen());
+            }
         }
     }
 
@@ -249,7 +248,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
 
-        // todo opgave 3
         if(evt.getCharacter().toString().toUpperCase()!="ENTER")
         {
             return;
@@ -283,7 +281,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void setScheidingsdatum(javafx.scene.input.KeyEvent evt)
     {
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
-        // todo opgave 3
 
         if(evt.getCharacter().toString().toUpperCase()!="ENTER")
         {
@@ -417,7 +414,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         this.clearAdministratie();
         clearTabs();
-        initComboboxes();
     }
 
 
@@ -426,6 +422,7 @@ public class StamboomFXController extends StamboomController implements Initiali
         File file = new File("admin");
         try{
             deserialize(file);
+            initComboboxes();
         }catch(IOException e){
             e.printStackTrace();
         }
