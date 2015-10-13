@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f342288-3d50-434d-b835-4abf5055a5cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin" afterPath="$PROJECT_DIR$/admin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" afterPath="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" afterPath="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" />
     </list>
     <ignored path="Stamboom (start).iws" />
@@ -32,25 +34,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StamboomFXController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StamboomFXController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8965516">
-              <caret line="524" column="25" selection-start-line="524" selection-start-column="25" selection-end-line="524" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.5471698">
+              <caret line="424" column="30" selection-start-line="424" selection-start-column="30" selection-end-line="424" selection-end-column="30" />
               <folding>
-                <element signature="e#0#14835#0" expanded="true" />
+                <element signature="e#0#14871#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StamboomGUI.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SerializationMediator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stamboom/storage/SerializationMediator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="11.413794">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="29" />
+              <folding>
+                <element signature="e#911#912#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StamboomGUI.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.8144655">
+            <state vertical-scroll-proportion="-140.51724">
               <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
               <folding />
             </state>
@@ -61,7 +76,17 @@
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="393" column="4" selection-start-line="393" selection-start-column="4" selection-end-line="403" selection-end-column="5" />
+              <caret line="402" column="71" selection-start-line="402" selection-start-column="71" selection-end-line="402" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StamboomController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stamboom/controller/StamboomController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -71,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="441" column="69" selection-start-line="441" selection-start-column="69" selection-end-line="441" selection-end-column="69" />
+              <caret line="441" column="93" selection-start-line="441" selection-start-column="93" selection-end-line="441" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -81,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="332" column="42" selection-start-line="332" selection-start-column="42" selection-end-line="332" selection-end-column="42" />
+              <caret line="334" column="5" selection-start-line="334" selection-start-column="5" selection-end-line="334" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -107,10 +132,10 @@
         <option value="$PROJECT_DIR$/src/stamboom/storage/DatabaseMediator.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/stamboom/controller/StamboomController.java" />
-        <option value="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
-        <option value="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
-        <option value="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
         <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" />
+        <option value="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
+        <option value="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
+        <option value="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
         <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" />
       </list>
     </option>
@@ -215,6 +240,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stamboom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stamboom (start)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stamboom (start)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stamboom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,7 +633,7 @@
       <workItem from="1444648557480" duration="3122000" />
       <workItem from="1444724120353" duration="2974000" />
       <workItem from="1444741096794" duration="4038000" />
-      <workItem from="1444748741122" duration="2743000" />
+      <workItem from="1444748741122" duration="4037000" />
     </task>
     <task id="LOCAL-00001" summary="Added Database settings">
       <created>1444651597207</created>
@@ -604,7 +651,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14530000" />
+    <option name="totallyTimeSpent" value="15824000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -849,7 +896,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
           <folding>
-            <element signature="e#0#14835#0" expanded="true" />
+            <element signature="e#0#14871#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -858,6 +905,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -906,7 +957,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="182" column="18" selection-start-line="182" selection-start-column="18" selection-end-line="182" selection-end-column="18" />
           <folding>
-            <element signature="e#0#14835#0" expanded="true" />
+            <element signature="e#0#14871#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -940,6 +991,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +1032,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="182" column="27" selection-start-line="182" selection-start-column="27" selection-end-line="182" selection-end-column="27" />
           <folding>
-            <element signature="e#0#14835#0" expanded="true" />
+            <element signature="e#0#14871#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1036,28 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13934426">
           <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/storage/IStorageMediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33241758">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/controller/StamboomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/storage/SerializationMediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.344828">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1281,18 +1311,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
+    <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-140.51724">
+          <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/storage/IStorageMediator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3314121">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/controller/StamboomController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="393" column="4" selection-start-line="393" selection-start-column="4" selection-end-line="403" selection-end-column="5" />
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/storage/SerializationMediator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.413794">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Gezin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="332" column="42" selection-start-line="332" selection-start-column="42" selection-end-line="332" selection-end-column="42" />
+          <caret line="334" column="5" selection-start-line="334" selection-start-column="5" selection-end-line="334" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Administratie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="402" column="71" selection-start-line="402" selection-start-column="71" selection-end-line="402" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1300,29 +1368,18 @@
     <entry file="file://$PROJECT_DIR$/src/stamboom/domain/Persoon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="441" column="69" selection-start-line="441" selection-start-column="69" selection-end-line="441" selection-end-column="69" />
+          <caret line="441" column="93" selection-start-line="441" selection-start-column="93" selection-end-line="441" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8965516">
-          <caret line="524" column="25" selection-start-line="524" selection-start-column="25" selection-end-line="524" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.5471698">
+          <caret line="424" column="30" selection-start-line="424" selection-start-column="30" selection-end-line="424" selection-end-column="30" />
           <folding>
-            <element signature="e#0#14835#0" expanded="true" />
+            <element signature="e#0#14871#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.8144655">
-          <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>

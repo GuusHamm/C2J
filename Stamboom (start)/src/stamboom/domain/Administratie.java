@@ -399,8 +399,8 @@ public class Administratie implements Serializable {
 
     private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
         ois.defaultReadObject();
-        observablePersonen = FXCollections.observableList(personen);
-        observableGezinnen = FXCollections.observableList(gezinnen);
+        observablePersonen = FXCollections.observableArrayList(personen);
+        observableGezinnen = FXCollections.observableArrayList(gezinnen);
     }
 
 }

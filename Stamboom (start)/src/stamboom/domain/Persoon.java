@@ -439,6 +439,6 @@ public class Persoon extends Observable implements Serializable
 
     private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
         ois.defaultReadObject();
-        observableAlsOuderBetrokkenIn = FXCollections.observableList(alsOuderBetrokkenIn);
+        observableAlsOuderBetrokkenIn = FXCollections.observableArrayList(alsOuderBetrokkenIn);
     }
 }

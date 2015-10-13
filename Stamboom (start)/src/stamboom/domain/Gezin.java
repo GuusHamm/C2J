@@ -336,6 +336,6 @@ public class Gezin extends Observable implements Serializable
 
     private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
         ois.defaultReadObject();
-        observableKinderen = FXCollections.observableList(kinderen);
+        observableKinderen = FXCollections.observableArrayList(kinderen);
     }
 }
