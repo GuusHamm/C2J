@@ -1,5 +1,8 @@
 package stamboom.domain;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.lang.String;
 import java.util.ArrayList;
@@ -427,5 +430,15 @@ public class Persoon extends Observable implements Serializable
         }
 
         return builder.toString();
+    }
+
+    private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
+        alsOuderBetrokkenIn.addAll(observableAlsOuderBetrokkenIn);
+        oos.defaultWriteObject();
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        observableAlsOuderBetrokkenIn = FXCollections.observableList(alsOuderBetrokkenIn);
     }
 }

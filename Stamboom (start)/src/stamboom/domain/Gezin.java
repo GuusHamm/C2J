@@ -4,6 +4,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import stamboom.util.StringUtilities;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -324,5 +327,15 @@ public class Gezin extends Observable implements Serializable
         {
             return false;
         }
+    }
+
+    private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
+        kinderen.addAll(observableKinderen);
+        oos.defaultWriteObject();
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        observableKinderen = FXCollections.observableList(kinderen);
     }
 }
