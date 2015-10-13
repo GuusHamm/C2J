@@ -107,7 +107,7 @@
                                 </AnchorPane>
                             </content>
                         </Tab>
-                  <Tab text="Gezin">
+                  <Tab fx:id="tabGezin" closable="false" onSelectionChanged="#selectTab" text="Gezin">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -176,7 +176,7 @@
                         </AnchorPane>
                     </content>
                   </Tab>
-                  <Tab text="Nieuwe Persoon">
+                  <Tab fx:id="tabPersoonInvoer" closable="false" onSelectionChanged="#selectTab" text="Nieuwe Persoon">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>

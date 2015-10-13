@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f342288-3d50-434d-b835-4abf5055a5cf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin" afterPath="$PROJECT_DIR$/admin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.db" afterPath="$PROJECT_DIR$/test.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" afterPath="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" afterPath="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" />
     </list>
     <ignored path="Stamboom (start).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,8 +35,8 @@
       <file leaf-file-name="StamboomFXController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9655173">
-              <caret line="519" column="17" selection-start-line="519" selection-start-column="17" selection-end-line="519" selection-end-column="17" />
+            <state vertical-scroll-proportion="-6.8965516">
+              <caret line="524" column="25" selection-start-line="524" selection-start-column="25" selection-end-line="524" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14835#0" expanded="true" />
               </folding>
@@ -51,7 +50,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5541045">
+            <state vertical-scroll-proportion="12.8144655">
               <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
               <folding />
             </state>
@@ -109,10 +108,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/stamboom/controller/StamboomController.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Administratie.java" />
-        <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Gezin.java" />
         <option value="$PROJECT_DIR$/src/stamboom/domain/Persoon.java" />
         <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomGUI.fxml" />
+        <option value="$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java" />
       </list>
     </option>
   </component>
@@ -587,7 +586,7 @@
       <workItem from="1444648557480" duration="3122000" />
       <workItem from="1444724120353" duration="2974000" />
       <workItem from="1444741096794" duration="4038000" />
-      <workItem from="1444748741122" duration="2456000" />
+      <workItem from="1444748741122" duration="2743000" />
     </task>
     <task id="LOCAL-00001" summary="Added Database settings">
       <created>1444651597207</created>
@@ -605,7 +604,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14243000" />
+    <option name="totallyTimeSpent" value="14530000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -626,9 +625,9 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32776934" sideWeight="0.5030211" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3971061" sideWeight="0.49697885" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3971061" sideWeight="0.49697885" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1308,8 +1307,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stamboom/gui/StamboomFXController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9655173">
-          <caret line="519" column="17" selection-start-line="519" selection-start-column="17" selection-end-line="519" selection-end-column="17" />
+        <state vertical-scroll-proportion="-6.8965516">
+          <caret line="524" column="25" selection-start-line="524" selection-start-column="25" selection-end-line="524" selection-end-column="25" />
           <folding>
             <element signature="e#0#14835#0" expanded="true" />
           </folding>
@@ -1321,7 +1320,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5541045">
+        <state vertical-scroll-proportion="12.8144655">
           <caret line="246" column="51" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
           <folding />
         </state>
