@@ -4,13 +4,18 @@
  */
 package stamboom.storage;
 
-import java.io.IOException;
-import java.sql.*;
-import java.util.Properties;
-
 import stamboom.domain.Administratie;
+import stamboom.domain.Geslacht;
 import stamboom.domain.Gezin;
 import stamboom.domain.Persoon;
+
+import java.io.IOException;
+import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.Properties;
 
 public class DatabaseMediator implements IStorageMediator
 {
@@ -26,9 +31,88 @@ public class DatabaseMediator implements IStorageMediator
     @Override
     public Administratie load() throws IOException
     {
+		Administratie administratie = new Administratie();
         //todo opgave 4
-        return null;
-    }
+		try {
+			initConnection();
+
+			Statement statement =null;
+            statement = conn.createStatement();
+			ResultSet rs = statement.executeQuery( "SELECT * FROM Persoon;" );
+			while ( rs.next() ) {
+				int nr = rs.getInt("persoonsnummer");
+				String[] voornamen = rs.getString("voornamen").split(" ");
+				String achternaam = rs.getString("achternaam");
+				String tussenvoegsel= rs.getString("tussenvoegsel");
+
+				Calendar gebDat = Calendar.getInstance();
+				SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+				gebDat.setTime(sdf.parse(rs.getString("geboortedatum")));
+
+				String gebPlaats = rs.getString("geboorteplaats");
+				Geslacht geslacht = Geslacht.valueOf(rs.getString("geslacht"));
+				Gezin ouderlijkGezin = null;
+
+				administratie.addPersoon(geslacht,voornamen,achternaam,tussenvoegsel,gebDat,gebPlaats,null);
+			}
+			statement = conn.createStatement();
+			rs = statement.executeQuery( "SELECT * FROM Gezin;" );
+			while ( rs.next() ) {
+				int ouder1NR = rs.getInt("ouder1");
+				int ouder2NR = rs.getInt("ouder2");
+
+				Persoon ouder1 = administratie.getPersoon(ouder1NR);
+				Persoon ouder2 = administratie.getPersoon(ouder2NR);
+
+				administratie.addOngehuwdGezin(ouder1,ouder2);
+
+				String huwelijksDatumString = rs.getString("huwelijksdatum");
+
+				if (!huwelijksDatumString.isEmpty()){
+					Calendar huwelijksDatum = Calendar.getInstance();
+					SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+					huwelijksDatum.setTime(sdf.parse(rs.getString("huwelijksdatum")));
+
+					administratie.setHuwelijk(administratie.getGezin(rs.getInt("gezinsnummer")), huwelijksDatum);
+				}
+
+				String scheidingsDatumString = rs.getString("scheidingsdatum");
+
+				if (!scheidingsDatumString.isEmpty()){
+					Calendar scheidingsDatum = Calendar.getInstance();
+					SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+					scheidingsDatum.setTime(sdf.parse(rs.getString("scheidingsdatum")));
+
+					administratie.setScheiding(administratie.getGezin(rs.getInt("gezinsnummer")),scheidingsDatum);
+				}
+
+			}
+			statement = conn.createStatement();
+			rs = statement.executeQuery( "SELECT persoonsnummer,ouders FROM persoon;" );
+			while ( rs.next() ) {
+				int persoonsnummer = rs.getInt("persoonsnummer");
+				int ouderNR = rs.getInt("ouders");
+				Persoon persoon = administratie.getPersoon(persoonsnummer);
+				Gezin gezin = administratie.getGezin(ouderNR);
+				if (gezin != null){
+					persoon.setOuderlijkGezin(gezin);
+				}
+
+			}
+
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		} finally {
+			String fuckthis = " FUUUUUUUCK";
+			//closeConnection();
+		}
+		return administratie;
+	}
 
     @Override
     public void save(Administratie admin) throws IOException
@@ -61,6 +145,8 @@ public class DatabaseMediator implements IStorageMediator
 //                    statement.executeUpdate(query);
 //                }
 
+				statement.close();
+
             }
 
             for (Gezin g : admin.getGezinnen()){
@@ -72,10 +158,10 @@ public class DatabaseMediator implements IStorageMediator
 
                 String huwelijksDatum = "";
                 String scheidingsDatum = "";
-				String ouder2 = "";
+				int ouder2 = -1;
 
 				if (g.getOuder2()!=null){
-					ouder2 = String.valueOf(g.getOuder2().getNr());
+					ouder2 = g.getOuder2().getNr();
 				}
                 if (g.getHuwelijksdatum()!= null){
                    huwelijksDatum = g.getHuwelijksdatum().getTime().toString();
@@ -85,7 +171,7 @@ public class DatabaseMediator implements IStorageMediator
                     scheidingsDatum = g.getScheidingsdatum().getTime().toString();
                 }
 
-                String query = String.format("INSERT INTO `Gezin` VALUES(%d,%s,%s,'%s','%s');",g.getNr(),g.getOuder1().getNr(),ouder2,huwelijksDatum,scheidingsDatum);
+                String query = String.format("INSERT INTO `Gezin` VALUES(%d,%d,%d,'%s','%s');",g.getNr(),g.getOuder1().getNr(),ouder2,huwelijksDatum,scheidingsDatum);
                 statement.executeUpdate(query);
 
 //                if (g.getOuder2() != null){
@@ -102,6 +188,8 @@ public class DatabaseMediator implements IStorageMediator
 //                    statement.executeUpdate(query);
 //                }
 
+				statement.close();
+
             }
 
         }
@@ -116,7 +204,7 @@ public class DatabaseMediator implements IStorageMediator
         }
         finally
         {
-           // closeConnection();
+           //closeConnection();
 
         }
 
@@ -159,7 +247,7 @@ public class DatabaseMediator implements IStorageMediator
         }
         finally
         {
-            closeConnection();
+            //closeConnection();
         }
     }
 
@@ -209,17 +297,18 @@ public class DatabaseMediator implements IStorageMediator
 
 
 
-            statement.executeUpdate("CREATE TABLE IF NOT EXISTS `Persoon`(\n" +
-                                            "\t`persoonsNummer`\tINTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n" +
-                                            "\t`achternaam`\tTEXT NOT NULL,\n" +
-                                            "\t`voornamen`\tTEXT NOT NULL,\n" +
-                                            "\t`tussenvoegsel`\tTEXT NOT NULL,\n" +
-                                            "\t`geboortedatum`\tTEXT NOT NULL,\n" +
-                                            "\t`geboorteplaats`\tTEXT NOT NULL,\n" +
-                                            "\t`geslacht`\tTEXT NOT NULL,\n" +
-                                            "\t`ouders`\tTEXT,\n" +
-                                            "\t FOREIGN KEY(ouders)\tREFERENCES gezin(gezinsnummer)\n" +
-                                            ");");
+			statement.executeUpdate("CREATE TABLE IF NOT EXISTS `Persoon`(\n" +
+					"\t`persoonsNummer`\tINTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n" +
+					"\t`voornamen`\tTEXT NOT NULL,\n" +
+					"\t`achternaam`\tTEXT NOT NULL,\n" +
+
+					"\t`tussenvoegsel`\tTEXT NOT NULL,\n" +
+					"\t`geboortedatum`\tTEXT NOT NULL,\n" +
+					"\t`geboorteplaats`\tTEXT NOT NULL,\n" +
+					"\t`geslacht`\tTEXT NOT NULL,\n" +
+					"\t`ouders`\tTEXT,\n" +
+					"\t FOREIGN KEY(ouders)\tREFERENCES gezin(gezinsnummer)\n" +
+					");");
             statement.executeUpdate("CREATE TABLE IF NOT EXISTS  `Gezin` (\n" +
                                             "\t`gezinsNummer`\tINTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n" +
                                             "\t`ouder1`\tINTEGER NOT NULL,\n" +

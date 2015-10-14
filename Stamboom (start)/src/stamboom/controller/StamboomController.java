@@ -110,7 +110,7 @@ public class StamboomController
      */
     public void loadFromDatabase() throws IOException
     {
-        //todo opgave 4
+       admin = storageMediator.load();
     }
 
     /**

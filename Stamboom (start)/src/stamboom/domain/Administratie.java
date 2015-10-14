@@ -1,7 +1,6 @@
 package stamboom.domain;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 
 import java.io.IOException;
@@ -109,7 +108,6 @@ public class Administratie implements Serializable {
         }
         return huidig;
     }
-
     /**
      * er wordt, zo mogelijk (zie return) een (kinderloos) ongehuwd gezin met
      * ouder1 en ouder2 als ouders gecreeerd; de huwelijks- en scheidingsdatum

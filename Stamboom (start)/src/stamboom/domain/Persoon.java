@@ -1,20 +1,14 @@
 package stamboom.domain;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import stamboom.util.StringUtilities;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.lang.String;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Observable;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import stamboom.util.StringUtilities;
+import java.util.*;
 
 public class Persoon extends Observable implements Serializable
 {
@@ -440,5 +434,10 @@ public class Persoon extends Observable implements Serializable
     private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
         ois.defaultReadObject();
         observableAlsOuderBetrokkenIn = FXCollections.observableArrayList(alsOuderBetrokkenIn);
+    }
+
+    public void setOuderlijkGezin(Gezin ouderlijkGezin) {
+        this.ouderlijkGezin = ouderlijkGezin;
+        ouderlijkGezin.breidUitMet(this);
     }
 }

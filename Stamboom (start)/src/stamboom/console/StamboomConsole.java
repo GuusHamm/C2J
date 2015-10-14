@@ -1,13 +1,15 @@
 package stamboom.console;
 
+import stamboom.controller.StamboomController;
+import stamboom.domain.Administratie;
+import stamboom.domain.Geslacht;
+import stamboom.domain.Gezin;
+import stamboom.domain.Persoon;
+import stamboom.util.StringUtilities;
+
 import java.io.File;
 import java.io.IOException;
-import stamboom.domain.*;
-
 import java.util.*;
-
-import stamboom.util.StringUtilities;
-import stamboom.controller.StamboomController;
 
 public class StamboomConsole
 {
