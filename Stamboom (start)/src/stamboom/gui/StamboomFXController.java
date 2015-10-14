@@ -4,6 +4,7 @@
  */
 package stamboom.gui;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -18,6 +19,8 @@ import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -157,7 +160,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void selectPersoon(Event evt)
     {
         Persoon persoon = (Persoon) cbPersonen.getSelectionModel().getSelectedItem();
-        lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         showPersoon(persoon);
     }
 
@@ -182,9 +184,7 @@ public class StamboomFXController extends StamboomController implements Initiali
             {
                 cbOuderlijkGezin.getSelectionModel().clearSelection();
             }
-
-            //todo opgave 3
-            //lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
+            lvAlsOuderBetrokkenBij.setItems(persoon.getAlsOuderBetrokkenIn());
         }
     }
 
@@ -212,17 +212,12 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void selectGezin(Event evt)
     {
-        // todo opgave 3
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
-        lvKinderen.setItems(g.getKinderen());
         showGezin(g);
     }
 
     private void showGezin(Gezin gezin)
     {
-        // todo opgave 3
-        clearTabGezin();
-
         if (gezin == null)
         {
             return;
@@ -239,10 +234,12 @@ public class StamboomFXController extends StamboomController implements Initiali
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 tfHuwelijk.setText(sdf.format(gezin.getHuwelijksdatum().getTime()));
             }
-            if(gezin.getScheidingsdatum()!=null)
+            if(gezin.getScheidingsdatum()!=null) {
                 tfScheiding.setText(gezin.getScheidingsdatum().toString());
-
-
+            }
+            if(gezin.getKinderen().size() != 0){
+                lvKinderen.setItems(gezin.getKinderen());
+            }
         }
     }
 
@@ -250,7 +247,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
 
-        // todo opgave 3
         if(evt.getCharacter().toString().toUpperCase()!="ENTER")
         {
             return;
@@ -284,7 +280,6 @@ public class StamboomFXController extends StamboomController implements Initiali
     public void setScheidingsdatum(javafx.scene.input.KeyEvent evt)
     {
         Gezin g = (Gezin)cbGezinnen.getSelectionModel().getSelectedItem();
-        // todo opgave 3
 
         if(evt.getCharacter().toString().toUpperCase()!="ENTER")
         {
@@ -324,19 +319,25 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     public void okPersoonInvoer(Event evt)
     {
-        String voornamenString = tfVoornamenInvoer.getText();
-        String[] voornamen = voornamenString.split(" ");
-        String tussenvoegsel = tfTussenvoegselInvoer.getText();
-        String achternaam = tfAchternaamInvoer.getText();
-        Geslacht geslacht = Geslacht.valueOf(cbGeslachtInvoer.getSelectionModel().getSelectedItem().toString().toUpperCase());
-        String geboortedatumString = tfGeboortedatumInvoer.getText();
-        String[] date = geboortedatumString.split("-");
-        GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
-        String geboorteplaats = tfGeboorteplaatsInvoer.getText();
-        Gezin ouderlijkGezin = (Gezin)cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
+        try {
 
-        admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin );
-        clearTabPersoonInvoer();
+            String voornamenString = tfVoornamenInvoer.getText();
+            String[] voornamen = voornamenString.split(" ");
+            String tussenvoegsel = tfTussenvoegselInvoer.getText();
+            String achternaam = tfAchternaamInvoer.getText();
+            Geslacht geslacht = Geslacht.valueOf(cbGeslachtInvoer.getSelectionModel().getSelectedItem().toString().toUpperCase());
+            String geboortedatumString = tfGeboortedatumInvoer.getText();
+            String[] date = geboortedatumString.split("-");
+            GregorianCalendar geboortedatumCal = new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]) - 1, Integer.parseInt(date[0]));
+            String geboorteplaats = tfGeboorteplaatsInvoer.getText();
+            Gezin ouderlijkGezin = (Gezin) cbOuderlijkGezinInvoer.getSelectionModel().getSelectedItem();
+
+
+            admin.addPersoon(geslacht, voornamen, achternaam, tussenvoegsel, geboortedatumCal, geboorteplaats, ouderlijkGezin);
+            clearTabPersoonInvoer();
+        } catch(Exception e){
+            showDialog(null, "Er is iets misgegaan, controleer of je alles correct hebt ingevuld");
+        }
     }
 
     public void okGezinInvoer(Event evt)
@@ -412,20 +413,30 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         this.clearAdministratie();
         clearTabs();
-        initComboboxes();
     }
 
 
     public void openStamboom(Event evt)
     {
-        // todo opgave 3
+        File file = new File("admin");
+        try{
+            deserialize(file);
+            initComboboxes();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
 
     public void saveStamboom(Event evt)
     {
-        // todo opgave 3
+        File file = new File("admin");
+        try{
+            serialize(file);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -507,13 +518,15 @@ public class StamboomFXController extends StamboomController implements Initiali
 
     private void clearTabGezin()
     {
-        // todo opgave 3
+
+        cbGezinnen.getSelectionModel().clearSelection();
         tfGezinNr.clear();
         tfOuder1.clear();
         tfOuder2.clear();
         tfHuwelijk.clear();
         tfScheiding.clear();
         lvKinderen.getItems().clear();
+        lvKinderen.setItems(FXCollections.emptyObservableList());
 
     }
 

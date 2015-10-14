@@ -3,17 +3,24 @@ package stamboom.domain;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Administratie implements Serializable {
 
     //************************datavelden*************************************
     private int nextGezinsNr;
     private int nextPersNr;
-    private final ObservableList<Persoon> observablePersonen;
-    private final ObservableList<Gezin> observableGezinnen;
+    private List<Persoon> personen = new ArrayList<>();
+    private List<Gezin> gezinnen  = new ArrayList<>();
+    private transient ObservableList<Persoon> observablePersonen;
+    private transient ObservableList<Gezin> observableGezinnen;
+
 
     private int getNextGezinsNr()
     {
@@ -29,7 +36,8 @@ public class Administratie implements Serializable {
      * (apart) opvolgend genummerd vanaf 1
      */
     public Administratie() {
-        this.observableGezinnen = FXCollections.observableArrayList(); 
+
+        this.observableGezinnen = FXCollections.observableArrayList();
         this.nextGezinsNr =0;
         this.nextPersNr=0; 
         this.observablePersonen = FXCollections.observableArrayList();
@@ -100,7 +108,6 @@ public class Administratie implements Serializable {
         }
         return huidig;
     }
-
     /**
      * er wordt, zo mogelijk (zie return) een (kinderloos) ongehuwd gezin met
      * ouder1 en ouder2 als ouders gecreeerd; de huwelijks- en scheidingsdatum
@@ -381,4 +388,17 @@ public class Administratie implements Serializable {
         }
         return null;
     }
+
+    private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
+        personen.addAll(observablePersonen);
+        gezinnen.addAll(observableGezinnen);
+        oos.defaultWriteObject();
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        observablePersonen = FXCollections.observableArrayList(personen);
+        observableGezinnen = FXCollections.observableArrayList(gezinnen);
+    }
+
 }

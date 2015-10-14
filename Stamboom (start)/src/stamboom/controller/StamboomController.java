@@ -5,11 +5,13 @@
 package stamboom.controller;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 import stamboom.domain.Administratie;
 import stamboom.domain.Geslacht;
+import stamboom.storage.DatabaseMediator;
 import stamboom.storage.IStorageMediator;
 import stamboom.storage.SerializationMediator;
 
@@ -26,6 +28,15 @@ public class StamboomController
     {
         admin = new Administratie();
         storageMediator = null;
+        try
+        {
+
+            initDatabaseMedium();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public Administratie getAdministratie()
@@ -59,7 +70,6 @@ public class StamboomController
         storageMediator = new SerializationMediator();
         storageMediator.configure(props);
         storageMediator.save(admin);
-        
     }
 
     /**
@@ -82,16 +92,15 @@ public class StamboomController
 
     }
 
-    // opgave 4
     private void initDatabaseMedium() throws IOException
     {
-//        if (!(storageMediator instanceof DatabaseMediator)) {
-//            Properties props = new Properties();
-//            try (FileInputStream in = new FileInputStream("database.properties")) {
-//                props.load(in);
-//            }
-//            storageMediator = new DatabaseMediator(props);
-//        }
+        if (!(storageMediator instanceof DatabaseMediator)) {
+            Properties props = new Properties();
+            try (FileInputStream in = new FileInputStream("database.properties")) {
+                props.load(in);
+            }
+            storageMediator = new DatabaseMediator(props);
+        }
     }
 
     /**
@@ -101,7 +110,7 @@ public class StamboomController
      */
     public void loadFromDatabase() throws IOException
     {
-        //todo opgave 4
+       admin = storageMediator.load();
     }
 
     /**
@@ -111,7 +120,8 @@ public class StamboomController
      */
     public void saveToDatabase() throws IOException
     {
-        //todo opgave 4
+        storageMediator.save(admin);
+
     }
 
 }

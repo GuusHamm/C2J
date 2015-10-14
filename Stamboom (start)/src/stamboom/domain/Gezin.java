@@ -4,8 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import stamboom.util.StringUtilities;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Observable;
 
 public class Gezin extends Observable implements Serializable
@@ -15,7 +20,8 @@ public class Gezin extends Observable implements Serializable
     private final int nr;
     private final Persoon ouder1;
     private final Persoon ouder2;
-    private final ObservableList<Persoon> observableKinderen;
+    private List<Persoon> kinderen = new ArrayList<>();
+    private transient ObservableList<Persoon> observableKinderen;
     /**
      * kan onbekend zijn (dan is het een ongehuwd gezin):
      */
@@ -321,5 +327,15 @@ public class Gezin extends Observable implements Serializable
         {
             return false;
         }
+    }
+
+    private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
+        kinderen.addAll(observableKinderen);
+        oos.defaultWriteObject();
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        observableKinderen = FXCollections.observableArrayList(kinderen);
     }
 }

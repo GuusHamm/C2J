@@ -1,17 +1,14 @@
 package stamboom.domain;
 
-import java.io.Serializable;
-import java.lang.String;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import stamboom.util.StringUtilities;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.*;
 
 public class Persoon extends Observable implements Serializable
 {
@@ -24,7 +21,8 @@ public class Persoon extends Observable implements Serializable
     private final Calendar gebDat;
     private final String gebPlaats;
     private Gezin ouderlijkGezin;
-    private final ObservableList<Gezin> observableAlsOuderBetrokkenIn;
+    private List<Gezin> alsOuderBetrokkenIn = new ArrayList<>();
+    private transient ObservableList<Gezin> observableAlsOuderBetrokkenIn;
     private final Geslacht geslacht;
 
     // ********constructoren***********************************
@@ -54,7 +52,7 @@ public class Persoon extends Observable implements Serializable
         this.achternaam = anaam;
         this.tussenvoegsel = tussenvoegsel.toLowerCase();
         this.gebDat = gebDat;
-        this.gebPlaats = gebPlaats.substring(0,1).toUpperCase()+gebPlaats.substring(1).toLowerCase();
+        this.gebPlaats = gebPlaats.replaceAll("\\s","").substring(0,1).toUpperCase()+gebPlaats.replaceAll("\\s","").substring(1).toLowerCase();
         this.geslacht = geslacht;
         this.ouderlijkGezin = ouderlijkGezin;
         this.observableAlsOuderBetrokkenIn = FXCollections.observableArrayList();
@@ -426,5 +424,20 @@ public class Persoon extends Observable implements Serializable
         }
 
         return builder.toString();
+    }
+
+    private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
+        alsOuderBetrokkenIn.addAll(observableAlsOuderBetrokkenIn);
+        oos.defaultWriteObject();
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        observableAlsOuderBetrokkenIn = FXCollections.observableArrayList(alsOuderBetrokkenIn);
+    }
+
+    public void setOuderlijkGezin(Gezin ouderlijkGezin) {
+        this.ouderlijkGezin = ouderlijkGezin;
+        ouderlijkGezin.breidUitMet(this);
     }
 }
