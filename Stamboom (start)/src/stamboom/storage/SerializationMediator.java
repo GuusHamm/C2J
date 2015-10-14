@@ -4,16 +4,10 @@
  */
 package stamboom.storage;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.util.Properties;
-import java.io.ObjectOutputStream;
-
 import stamboom.domain.Administratie;
+
+import java.io.*;
+import java.util.Properties;
 
 public class SerializationMediator implements IStorageMediator
 {
@@ -98,6 +92,11 @@ public class SerializationMediator implements IStorageMediator
             oos.close();
             fos.close();
         } 
+    }
+
+    @Override
+    public void dump() {
+
     }
 
     /**

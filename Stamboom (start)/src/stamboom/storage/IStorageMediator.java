@@ -30,6 +30,7 @@ public interface IStorageMediator
      */
     void save(Administratie admin) throws IOException;
 
+    void dump();
     /**
      * the mediator is initialized with properties in props, so afterwards config()=props;
      * the specific requirements with respect to the configuration depends on the

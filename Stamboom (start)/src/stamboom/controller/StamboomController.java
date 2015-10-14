@@ -4,16 +4,15 @@
  */
 package stamboom.controller;
 
+import stamboom.domain.Administratie;
+import stamboom.storage.DatabaseMediator;
+import stamboom.storage.IStorageMediator;
+import stamboom.storage.SerializationMediator;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
-import stamboom.domain.Administratie;
-import stamboom.domain.Geslacht;
-import stamboom.storage.DatabaseMediator;
-import stamboom.storage.IStorageMediator;
-import stamboom.storage.SerializationMediator;
 
 public class StamboomController
 {
@@ -120,6 +119,7 @@ public class StamboomController
      */
     public void saveToDatabase() throws IOException
     {
+        storageMediator.dump();
         storageMediator.save(admin);
 
     }
