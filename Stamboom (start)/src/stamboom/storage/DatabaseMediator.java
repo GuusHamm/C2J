@@ -46,13 +46,20 @@ public class DatabaseMediator implements IStorageMediator
                 // set timeout to 30 sec
                 statement.setQueryTimeout(30);
 
-                String query = String.format("INSERT INTO `Persoon` VALUES(%d,'%s','%s','%s','%s','%s','%s','');",p.getNr(),p.getVoornamen(),p.getAchternaam(),p.getTussenvoegsel(),p.getGebDat().getTime().toString(),p.getGebPlaats(),p.getGeslacht().toString());
+                String ouderlijkGezin = "";
+
+                if (p.getOuderlijkGezin()!= null){
+                ouderlijkGezin = String.valueOf(p.getOuderlijkGezin().getNr());
+                }
+
+
+                String query = String.format("INSERT INTO `Persoon` VALUES(%d,'%s','%s','%s','%s','%s','%s','%s');",p.getNr(),p.getVoornamen(),p.getAchternaam(),p.getTussenvoegsel(),p.getGebDat().getTime().toString(),p.getGebPlaats(),p.getGeslacht().toString(),ouderlijkGezin);
                 statement.executeUpdate(query);
 
-                if (p.getOuderlijkGezin() != null){
-                    query = String.format("UPDATE PERSOON SET ouders = %d where persoonsnummer = %d",p.getOuderlijkGezin().getNr(),p.getNr());
-                    statement.executeUpdate(query);
-                }
+//                if (p.getOuderlijkGezin() != null){
+//                    query = String.format("UPDATE PERSOON SET ouders = %d where persoonsnummer = %d",p.getOuderlijkGezin().getNr(),p.getNr());
+//                    statement.executeUpdate(query);
+//                }
 
             }
 
@@ -63,22 +70,37 @@ public class DatabaseMediator implements IStorageMediator
                 // set timeout to 30 sec
                 statement.setQueryTimeout(30);
 
-                String query = String.format("INSERT INTO `Gezin` VALUES(%d,%s,' ',' ',' ');",g.getNr(),g.getOuder1().getNr());
+                String huwelijksDatum = "";
+                String scheidingsDatum = "";
+				String ouder2 = "";
+
+				if (g.getOuder2()!=null){
+					ouder2 = String.valueOf(g.getOuder2().getNr());
+				}
+                if (g.getHuwelijksdatum()!= null){
+                   huwelijksDatum = g.getHuwelijksdatum().getTime().toString();
+                }
+
+                if (g.getScheidingsdatum()!= null){
+                    scheidingsDatum = g.getScheidingsdatum().getTime().toString();
+                }
+
+                String query = String.format("INSERT INTO `Gezin` VALUES(%d,%s,%s,'%s','%s');",g.getNr(),g.getOuder1().getNr(),ouder2,huwelijksDatum,scheidingsDatum);
                 statement.executeUpdate(query);
 
-                if (g.getOuder2() != null){
-                    query = String.format("UPDATE GEZIN SET ouder2 = %d where gezinsnummer = %d ;",g.getOuder2().getNr(),g.getNr());
-                    statement.executeUpdate(query);
-                }
+//                if (g.getOuder2() != null){
+//                    query = String.format("UPDATE GEZIN SET ouder2 = %d where gezinsnummer = %d ;",g.getOuder2().getNr(),g.getNr());
+//                    statement.executeUpdate(query);
+//                }
 
-                if (g.getHuwelijksdatum()!= null){
-                    query = String.format("UPDATE GEZIN SET huwelijksdatum = '%s' where gezinsnummer = %d ;",g.getHuwelijksdatum().getTime().toString(),g.getNr());
-                    statement.executeUpdate(query);
-                }
-                if (g.getScheidingsdatum() != null){
-                    query = String.format("UPDATE GEZIN SET scheidingsdatum = '%s' where gezinsnummer = %d ;",g.getScheidingsdatum().getTime().toString(),g.getNr());
-                    statement.executeUpdate(query);
-                }
+//                if (g.getHuwelijksdatum()!= null){
+//                    query = String.format("UPDATE GEZIN SET huwelijksdatum = '%s' where gezinsnummer = %d ;",g.getHuwelijksdatum().getTime().toString(),g.getNr());
+//                    statement.executeUpdate(query);
+//                }
+//                if (g.getScheidingsdatum() != null){
+//                    query = String.format("UPDATE GEZIN SET scheidingsdatum = '%s' where gezinsnummer = %d ;",g.getScheidingsdatum().getTime().toString(),g.getNr());
+//                    statement.executeUpdate(query);
+//                }
 
             }
 
