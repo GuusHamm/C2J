@@ -4,7 +4,6 @@
  */
 package stamboom.gui;
 
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.Event;
@@ -19,8 +18,7 @@ import stamboom.domain.Persoon;
 import stamboom.util.StringUtilities;
 
 import javax.swing.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -413,11 +411,13 @@ public class StamboomFXController extends StamboomController implements Initiali
     {
         this.clearAdministratie();
         clearTabs();
+        initComboboxes();
     }
 
 
     public void openStamboom(Event evt)
     {
+        createEmptyStamboom(evt);
         File file = new File("admin");
         try{
             deserialize(file);
@@ -437,9 +437,29 @@ public class StamboomFXController extends StamboomController implements Initiali
         }catch(IOException e){
             e.printStackTrace();
         }
+    }
+    public void openStamboomDatabase(Event evt)
+    {
+        try{
+            createEmptyStamboom(evt);
+            loadFromDatabase();
+            initComboboxes();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
     }
 
+
+    public void saveStamboomDatabase(Event evt)
+    {
+        try{
+            saveToDatabase();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
 
     public void closeApplication(Event evt)
     {

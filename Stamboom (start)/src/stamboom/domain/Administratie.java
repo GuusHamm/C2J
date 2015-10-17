@@ -390,8 +390,13 @@ public class Administratie implements Serializable {
     }
 
     private void writeObject(ObjectOutputStream oos) throws IOException, ClassNotFoundException {
+        personen.clear();
         personen.addAll(observablePersonen);
+        //observablePersonen.clear();
+
+        gezinnen.clear();
         gezinnen.addAll(observableGezinnen);
+        //observableGezinnen.clear();
         oos.defaultWriteObject();
     }
 

@@ -95,7 +95,7 @@ public class StamboomController
     {
         if (!(storageMediator instanceof DatabaseMediator)) {
             Properties props = new Properties();
-            try (FileInputStream in = new FileInputStream("database.properties")) {
+            try (FileInputStream in = new FileInputStream("Stamboom (start)/database.properties")) {
                 props.load(in);
             }
             storageMediator = new DatabaseMediator(props);

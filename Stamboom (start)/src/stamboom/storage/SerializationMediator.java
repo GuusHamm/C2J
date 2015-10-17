@@ -56,7 +56,7 @@ public class SerializationMediator implements IStorageMediator
                 catch (EOFException e){
                     break;
                 }
-            }           
+            }
         }      
         catch (IOException | ClassNotFoundException e2){
             e2.printStackTrace();
