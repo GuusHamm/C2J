@@ -140,10 +140,6 @@ public class DatabaseMediator implements IStorageMediator
                 String query = String.format("INSERT INTO `Persoon` VALUES(%d,'%s','%s','%s','%s','%s','%s','%s');",p.getNr(),p.getVoornamen(),p.getAchternaam(),p.getTussenvoegsel(),p.getGebDat().getTime().toString(),p.getGebPlaats(),p.getGeslacht().toString(),ouderlijkGezin);
                 statement.executeUpdate(query);
 
-//                if (p.getOuderlijkGezin() != null){
-//                    query = String.format("UPDATE PERSOON SET ouders = %d where persoonsnummer = %d",p.getOuderlijkGezin().getNr(),p.getNr());
-//                    statement.executeUpdate(query);
-//                }
 
 				statement.close();
 
@@ -174,20 +170,6 @@ public class DatabaseMediator implements IStorageMediator
                 String query = String.format("INSERT INTO `Gezin` VALUES(%d,%d,%d,'%s','%s');",g.getNr(),g.getOuder1().getNr(),ouder2,huwelijksDatum,scheidingsDatum);
                 statement.executeUpdate(query);
 
-//                if (g.getOuder2() != null){
-//                    query = String.format("UPDATE GEZIN SET ouder2 = %d where gezinsnummer = %d ;",g.getOuder2().getNr(),g.getNr());
-//                    statement.executeUpdate(query);
-//                }
-
-//                if (g.getHuwelijksdatum()!= null){
-//                    query = String.format("UPDATE GEZIN SET huwelijksdatum = '%s' where gezinsnummer = %d ;",g.getHuwelijksdatum().getTime().toString(),g.getNr());
-//                    statement.executeUpdate(query);
-//                }
-//                if (g.getScheidingsdatum() != null){
-//                    query = String.format("UPDATE GEZIN SET scheidingsdatum = '%s' where gezinsnummer = %d ;",g.getScheidingsdatum().getTime().toString(),g.getNr());
-//                    statement.executeUpdate(query);
-//                }
-
 				statement.close();
 
             }
@@ -212,7 +194,31 @@ public class DatabaseMediator implements IStorageMediator
 
     }
 
-    /**
+	@Override
+	public void dump() {
+		try {
+			initConnection();
+
+			Statement statement = null;
+
+			statement = conn.createStatement();
+			// set timeout to 30 sec
+			statement.setQueryTimeout(30);
+
+			statement.execute("DELETE from Persoon");
+			statement.execute("DELETE FROM Gezin");
+			statement.execute("DELETE FROM sqlite_sequence");
+
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
      * Laadt de instellingen, in de vorm van een Properties bestand, en controleert
      * of deze in de correcte vorm is, en er verbinding gemaakt kan worden met
      * de database.
